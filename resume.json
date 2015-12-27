@@ -1,56 +1,60 @@
 {
   "basics": {
-    "name": "",
+    "name": "Steve Perkins",
     "label": "",
     "picture": "",
-    "email": "",
-    "phone": "",
+    "email": "steve@steveperkins.com",
+    "phone": "404-997-3018",
     "degree": "",
-    "website": "",
+    "website": "www.steveperkins.com",
     "summary": "",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "",
+      "city": "Atlanta",
       "countryCode": "",
-      "region": ""
+      "region": "GA"
     },
     "profiles": [
       {
-        "network": "",
-        "username": "",
-        "url": ""
+        "network": "GitHub",
+        "username": "steve-perkins",
+        "url": "https://github.com/steve-perkins"
       }
     ]
   },
   "work": [
     {
-      "company": "",
-      "position": "",
+      "company": "BetterCloud",
+      "position": "Software Architect",
       "website": "",
-      "startDate": "",
+      "startDate": "2013-10-01",
       "endDate": "",
       "summary": "",
       "highlights": [
-        ""
+        "BetterCloud is SaaS product company offering analytics, security, and advanced administration for users of Google Apps or Microsoft Office 365.  The total data set within our domain is over 100 terabytes , growing at rate of multiple terabytes per month.",
+        "We use a microservice architecture, with Google services written in Java and hosted on Google Cloud Platform, and Microsoft services written in C# and deployed to Azure.  Service integration primarily invo lves AMQP (i.e. RabbitMQ) and REST.  We are in the process of shifting to Docker - based containerization of microservice components across the board."
       ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "",
-      "date": "",
-      "awarder": "",
-      "summary": ""
     }
   ],
   "education": [
     {
-      "institution": "",
-      "area": "",
+      "institution": "Georgia State University",
+      "area": "J.D.",
       "studyType": "",
       "startDate": "",
-      "endDate": "",
+      "endDate": "2010-06-01",
+      "gpa": "",
+      "courses": [
+        ""
+      ]
+    },
+    {
+      "institution": "Georgia Southwestern State University",
+      "area": "B.S. Computer Science",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "1999-12-01",
       "gpa": "",
       "courses": [
         ""
@@ -59,29 +63,65 @@
   ],
   "publications": [
     {
-      "name": "",
-      "publisher": "",
+      "name": "Hibernate Search by Example",
+      "publisher": "Packt Publishing",
       "releaseDate": "",
       "website": "",
-      "summary": ""
-    }
-  ],
-  "volunteer": [
+      "summary": "Author, Packt Publishing, ISBN 184951920X"
+    },
     {
-      "organization": "",
-      "position": "",
+      "name": "In the Aftermath of Bilski v. Kappos",
+      "publisher": "Practicing Law Institute",
+      "releaseDate": "",
       "website": "",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        ""
-      ]
+      "summary": "Co-author, 2010 Practicing Law Institute Handbook Series"
+    },
+    {
+      "name": "In the Aftermath of In re Bilski",
+      "publisher": "Practicing Law Institute",
+      "releaseDate": "",
+      "website": "",
+      "summary": "Co-author, 2009 Practicing Law Institute Handbook Series"
+    },
+    {
+      "name": "Scala for Java Developers",
+      "publisher": "Packt Publishing",
+      "releaseDate": "",
+      "website": "",
+      "summary": "Technical Reviewer, Packt Publishing, ISBN 1783283637"
+    },
+    {
+      "name": "PostgreSQL Administration Essentials",
+      "publisher": "Packt Publishing",
+      "releaseDate": "",
+      "website": "",
+      "summary": "Technical Reviewer, Packt Publishing, ISBN 1783988983"
+    },
+    {
+      "name": "Building Web Applications in Spring Web MVC",
+      "publisher": "Packt Publishing",
+      "releaseDate": "",
+      "website": "",
+      "summary": "Technical Reviewer, Packt Publishing, ISBN 9781783286539"
+    },
+    {
+      "name": "Angular UI Development",
+      "publisher": "Packt Publishing",
+      "releaseDate": "",
+      "website": "",
+      "summary": "Technical Reviewer, Packt Publishing, ISBN 9781783288472"
+    },
+    {
+      "name": "Angular Testing Cookbook",
+      "publisher": "Packt Publishing",
+      "releaseDate": "",
+      "website": "",
+      "summary": "Technical Reviewer, Packt Publishing, ISBN 1783983744"
     }
   ],
   "skills": [
     {
-      "name": "",
+      "name": "Over 15 years experience with enterprise application integration and web development, in Java and .NET environments ranging from startups to the Fortune 500.  Recent experience with microservice architecture supporting tens of millions of users and over 100 terabytes of data.",
       "level": "",
       "keywords": [
         ""
