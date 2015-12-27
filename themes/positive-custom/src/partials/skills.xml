@@ -5,7 +5,7 @@
       <w:pStyle w:val="Heading1"/>
     </w:pPr>
     <w:r wsp:rsidRPr="00C146CA">
-      <w:t>SKILLS</w:t>
+      <w:t>SKILLS AND BACKGROUND</w:t>
     </w:r>
   </w:p>
   <w:tbl>
@@ -20,6 +20,29 @@
 
     {{#each r.skills.sets}}
 
+    <w:p wsp:rsidR="00C146CA" wsp:rsidRDefault="009452CA" wsp:rsidP="00C146CA">
+      <w:pPr>
+        <w:pStyle w:val="ListParagraph"/>
+        <w:listPr>
+          <w:ilvl w:val="0"/>
+          <w:ilfo w:val="1"/>
+          <wx:t wx:val="•"/>
+          <wx:font wx:val="Calibri"/>
+        </w:listPr>
+        <w:rPr>
+          <w:sz-cs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      {{{wpml this.name true}}}
+	  <!-- <w:r>
+        <w:rPr>
+          <w:sz-cs w:val="20"/>
+        </w:rPr>
+        <w:t>{{ this }}</w:t>
+      </w:r> -->
+    </w:p>
+
+	<!--
     <w:tr wsp:rsidR="00427ECC" wsp:rsidTr="00FD3B33">
       <w:tc>
         <w:tcPr>
@@ -55,6 +78,7 @@
         </w:p>
       </w:tc>
     </w:tr>
+-->
 
     {{/each}}
 

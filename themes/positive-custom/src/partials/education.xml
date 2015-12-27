@@ -32,7 +32,7 @@
         <w:tab/>
       </w:r>
       <w:r wsp:rsidR="00C146CA" wsp:rsidRPr="00C146CA">
-        <w:t>{{formatDate safe.start 'YYYY' }} — {{formatDate safe.end 'YYYY'}}</w:t>
+        <w:t><!-- {{formatDate safe.start 'YYYY' }} — -->{{formatDate safe.end 'YYYY'}}</w:t>
       </w:r>
     </w:p>
     {{#either area studyType }}
@@ -46,7 +46,7 @@
         <w:rPr>
           <w:sz-cs w:val="20"/>
         </w:rPr>
-        <w:t>{{ area }}, {{ studyType }}</w:t>
+        <w:t>{{ area }}{{#if studyType}}, {{ studyType }}{{/if}}</w:t>
       </w:r>
     </w:p>
     {{/either}}

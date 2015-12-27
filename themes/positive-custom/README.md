@@ -1,5 +1,5 @@
 Theme: Positive
 ===============
-A dynamic technical résumé theme for FluentCV.
+A modified version of hacksalot's 'positive' theme for FluentCV.
 
 ![](positive.png)

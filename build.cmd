@@ -2,4 +2,4 @@
 
 REM hackmyresume NEW resume.json -f jrs
 
-hackmyresume BUILD resume.json TO resume.doc -t themes\positive
+hackmyresume BUILD resume.json TO resume.doc -t themes\positive-custom
