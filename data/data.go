@@ -9,6 +9,7 @@ import (
 )
 
 type ResumeData struct {
+	XMLName      xml.Name `xml:"resume" json:"-"`
 	Basics       Basics `xml:"basics" json:"basics"`
 	Work         []Work `xml:"work" json:"work"`
 	Education    []Education `xml:"education" json:"education"`
@@ -48,7 +49,7 @@ type Work struct {
 	Position   string `xml:"position" json:"position"`
 	Website    string `xml:"website" json:"website"`
 	StartDate  string `xml:"startDate" json:"startDate"` // time.Time
-	EndDate    string `xml:"endDate" json:"endDate"`   // time.Time
+	EndDate    string `xml:"endDate" json:"endDate"`     // time.Time
 	Summary    string `xml:"summary" json:"summary"`
 	Highlights []string `xml:"highlights" json:"highlights"`
 }
@@ -58,7 +59,7 @@ type Education struct {
 	Area        string `xml:"area" json:"area"`
 	StudyType   string `xml:"studyType" json:"studyType"`
 	StartDate   string `xml:"startDate" json:"startDate"` // time.Time
-	EndDate     string `xml:"endDate" json:"endDate"`   // time.Time
+	EndDate     string `xml:"endDate" json:"endDate"`     // time.Time
 	GPA         string `xml:"gpa" json:"endDate"`
 	Courses     []string `xml:"courses" json:"courses"`
 }
@@ -87,26 +88,25 @@ type Skill struct {
 // data := data.ResumeData{}
 //
 func NewResumeData() (ResumeData) {
-	return ResumeData{
-		Basics: Basics{
+	return ResumeData {
+		Basics: Basics {
 			Location: Location{},
-			Profiles: []SocialProfile{SocialProfile{}},
+			Profiles: []SocialProfile{{}},
 		},
 		Work: []Work{
-			Work{
+			{
 				Highlights:[]string{""},
 			},
 		},
 		Education: []Education{
-			Education{
-				Courses:[]string{""},
+			{
+				Courses: []string{""},
 			},
 		},
-		Publications: []Publication{
-			Publication{},
-		},
+		Publications: []Publication{{}},
 		Skills: []Skill{
-			Skill{Keywords:[]string{""},
+			{
+				Keywords: []string{""},
 			},
 		},
 	}

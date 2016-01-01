@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/steve-perkins/resume/data"
 	"log"
+	"os"
 )
 
 //var format string
@@ -16,7 +17,7 @@ func main() {
 
 
 	// Init a resume data file, in XML or JSON format
-//	resumeData := data.NewResumeData()
+	resumeData := data.NewResumeData()
 //	resumeData := data.ResumeData{}
 
 //	if xmlString, err := data.ToXmlString(resumeData); err == nil {
@@ -31,10 +32,10 @@ func main() {
 //		fmt.Println(err)
 //	}
 
-	resumeData, err := data.FromJsonFile("c:/Users/Steve/Documents/IdeaProjects/resume/resume.json")
-	if err != nil {
-		log.Fatal(err)
-	}
+//	resumeData, err := data.FromJsonFile("resume.json")
+//	if err != nil {
+//		log.Fatal(err)
+//	}
 	xmlString, err := data.ToXmlString(resumeData)
 	if err != nil {
 		log.Fatal(err)
@@ -49,6 +50,9 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println("\n\n" + jsonString)
+
+	cwd, _ := os.Getwd()
+	fmt.Println("\n\n" + cwd)
 
 	// Convert to/from XML and JSON format
 
