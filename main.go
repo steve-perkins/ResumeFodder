@@ -36,9 +36,13 @@ func main() {
 
 // ParseArgs is used to validate the arguments passed to the application, identify which command is meant to
 // be executed, and perform any processing or enrichment of that command's inputs.  By placing this logic
-// in its own separate function, unit tests can more easily isolate the parsing logic for verification.  The
-// first string return value is a command identifies, the second string array is the set of arguments to be
-// passed to the appropriate command function, and the third error value captures anything that goes wrong
+// in its own separate function, unit tests can more easily isolate the parsing logic for verification.
+//
+// The input string array should come from `os.Args`, and as such it's expected that the first array element
+// will be the application executable name.
+//
+// The first string return value is a command identifier.  The second string array is the arguments to be
+// passed to the appropriate command function.  The third error value captures anything that goes wrong
 // during validation.
 func ParseArgs(args []string) (string, []string, error) {
 	if len(args) < 2 {
@@ -64,7 +68,7 @@ func ParseArgs(args []string) (string, []string, error) {
 
 	case "convert":
 		if len(args) < 4 {
-			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume.exe convert resume.xml resume.json\"")
+			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume.exe convert resume.xml resume.json\")")
 		}
 		inputFilename := args[2]
 		inputExtension := strings.ToLower(path.Ext(inputFilename))
