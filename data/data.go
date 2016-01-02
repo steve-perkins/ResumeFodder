@@ -3,7 +3,6 @@ package data
 import (
 	"encoding/json"
 	"encoding/xml"
-	"errors"
 	"io/ioutil"
 )
 
@@ -136,21 +135,26 @@ func fromXml(xmlBytes []byte) (ResumeData, error) {
 }
 
 func ToXmlString(data ResumeData) (string, error) {
-	return toXml(data)
-}
-
-func ToXmlFile(data ResumeData, xmlFilename string) error {
-	// TODO
-	return errors.New("not implemented")
-}
-
-func toXml(data ResumeData) (string, error) {
-	xmlBytes, err := xml.MarshalIndent(data, "", "  ")
+	xmlBytes, err := toXml(data)
 	if err != nil {
 		return "", err
 	}
-	xmlString := string(xmlBytes[:])
-	return xmlString, nil
+	return string(xmlBytes[:]), nil
+}
+
+func ToXmlFile(data ResumeData, xmlFilename string) error {
+	xmlBytes, err := toXml(data)
+	if err != nil {
+		return err
+	}
+	if err := ioutil.WriteFile(xmlFilename, xmlBytes, 0644); err != nil {
+		return err
+	}
+	return nil
+}
+
+func toXml(data ResumeData) ([]byte, error) {
+	return xml.MarshalIndent(data, "", "  ")
 }
 
 func FromJsonString(jsonString string) (ResumeData, error) {
@@ -172,19 +176,24 @@ func fromJson(jsonBytes []byte) (ResumeData, error) {
 }
 
 func ToJsonString(data ResumeData) (string, error) {
-	return toJson(data)
-}
-
-func ToJsonFile(data ResumeData, jsonFilename string) error {
-	// TODO
-	return errors.New("not implemented")
-}
-
-func toJson(data ResumeData) (string, error) {
-	jsonBytes, err := json.MarshalIndent(data, "", "  ")
+	jsonBytes, err := toJson(data)
 	if err != nil {
 		return "", err
 	}
-	jsonString := string(jsonBytes[:])
-	return jsonString, nil
+	return string(jsonBytes[:]), nil
+}
+
+func ToJsonFile(data ResumeData, jsonFilename string) error {
+	jsonBytes, err := toJson(data)
+	if err != nil {
+		return err
+	}
+	if err := ioutil.WriteFile(jsonFilename, jsonBytes, 0644); err != nil {
+		return err
+	}
+	return nil
+}
+
+func toJson(data ResumeData) ([]byte, error) {
+	return json.MarshalIndent(data, "", "  ")
 }

@@ -1,6 +1,8 @@
 package data
 
 import (
+	"os"
+	"path/filepath"
 	"reflect"
 	"testing"
 )
@@ -10,11 +12,15 @@ func TestXmlConversion(t *testing.T) {
 
 	// Convert the data structure to a string of XML text
 	xml, err := ToXmlString(originalData)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	// Parse that XML text into a new resume data structure
 	fromXmlData, err := FromXmlString(xml)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	// Compare the original data structure against this round-trip copy, to see if anything changed.
 	if !reflect.DeepEqual(originalData, fromXmlData) {
@@ -26,9 +32,13 @@ func TestJsonConversion(t *testing.T) {
 	originalData := generateResumeData()
 
 	json, err := ToJsonString(originalData)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 	fromJsonData, err := FromJsonString(json)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	if !reflect.DeepEqual(originalData, fromJsonData) {
 		t.Fatal("Resume data after JSON conversion doesn't match the original")
@@ -39,13 +49,21 @@ func TestXmlToJsonConversion(t *testing.T) {
 	originalData := generateResumeData()
 
 	xml, err := ToXmlString(originalData)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 	fromXmlData, err := FromXmlString(xml)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 	json, err := ToJsonString(fromXmlData)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 	fromJsonData, err := FromJsonString(json)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	if !reflect.DeepEqual(originalData, fromJsonData) {
 		t.Fatal("Resume data after XML-to-JSON conversion doesn't match the original")
@@ -56,16 +74,84 @@ func TestJsonToXmlConversion(t *testing.T) {
 	originalData := generateResumeData()
 
 	json, err := ToJsonString(originalData)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 	fromJsonData, err := FromJsonString(json)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 	xml, err := ToXmlString(fromJsonData)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 	fromXmlData, err := FromXmlString(xml)
-	fatalIfError(t, err)
+	if err != nil {
+		t.Fatal(err)
+	}
 
 	if !reflect.DeepEqual(originalData, fromXmlData) {
 		t.Fatal("Resume data after JSON-to-XML conversion doesn't match the original")
+	}
+}
+
+func TestXmlFileConversion(t *testing.T) {
+	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
+	deleteTestFile := func() {
+		if _, err := os.Stat(xmlFilename); err == nil {
+			err := os.Remove(xmlFilename)
+			if err != nil {
+				t.Fatal(err)
+			}
+		}
+	}
+	// Delete any pre-existing XML test file now, and then also clean up afterwards
+	deleteTestFile()
+	defer deleteTestFile()
+
+	// Write a resume data structure to an XML test file in the temp directory
+	originalData := generateResumeData()
+	err := ToXmlFile(originalData, xmlFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	// Parse that XML file back into a new resume data structure
+	fromXmlData, err := FromXmlFile(xmlFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	// Compare the original data structure against this round-trip copy, to see if anything changed.
+	if !reflect.DeepEqual(originalData, fromXmlData) {
+		t.Fatal("Resume data after XML conversion doesn't match the original")
+	}
+}
+
+func TestJsonFileConversion(t *testing.T) {
+	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
+	deleteTestFile := func() {
+		if _, err := os.Stat(jsonFilename); err == nil {
+			err := os.Remove(jsonFilename)
+			if err != nil {
+				t.Fatal(err)
+			}
+		}
+	}
+	deleteTestFile()
+	defer deleteTestFile()
+
+	originalData := generateResumeData()
+	err := ToJsonFile(originalData, jsonFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+	fromJsonData, err := FromJsonFile(jsonFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !reflect.DeepEqual(originalData, fromJsonData) {
+		t.Fatal("Resume data after JSON conversion doesn't match the original")
 	}
 }
 
@@ -121,11 +207,4 @@ func generateResumeData() ResumeData {
 		},
 	}
 	return data
-}
-
-// Fails the test if a real error is passed, or else takes no action if a nil error is passed.
-func fatalIfError(t *testing.T, err error) {
-	if err != nil {
-		t.Fatal(err)
-	}
 }
