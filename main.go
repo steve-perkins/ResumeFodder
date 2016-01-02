@@ -10,32 +10,31 @@ import (
 //var format string
 
 func main() {
-//	flag.StringVar(&format, "f", "default", "File format")
-//	flag.Parse()
-//	fmt.Printf("hello %s!\n", format)
-//	flag.PrintDefaults()
-
+	//	flag.StringVar(&format, "f", "default", "File format")
+	//	flag.Parse()
+	//	fmt.Printf("hello %s!\n", format)
+	//	flag.PrintDefaults()
 
 	// Init a resume data file, in XML or JSON format
 	resumeData := data.NewResumeData()
-//	resumeData := data.ResumeData{}
+	//	resumeData := data.ResumeData{}
 
-//	if xmlString, err := data.ToXmlString(resumeData); err == nil {
-//		fmt.Println(xmlString)
-//	} else {
-//		fmt.Println(err)
-//	}
+	//	if xmlString, err := data.ToXmlString(resumeData); err == nil {
+	//		fmt.Println(xmlString)
+	//	} else {
+	//		fmt.Println(err)
+	//	}
 
-//	if jsonString, err := data.ToJsonString(resumeData); err == nil {
-//		fmt.Println(jsonString)
-//	} else {
-//		fmt.Println(err)
-//	}
+	//	if jsonString, err := data.ToJsonString(resumeData); err == nil {
+	//		fmt.Println(jsonString)
+	//	} else {
+	//		fmt.Println(err)
+	//	}
 
-//	resumeData, err := data.FromJsonFile("resume.json")
-//	if err != nil {
-//		log.Fatal(err)
-//	}
+	//	resumeData, err := data.FromJsonFile("resume.json")
+	//	if err != nil {
+	//		log.Fatal(err)
+	//	}
 	xmlString, err := data.ToXmlString(resumeData)
 	if err != nil {
 		log.Fatal(err)
@@ -57,6 +56,5 @@ func main() {
 	// Convert to/from XML and JSON format
 
 	// Generate resume output from data file
-
 
 }

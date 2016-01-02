@@ -1,32 +1,31 @@
 package data
 
 import (
-	"encoding/xml"
-	"io/ioutil"
 	"encoding/json"
+	"encoding/xml"
 	"errors"
-	"fmt"
+	"io/ioutil"
 )
 
 type ResumeData struct {
-	XMLName      xml.Name `xml:"resume" json:"-"`
-	Basics       Basics `xml:"basics" json:"basics"`
-	Work         []Work `xml:"work" json:"work"`
-	Education    []Education `xml:"education" json:"education"`
+	XMLName      xml.Name      `xml:"resume" json:"-"`
+	Basics       Basics        `xml:"basics" json:"basics"`
+	Work         []Work        `xml:"work" json:"work"`
+	Education    []Education   `xml:"education" json:"education"`
 	Publications []Publication `xml:"publications" json:"publications"`
-	Skills       []Skill `xml:"skills" json:"skills"`
+	Skills       []Skill       `xml:"skills" json:"skills"`
 }
 
 type Basics struct {
-	Name     string `xml:"name" json:"name"`
-	Label    string `xml:"label" json:"label"`
-	Picture  string `xml:"picture" json:"picture"`
-	Email    string `xml:"email" json:"email"`
-	Phone    string `xml:"phone" json:"phone"`
-	Degree   string `xml:"degree" json:"degree"`
-	Website  string `xml:"website" json:"website"`
-	Summary  string `xml:"summary" json:"summary"`
-	Location Location `xml:"location" json:"location"`
+	Name     string          `xml:"name" json:"name"`
+	Label    string          `xml:"label" json:"label"`
+	Picture  string          `xml:"picture" json:"picture"`
+	Email    string          `xml:"email" json:"email"`
+	Phone    string          `xml:"phone" json:"phone"`
+	Degree   string          `xml:"degree" json:"degree"`
+	Website  string          `xml:"website" json:"website"`
+	Summary  string          `xml:"summary" json:"summary"`
+	Location Location        `xml:"location" json:"location"`
 	Profiles []SocialProfile `xml:"profiles" json:"profiles"`
 }
 
@@ -45,22 +44,22 @@ type SocialProfile struct {
 }
 
 type Work struct {
-	Company    string `xml:"company" json:"company"`
-	Position   string `xml:"position" json:"position"`
-	Website    string `xml:"website" json:"website"`
-	StartDate  string `xml:"startDate" json:"startDate"` // time.Time
-	EndDate    string `xml:"endDate" json:"endDate"`     // time.Time
-	Summary    string `xml:"summary" json:"summary"`
+	Company    string   `xml:"company" json:"company"`
+	Position   string   `xml:"position" json:"position"`
+	Website    string   `xml:"website" json:"website"`
+	StartDate  string   `xml:"startDate" json:"startDate"` // time.Time
+	EndDate    string   `xml:"endDate" json:"endDate"`     // time.Time
+	Summary    string   `xml:"summary" json:"summary"`
 	Highlights []string `xml:"highlights" json:"highlights"`
 }
 
 type Education struct {
-	Institution string `xml:"institution" json:"institution"`
-	Area        string `xml:"area" json:"area"`
-	StudyType   string `xml:"studyType" json:"studyType"`
-	StartDate   string `xml:"startDate" json:"startDate"` // time.Time
-	EndDate     string `xml:"endDate" json:"endDate"`     // time.Time
-	GPA         string `xml:"gpa" json:"endDate"`
+	Institution string   `xml:"institution" json:"institution"`
+	Area        string   `xml:"area" json:"area"`
+	StudyType   string   `xml:"studyType" json:"studyType"`
+	StartDate   string   `xml:"startDate" json:"startDate"` // time.Time
+	EndDate     string   `xml:"endDate" json:"endDate"`     // time.Time
+	GPA         string   `xml:"gpa" json:"gpa"`
 	Courses     []string `xml:"courses" json:"courses"`
 }
 
@@ -73,8 +72,8 @@ type Publication struct {
 }
 
 type Skill struct {
-	Name     string `xml:"name" json:"name"`
-	Level    string `xml:"level" json:"level"`
+	Name     string   `xml:"name" json:"name"`
+	Level    string   `xml:"level" json:"level"`
 	Keywords []string `xml:"keywords" json:"keywords"`
 }
 
@@ -87,15 +86,15 @@ type Skill struct {
 //
 // data := data.ResumeData{}
 //
-func NewResumeData() (ResumeData) {
-	return ResumeData {
-		Basics: Basics {
+func NewResumeData() ResumeData {
+	return ResumeData{
+		Basics: Basics{
 			Location: Location{},
 			Profiles: []SocialProfile{{}},
 		},
 		Work: []Work{
 			{
-				Highlights:[]string{""},
+				Highlights: []string{""},
 			},
 		},
 		Education: []Education{
@@ -127,6 +126,12 @@ func FromXmlFile(xmlFilename string) (ResumeData, error) {
 func fromXml(xmlBytes []byte) (ResumeData, error) {
 	var data ResumeData
 	err := xml.Unmarshal(xmlBytes, &data)
+	if err == nil {
+		// The marshal process in `toXml()` will use field tags to populate the `ResumeData.XMLName` field
+		// with `resume`.  When unmarshaling from XML, we likewise strip this field value back off... to
+		// better facilitate equality comparison between `ResumeData` structs (e.g. in unit testing).
+		data.XMLName.Local = ""
+	}
 	return data, err
 }
 
@@ -161,7 +166,6 @@ func FromJsonFile(jsonFilename string) (ResumeData, error) {
 }
 
 func fromJson(jsonBytes []byte) (ResumeData, error) {
-	fmt.Println("Inside fromJson")
 	var data ResumeData
 	err := json.Unmarshal(jsonBytes, &data)
 	return data, err
