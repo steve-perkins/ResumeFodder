@@ -33,7 +33,7 @@
       "summary": "",
       "highlights": [
         "BetterCloud is SaaS product company offering analytics, security, and advanced administration for users of Google Apps or Microsoft Office 365.  The total data set within our domain is over 100 terabytes , growing at rate of multiple terabytes per month.",
-        "We use a microservice architecture, with Google services written in Java and hosted on Google Cloud Platform, and Microsoft services written in C# and deployed to Azure.  Service integration primarily invo lves AMQP (i.e. RabbitMQ) and REST.  We are in the process of shifting to Docker - based containerization of microservice components across the board."
+        "We use a microservice architecture, with Google services written in Java and hosted on Google Cloud Platform, and Microsoft services written in C# and deployed to Azure.  Service integration primarily involves AMQP (i.e. RabbitMQ) and REST.  We are in the process of shifting to Docker - based containerization of microservice components across the board."
       ]
     }
   ],

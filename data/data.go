@@ -128,7 +128,7 @@ func fromXml(xmlBytes []byte) (ResumeData, error) {
 	err := xml.Unmarshal(xmlBytes, &data)
 	if err == nil {
 		// The marshal process in `toXml()` will use field tags to populate the `ResumeData.XMLName` field
-		// with `resume`.  When unmarshaling from XML, we likewise strip this field value back off... to
+		// with `resume`.  When unmarshalling from XML, we likewise strip this field value back off... to
 		// better facilitate equality comparison between `ResumeData` structs (e.g. in unit testing).
 		data.XMLName.Local = ""
 	}
