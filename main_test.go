@@ -1,6 +1,10 @@
 package main
 
 import (
+	"github.com/steve-perkins/resume/data"
+	"os"
+	"path/filepath"
+	"reflect"
 	"testing"
 )
 
@@ -86,3 +90,31 @@ func TestParseArgs_Convert_Valid(t *testing.T) {
 	}
 }
 
+func TestInitResume(t *testing.T) {
+	// Delete any pre-existing test file now, and then also clean up afterwards
+	filename := filepath.Join(os.TempDir(), "testresume.xml")
+	deleteFileIfExists(t, filename)
+	defer deleteFileIfExists(t, filename)
+
+	err := InitResume(filename)
+	if err != nil {
+		t.Fatal(err)
+	}
+	inMemory := data.NewResumeData()
+	fromFile, err := data.FromXmlFile(filename)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !reflect.DeepEqual(inMemory, fromFile) {
+		t.Fatal("Resume data after XML conversion doesn't match the original")
+	}
+}
+
+func deleteFileIfExists(t *testing.T, filename string) {
+	if _, err := os.Stat(filename); err == nil {
+		err := os.Remove(filename)
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
+}

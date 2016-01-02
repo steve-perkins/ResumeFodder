@@ -8,7 +8,7 @@ import (
 )
 
 func TestXmlConversion(t *testing.T) {
-	originalData := generateResumeData()
+	originalData := GenerateTestResumeData()
 
 	// Convert the data structure to a string of XML text
 	xml, err := ToXmlString(originalData)
@@ -29,7 +29,7 @@ func TestXmlConversion(t *testing.T) {
 }
 
 func TestJsonConversion(t *testing.T) {
-	originalData := generateResumeData()
+	originalData := GenerateTestResumeData()
 
 	json, err := ToJsonString(originalData)
 	if err != nil {
@@ -46,7 +46,7 @@ func TestJsonConversion(t *testing.T) {
 }
 
 func TestXmlToJsonConversion(t *testing.T) {
-	originalData := generateResumeData()
+	originalData := GenerateTestResumeData()
 
 	xml, err := ToXmlString(originalData)
 	if err != nil {
@@ -71,7 +71,7 @@ func TestXmlToJsonConversion(t *testing.T) {
 }
 
 func TestJsonToXmlConversion(t *testing.T) {
-	originalData := generateResumeData()
+	originalData := GenerateTestResumeData()
 
 	json, err := ToJsonString(originalData)
 	if err != nil {
@@ -96,21 +96,13 @@ func TestJsonToXmlConversion(t *testing.T) {
 }
 
 func TestXmlFileConversion(t *testing.T) {
-	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
-	deleteTestFile := func() {
-		if _, err := os.Stat(xmlFilename); err == nil {
-			err := os.Remove(xmlFilename)
-			if err != nil {
-				t.Fatal(err)
-			}
-		}
-	}
 	// Delete any pre-existing XML test file now, and then also clean up afterwards
-	deleteTestFile()
-	defer deleteTestFile()
+	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
+	deleteFileIfExists(t, xmlFilename)
+	defer deleteFileIfExists(t, xmlFilename)
 
 	// Write a resume data structure to an XML test file in the temp directory
-	originalData := generateResumeData()
+	originalData := GenerateTestResumeData()
 	err := ToXmlFile(originalData, xmlFilename)
 	if err != nil {
 		t.Fatal(err)
@@ -130,18 +122,10 @@ func TestXmlFileConversion(t *testing.T) {
 
 func TestJsonFileConversion(t *testing.T) {
 	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
-	deleteTestFile := func() {
-		if _, err := os.Stat(jsonFilename); err == nil {
-			err := os.Remove(jsonFilename)
-			if err != nil {
-				t.Fatal(err)
-			}
-		}
-	}
-	deleteTestFile()
-	defer deleteTestFile()
+	deleteFileIfExists(t, jsonFilename)
+	defer deleteFileIfExists(t, jsonFilename)
 
-	originalData := generateResumeData()
+	originalData := GenerateTestResumeData()
 	err := ToJsonFile(originalData, jsonFilename)
 	if err != nil {
 		t.Fatal(err)
@@ -156,7 +140,7 @@ func TestJsonFileConversion(t *testing.T) {
 }
 
 // A helper function to generate fake `ResumeData` structs, for use by the various test functions.
-func generateResumeData() ResumeData {
+func GenerateTestResumeData() ResumeData {
 	data := ResumeData{
 		Basics: Basics{
 			Name:    "Peter Gibbons",
@@ -207,4 +191,13 @@ func generateResumeData() ResumeData {
 		},
 	}
 	return data
+}
+
+func deleteFileIfExists(t *testing.T, filename string) {
+	if _, err := os.Stat(filename); err == nil {
+		err := os.Remove(filename)
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
 }
