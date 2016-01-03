@@ -110,6 +110,34 @@ func TestInitResume(t *testing.T) {
 	}
 }
 
+func TestConvertResume(t *testing.T) {
+	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
+	deleteFileIfExists(t, xmlFilename)
+	defer deleteFileIfExists(t, xmlFilename)
+
+	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
+	deleteFileIfExists(t, jsonFilename)
+	defer deleteFileIfExists(t, jsonFilename)
+
+	err := InitResume(xmlFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+	err = ConvertResume(xmlFilename, jsonFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	inMemory := data.NewResumeData()
+	fromFile, err := data.FromJsonFile(jsonFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !reflect.DeepEqual(inMemory, fromFile) {
+		t.Fatal("Resume data after XML-to-JSON conversion doesn't match the original")
+	}
+}
+
 func deleteFileIfExists(t *testing.T, filename string) {
 	if _, err := os.Stat(filename); err == nil {
 		err := os.Remove(filename)
