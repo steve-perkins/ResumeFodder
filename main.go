@@ -20,18 +20,27 @@ func main() {
 	// Invoke the appropriate command
 	switch command {
 	case "init":
-		if err := InitResume(args[0]); err != nil {
+		if err := InitResume(args[0]); err == nil {
+			fmt.Printf("Empty resume data file \"%s\" has been created.\n", args[0])
+		} else {
 			fmt.Println(err)
 		}
 	case "convert":
-		if err := ConvertResume(args[0], args[1]); err != nil {
+		if err := ConvertResume(args[0], args[1]); err == nil {
+			fmt.Println("Converted resume data file \"%s\" has been created.\n", args[1])
+		} else {
+			fmt.Println(err)
+		}
+	case "export":
+		if err := ExportResume(args[0], args[1], args[2]); err == nil {
+			fmt.Println("Resume has been exported to \"%s\" using template \"%s\".\n", args[1], args[2])
+		} else {
 			fmt.Println(err)
 		}
 	default:
 		usage()
 	}
 
-	fmt.Println("Done!")
 }
 
 // ParseArgs is used to validate the arguments passed to the application, identify which command is meant to
@@ -88,6 +97,32 @@ func ParseArgs(args []string) (string, []string, error) {
 		}
 		return "convert", []string{inputFilename, outputFilename}, nil
 
+	case "export":
+		if len(args) < 4 {
+			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume.exe export resume.xml resume.doc\"), and optionally a template name.")
+		}
+		inputFilename := args[2]
+		inputExtension := strings.ToLower(path.Ext(inputFilename))
+		if inputExtension != ".xml" && inputExtension != ".json" {
+			return "", nil, errors.New("Source file must have an '.xml' or '.json' extension.")
+		}
+		outputFilename := args[3]
+		outputExtension := strings.ToLower(path.Ext(outputFilename))
+		if outputExtension != ".doc" && outputExtension != ".xml" {
+			return "", nil, errors.New("Target file must have a '.doc' or '.xml' extension.")
+		}
+		var templateFilename string
+		if len(args) < 5 {
+			templateFilename = "defaultTemplate.xml"
+		} else {
+			templateFilename = args[4]
+		}
+		templateExtension := strings.ToLower(path.Ext(templateFilename))
+		if templateExtension != ".doc" && inputExtension != ".xml" {
+			return "", nil, errors.New("Template file must have a '.doc' or '.xml' extension.")
+		}
+		return "export", []string{inputFilename, outputFilename, templateFilename}, nil
+
 	default:
 		err := errors.New("Unrecognized command.")
 		return "", nil, err
@@ -105,7 +140,7 @@ func InitResume(filename string) error {
 	}
 }
 
-// ConvertResume reads a resume file in XML or JSON format, and writes that data to another destination file
+// ConvertResume reads a resume data file in XML or JSON format, and writes that data to another destination file
 // in XML or JSON format.
 func ConvertResume(inputFilename, outputFilename string) error {
 	var resume data.ResumeData
@@ -126,9 +161,39 @@ func ConvertResume(inputFilename, outputFilename string) error {
 	}
 }
 
-// Usage displays information about this application and its supported arguments, and then terminates
+// ExportResume applies a Office XML template to a resume data file, resulting in a Word 2003 XML document.
+//
+// See:
+//   https://en.wikipedia.org/wiki/Microsoft_Office_XML_formats
+//   https://www.microsoft.com/en-us/download/details.aspx?id=101
+func ExportResume(inputFilename, outputFilename, templateFilename string) error {
+
+	// TODO
+	//
+	// [1] Load the resume data structure, and iterate through each field
+	// [2] Divide the field by line breaks
+	// [3] If there is more than one line in a field, then add close-paragraph markup the end of the first
+	//     line, and surround the subsequent lines with open-and-close-paragraph markup
+	// [4] If a line begins with Markdown bullet-list markup, then make it's paragraph markup of the appropriate style
+	// [5] If Markdown bold or italics markup is found within a line, then close the current "r" and "t"
+	//     tags.  Start new "r" and "t" tags, with the appropriate style and text, close them, and then re-start
+	//     a new "r" and "t" tag set with the default style.  *****NOTE*****: template authors must always insert
+	//     text insertion tokens within "t" tags.
+	// [6] Overwrite the string values within the resume data structure with any modifications
+	// [7] Perform Go template token replacement.
+	//
+	// [???] Move this and all of the other command functions to a new "command[s?]" package.
+
+	return errors.New("ExportResume function is not yet implemented.")
+}
+
+// usage displays information about this application and its supported arguments, and then terminates
 // the application.
 func usage() {
+
+	// TODO... write full usage text
+
 	fmt.Println("\nUsage...")
 	os.Exit(0)
 }
+

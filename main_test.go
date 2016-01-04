@@ -90,6 +90,12 @@ func TestParseArgs_Convert_Valid(t *testing.T) {
 	}
 }
 
+func TestParseArgs_Export(t *testing.T) {
+
+	// TODO... test no args, bad source filename, bad target filename, missing or bad template filename, valid inputs
+
+}
+
 func TestInitResume(t *testing.T) {
 	// Delete any pre-existing test file now, and then also clean up afterwards
 	filename := filepath.Join(os.TempDir(), "testresume.xml")
@@ -135,6 +141,16 @@ func TestConvertResume(t *testing.T) {
 	}
 	if !reflect.DeepEqual(inMemory, fromFile) {
 		t.Fatal("Resume data after XML-to-JSON conversion doesn't match the original")
+	}
+}
+
+func TestExportResume(t *testing.T) {
+
+	// TODO... implement ExportResume
+
+	err := ExportResume("resume.xml", "resume.doc", "defaultTemplate.xml")
+	if err.Error() != "ExportResume function is not yet implemented." {
+		t.Fatalf("err should be [ExportResume function is not yet implemented.], found [%s]\n", err)
 	}
 }
 
