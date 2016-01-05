@@ -210,4 +210,3 @@ func ToJsonFile(data ResumeData, jsonFilename string) error {
 func toJson(data ResumeData) ([]byte, error) {
 	return json.MarshalIndent(data, "", "  ")
 }
-

@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/steve-perkins/resume/data"
+	"github.com/steve-perkins/resume/command"
 	"os"
 	"path"
 	"strings"
@@ -11,28 +11,28 @@ import (
 
 func main() {
 	// Identify the requested command, and perform any pre-processing of command inputs
-	command, args, err := ParseArgs(os.Args)
+	commandName, args, err := ParseArgs(os.Args)
 	if err != nil {
 		fmt.Printf("\n%s\n", err)
 		usage()
 	}
 
 	// Invoke the appropriate command
-	switch command {
+	switch commandName {
 	case "init":
-		if err := InitResume(args[0]); err == nil {
+		if err := command.InitResume(args[0]); err == nil {
 			fmt.Printf("Empty resume data file \"%s\" has been created.\n", args[0])
 		} else {
 			fmt.Println(err)
 		}
 	case "convert":
-		if err := ConvertResume(args[0], args[1]); err == nil {
+		if err := command.ConvertResume(args[0], args[1]); err == nil {
 			fmt.Println("Converted resume data file \"%s\" has been created.\n", args[1])
 		} else {
 			fmt.Println(err)
 		}
 	case "export":
-		if err := ExportResume(args[0], args[1], args[2]); err == nil {
+		if err := command.ExportResume(args[0], args[1], args[2]); err == nil {
 			fmt.Println("Resume has been exported to \"%s\" using template \"%s\".\n", args[1], args[2])
 		} else {
 			fmt.Println(err)
@@ -130,63 +130,6 @@ func ParseArgs(args []string) (string, []string, error) {
 	}
 }
 
-// InitResume writes a new, empty resume data file to the destination specified by the filename argument.  That
-// filename must have an extension of ".xml" or ".json", and XML or JSON format will be used accordingly.
-func InitResume(filename string) error {
-	if strings.ToLower(path.Ext(filename)) == ".xml" {
-		return data.ToXmlFile(data.NewResumeData(), filename)
-	} else {
-		return data.ToJsonFile(data.NewResumeData(), filename)
-	}
-}
-
-// ConvertResume reads a resume data file in XML or JSON format, and writes that data to another destination file
-// in XML or JSON format.
-func ConvertResume(inputFilename, outputFilename string) error {
-	var resume data.ResumeData
-	var err error
-	if strings.ToLower(path.Ext(inputFilename)) == ".xml" {
-		resume, err = data.FromXmlFile(inputFilename)
-	} else {
-		resume, err = data.FromJsonFile(inputFilename)
-	}
-	if err != nil {
-		return err
-	}
-
-	if strings.ToLower(path.Ext(outputFilename)) == ".xml" {
-		return data.ToXmlFile(resume, outputFilename)
-	} else {
-		return data.ToJsonFile(resume, outputFilename)
-	}
-}
-
-// ExportResume applies a Office XML template to a resume data file, resulting in a Word 2003 XML document.
-//
-// See:
-//   https://en.wikipedia.org/wiki/Microsoft_Office_XML_formats
-//   https://www.microsoft.com/en-us/download/details.aspx?id=101
-func ExportResume(inputFilename, outputFilename, templateFilename string) error {
-
-	// TODO
-	//
-	// [1] Load the resume data structure, and iterate through each field
-	// [2] Divide the field by line breaks
-	// [3] If there is more than one line in a field, then add close-paragraph markup the end of the first
-	//     line, and surround the subsequent lines with open-and-close-paragraph markup
-	// [4] If a line begins with Markdown bullet-list markup, then make it's paragraph markup of the appropriate style
-	// [5] If Markdown bold or italics markup is found within a line, then close the current "r" and "t"
-	//     tags.  Start new "r" and "t" tags, with the appropriate style and text, close them, and then re-start
-	//     a new "r" and "t" tag set with the default style.  *****NOTE*****: template authors must always insert
-	//     text insertion tokens within "t" tags.
-	// [6] Overwrite the string values within the resume data structure with any modifications
-	// [7] Perform Go template token replacement.
-	//
-	// [???] Move this and all of the other command functions to a new "command[s?]" package.
-
-	return errors.New("ExportResume function is not yet implemented.")
-}
-
 // usage displays information about this application and its supported arguments, and then terminates
 // the application.
 func usage() {
@@ -196,4 +139,3 @@ func usage() {
 	fmt.Println("\nUsage...")
 	os.Exit(0)
 }
-

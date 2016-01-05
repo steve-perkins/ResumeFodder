@@ -1,21 +1,17 @@
 package main
 
 import (
-	"github.com/steve-perkins/resume/data"
-	"os"
-	"path/filepath"
-	"reflect"
 	"testing"
 )
 
-func TestParseArgs_NoArgs(t *testing.T) {
+func TestNoArgs(t *testing.T) {
 	_, _, err := ParseArgs([]string{"resume.exe"})
 	if err == nil || err.Error() != "No command was specified." {
 		t.Fatalf("err should be [No command was specified.], found [%s]\n", err)
 	}
 }
 
-func TestParseArgs_Init_NoArg(t *testing.T) {
+func TestInit_NoArg(t *testing.T) {
 	command, args, err := ParseArgs([]string{"resume.exe", "init"})
 	if command != "init" {
 		t.Fatalf("command should be [init], found [%s]\n", command)
@@ -28,14 +24,14 @@ func TestParseArgs_Init_NoArg(t *testing.T) {
 	}
 }
 
-func TestParseArgs_Init_InvalidFilename(t *testing.T) {
+func TestInit_InvalidFilename(t *testing.T) {
 	_, _, err := ParseArgs([]string{"resume.exe", "init", "bad_extension.foo"})
 	if err == nil || err.Error() != "Filename to initialize must have an '.xml' or '.json' extension." {
 		t.Fatalf("err should be [Filename to initialize must have an '.xml' or '.json' extension.], found [%s]\n", err)
 	}
 }
 
-func TestParseArgs_Init_Valid(t *testing.T) {
+func TestInit_Valid(t *testing.T) {
 	command, args, err := ParseArgs([]string{"resume.exe", "init", "resume.xml"})
 	if command != "init" {
 		t.Fatalf("command should be [init], found [%s]\n", command)
@@ -48,14 +44,14 @@ func TestParseArgs_Init_Valid(t *testing.T) {
 	}
 }
 
-func TestParseArgs_Convert_NoArgs(t *testing.T) {
+func TestConvert_NoArgs(t *testing.T) {
 	_, _, err := ParseArgs([]string{"resume.exe", "convert"})
 	if err == nil || err.Error() != "You must specify input and output filenames (e.g. \"resume.exe convert resume.xml resume.json\")" {
 		t.Fatalf("err should be [You must specify input and output filenames (e.g. \"resume.exe convert resume.xml resume.json\")], found [%s]\n", err)
 	}
 }
 
-func TestParseArgs_Convert_InvalidFilename(t *testing.T) {
+func TestConvert_InvalidFilename(t *testing.T) {
 	// Source and target must be XML or JSON
 	_, _, err := ParseArgs([]string{"resume.exe", "convert", "bad_extension.foo", "resume.json"})
 	if err == nil || err.Error() != "Source file must have an '.xml' or '.json' extension." {
@@ -77,7 +73,7 @@ func TestParseArgs_Convert_InvalidFilename(t *testing.T) {
 	}
 }
 
-func TestParseArgs_Convert_Valid(t *testing.T) {
+func TestConvert_Valid(t *testing.T) {
 	command, args, err := ParseArgs([]string{"resume.exe", "convert", "resume.xml", "resume.json"})
 	if command != "convert" {
 		t.Fatalf("command should be [convert], found [%s]\n", command)
@@ -90,75 +86,8 @@ func TestParseArgs_Convert_Valid(t *testing.T) {
 	}
 }
 
-func TestParseArgs_Export(t *testing.T) {
+func TestExport(t *testing.T) {
 
 	// TODO... test no args, bad source filename, bad target filename, missing or bad template filename, valid inputs
 
-}
-
-func TestInitResume(t *testing.T) {
-	// Delete any pre-existing test file now, and then also clean up afterwards
-	filename := filepath.Join(os.TempDir(), "testresume.xml")
-	deleteFileIfExists(t, filename)
-	defer deleteFileIfExists(t, filename)
-
-	err := InitResume(filename)
-	if err != nil {
-		t.Fatal(err)
-	}
-	inMemory := data.NewResumeData()
-	fromFile, err := data.FromXmlFile(filename)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if !reflect.DeepEqual(inMemory, fromFile) {
-		t.Fatal("Resume data after XML conversion doesn't match the original")
-	}
-}
-
-func TestConvertResume(t *testing.T) {
-	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
-	deleteFileIfExists(t, xmlFilename)
-	defer deleteFileIfExists(t, xmlFilename)
-
-	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
-	deleteFileIfExists(t, jsonFilename)
-	defer deleteFileIfExists(t, jsonFilename)
-
-	err := InitResume(xmlFilename)
-	if err != nil {
-		t.Fatal(err)
-	}
-	err = ConvertResume(xmlFilename, jsonFilename)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	inMemory := data.NewResumeData()
-	fromFile, err := data.FromJsonFile(jsonFilename)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if !reflect.DeepEqual(inMemory, fromFile) {
-		t.Fatal("Resume data after XML-to-JSON conversion doesn't match the original")
-	}
-}
-
-func TestExportResume(t *testing.T) {
-
-	// TODO... implement ExportResume
-
-	err := ExportResume("resume.xml", "resume.doc", "defaultTemplate.xml")
-	if err.Error() != "ExportResume function is not yet implemented." {
-		t.Fatalf("err should be [ExportResume function is not yet implemented.], found [%s]\n", err)
-	}
-}
-
-func deleteFileIfExists(t *testing.T, filename string) {
-	if _, err := os.Stat(filename); err == nil {
-		err := os.Remove(filename)
-		if err != nil {
-			t.Fatal(err)
-		}
-	}
 }
