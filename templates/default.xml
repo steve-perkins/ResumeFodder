@@ -34,10 +34,10 @@
 		</w:font>
 		<w:font w:name="Cambria Math">
 			<w:panose-1 w:val="02040503050406030204"/>
-			<w:charset w:val="00"/>
+			<w:charset w:val="01"/>
 			<w:family w:val="Roman"/>
+			<w:notTrueType/>
 			<w:pitch w:val="variable"/>
-			<w:sig w:usb-0="E00002FF" w:usb-1="420024FF" w:usb-2="00000000" w:usb-3="00000000" w:csb-0="0000019F" w:csb-1="00000000"/>
 		</w:font>
 		<w:font w:name="Trebuchet MS">
 			<w:panose-1 w:val="020B0603020202020204"/>
@@ -699,7 +699,7 @@
 		<w:listDef w:listDefId="6">
 			<w:lsid w:val="3A2C6944"/>
 			<w:plt w:val="HybridMultilevel"/>
-			<w:tmpl w:val="24AE80F8"/>
+			<w:tmpl w:val="C570DED6"/>
 			<w:lvl w:ilvl="0" w:tplc="04090001">
 				<w:start w:val="1"/>
 				<w:nfc w:val="23"/>
@@ -810,6 +810,232 @@
 			</w:lvl>
 		</w:listDef>
 		<w:listDef w:listDefId="7">
+			<w:lsid w:val="4506353A"/>
+			<w:plt w:val="HybridMultilevel"/>
+			<w:tmpl w:val="5DD642BA"/>
+			<w:lvl w:ilvl="0" w:tplc="04090001">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="720" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="1" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="1440" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="2" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2160" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="3" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2880" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="4" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="3600" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="5" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="4320" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="6" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5040" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="7" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5760" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="8" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="6480" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+		</w:listDef>
+		<w:listDef w:listDefId="8">
+			<w:lsid w:val="4D061C25"/>
+			<w:plt w:val="HybridMultilevel"/>
+			<w:tmpl w:val="B9488E12"/>
+			<w:lvl w:ilvl="0" w:tplc="04090001">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="720" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="1" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="1440" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="2" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2160" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="3" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2880" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="4" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="3600" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="5" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="4320" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="6" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5040" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="7" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5760" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="8" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="6480" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+		</w:listDef>
+		<w:listDef w:listDefId="9">
 			<w:lsid w:val="622F5E3C"/>
 			<w:plt w:val="HybridMultilevel"/>
 			<w:tmpl w:val="CDAE32D2"/>
@@ -922,7 +1148,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="8">
+		<w:listDef w:listDefId="10">
 			<w:lsid w:val="63057A46"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="206E62E8"/>
@@ -1035,7 +1261,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="9">
+		<w:listDef w:listDefId="11">
 			<w:lsid w:val="66C151D6"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="A8FC532A"/>
@@ -1148,7 +1374,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="10">
+		<w:listDef w:listDefId="12">
 			<w:lsid w:val="6B6377DB"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="B7A601A4"/>
@@ -1261,7 +1487,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="11">
+		<w:listDef w:listDefId="13">
 			<w:lsid w:val="72E472E0"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="B158F346"/>
@@ -1374,7 +1600,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="12">
+		<w:listDef w:listDefId="14">
 			<w:lsid w:val="7CBF01FD"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="C8529852"/>
@@ -1487,7 +1713,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="13">
+		<w:listDef w:listDefId="15">
 			<w:lsid w:val="7DCA7848"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="77767B20"/>
@@ -1600,7 +1826,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="14">
+		<w:listDef w:listDefId="16">
 			<w:lsid w:val="7ED8003E"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="D278F328"/>
@@ -1713,7 +1939,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="15">
+		<w:listDef w:listDefId="17">
 			<w:lsid w:val="7F3B546B"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="ACD264C6"/>
@@ -1826,7 +2052,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="16">
+		<w:listDef w:listDefId="18">
 			<w:lsid w:val="7FED6F01"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="A2BC9D8E"/>
@@ -1943,31 +2169,31 @@
 			<w:ilst w:val="2"/>
 		</w:list>
 		<w:list w:ilfo="2">
-			<w:ilst w:val="14"/>
-		</w:list>
-		<w:list w:ilfo="3">
-			<w:ilst w:val="13"/>
-		</w:list>
-		<w:list w:ilfo="4">
 			<w:ilst w:val="16"/>
 		</w:list>
+		<w:list w:ilfo="3">
+			<w:ilst w:val="15"/>
+		</w:list>
+		<w:list w:ilfo="4">
+			<w:ilst w:val="18"/>
+		</w:list>
 		<w:list w:ilfo="5">
-			<w:ilst w:val="12"/>
+			<w:ilst w:val="14"/>
 		</w:list>
 		<w:list w:ilfo="6">
-			<w:ilst w:val="11"/>
+			<w:ilst w:val="13"/>
 		</w:list>
 		<w:list w:ilfo="7">
 			<w:ilst w:val="5"/>
 		</w:list>
 		<w:list w:ilfo="8">
-			<w:ilst w:val="8"/>
+			<w:ilst w:val="10"/>
 		</w:list>
 		<w:list w:ilfo="9">
-			<w:ilst w:val="9"/>
+			<w:ilst w:val="11"/>
 		</w:list>
 		<w:list w:ilfo="10">
-			<w:ilst w:val="15"/>
+			<w:ilst w:val="17"/>
 		</w:list>
 		<w:list w:ilfo="11">
 			<w:ilst w:val="4"/>
@@ -1979,16 +2205,22 @@
 			<w:ilst w:val="1"/>
 		</w:list>
 		<w:list w:ilfo="14">
-			<w:ilst w:val="10"/>
+			<w:ilst w:val="12"/>
 		</w:list>
 		<w:list w:ilfo="15">
-			<w:ilst w:val="7"/>
+			<w:ilst w:val="9"/>
 		</w:list>
 		<w:list w:ilfo="16">
 			<w:ilst w:val="3"/>
 		</w:list>
 		<w:list w:ilfo="17">
 			<w:ilst w:val="6"/>
+		</w:list>
+		<w:list w:ilfo="18">
+			<w:ilst w:val="7"/>
+		</w:list>
+		<w:list w:ilfo="19">
+			<w:ilst w:val="8"/>
 		</w:list>
 	</w:lists>
 	<w:styles>
@@ -2425,7 +2657,6 @@
 		<w:zoom w:percent="100"/>
 		<w:displayBackgroundShape/>
 		<w:doNotEmbedSystemFonts/>
-		<w:proofState w:spelling="clean" w:grammar="clean"/>
 		<w:defaultTabStop w:val="720"/>
 		<w:punctuationKerning/>
 		<w:characterSpacingControl w:val="DontCompress"/>
@@ -2435,7 +2666,7 @@
 		<w:alwaysShowPlaceholderText w:val="off"/>
 		<w:footnotePr>
 			<w:footnote w:type="separator">
-				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
+				<w:p wsp:rsidR="00B14285" wsp:rsidRDefault="00B14285">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2445,7 +2676,7 @@
 				</w:p>
 			</w:footnote>
 			<w:footnote w:type="continuation-separator">
-				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
+				<w:p wsp:rsidR="00B14285" wsp:rsidRDefault="00B14285">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2457,7 +2688,7 @@
 		</w:footnotePr>
 		<w:endnotePr>
 			<w:endnote w:type="separator">
-				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
+				<w:p wsp:rsidR="00B14285" wsp:rsidRDefault="00B14285">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2467,7 +2698,7 @@
 				</w:p>
 			</w:endnote>
 			<w:endnote w:type="continuation-separator">
-				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
+				<w:p wsp:rsidR="00B14285" wsp:rsidRDefault="00B14285">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2488,10 +2719,13 @@
 			<wsp:rsidRoot wsp:val="497B5ECC"/>
 			<wsp:rsid wsp:val="001E599A"/>
 			<wsp:rsid wsp:val="005B2442"/>
+			<wsp:rsid wsp:val="007B7A8F"/>
 			<wsp:rsid wsp:val="00974E8B"/>
 			<wsp:rsid wsp:val="00992038"/>
+			<wsp:rsid wsp:val="00B14285"/>
 			<wsp:rsid wsp:val="00DF6AD6"/>
 			<wsp:rsid wsp:val="00E60FE4"/>
+			<wsp:rsid wsp:val="00F662E2"/>
 			<wsp:rsid wsp:val="00FE3ECB"/>
 			<wsp:rsid wsp:val="01D4AD75"/>
 			<wsp:rsid wsp:val="1504D104"/>
@@ -2617,6 +2851,46 @@
 							<w:t>.</w:t>
 						</w:r>
 					</w:p>
+					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
+						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="18"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>Once did nothing for an entire day.</w:t>
+						</w:r>
+					</w:p>
+					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
+						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="18"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>It was everything I thought it could be.</w:t>
+						</w:r>
+					</w:p>
 				</wx:sub-section>
 				<wx:sub-section>
 					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
@@ -2627,38 +2901,48 @@
 							<w:t>Skills</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
+					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="19"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
 						</w:pPr>
-						<w:r wsp:rsidRPr="00DF6AD6">
+						<w:r>
 							<w:rPr>
-								<w:i/>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Programming (mid-level)</w:t>
+							<w:t>Programming</w:t>
 						</w:r>
-						<w:r wsp:rsidRPr="00DF6AD6">
+						<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
 							<w:t>: C++, Java</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
+					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00F662E2">
 						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="19"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
 						</w:pPr>
-						<w:r wsp:rsidRPr="00DF6AD6">
+						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
-								<w:i/>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Communication (junior)</w:t>
+							<w:t>Communication</w:t>
 						</w:r>
 						<w:r wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
@@ -2697,11 +2981,9 @@
 							<w:r>
 								<w:t>, </w:t>
 							</w:r>
-							<w:proofErr w:type="spellStart"/>
 							<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
 								<w:t>Initech</w:t>
 							</w:r>
-							<w:proofErr w:type="spellEnd"/>
 							<w:r wsp:rsidR="00DF6AD6">
 								<w:t>, 2/1998</w:t>
 							</w:r>
@@ -2824,7 +3106,7 @@
 							<w:t>Publications</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="00DF6AD6">
+					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:listPr>
 								<w:ilvl w:val="0"/>
@@ -2840,199 +3122,126 @@
 						</w:pPr>
 						<aml:annotation aml:id="8" w:type="Word.Bookmark.Start" w:name="h.b8yy8rn005ki" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="8" w:type="Word.Bookmark.End"/>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:i/>
 								<w:i-cs/>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Hibernate Search by Example</w:t>
+							<w:t>Money Laundering for Dummies</w:t>
 						</w:r>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
 							<w:t>, </w:t>
 						</w:r>
-						<w:proofErr w:type="spellStart"/>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Packt</w:t>
+							<w:t>John Wiley &amp; Sons</w:t>
 						</w:r>
-						<w:proofErr w:type="spellEnd"/>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t> Publishing, ISBN 184951920X</w:t>
+							<w:t>, ISBN </w:t>
 						</w:r>
-						<w:r>
+						<w:r wsp:rsidRPr="00F662E2">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>xxxxxxxxxxx</w:t>
+						</w:r>
+						<w:r wsp:rsidR="00E60FE4">
 							<w:br/>
 						</w:r>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>A Java developer’s guide to using Hibernate with Apache Lucene and </w:t>
-						</w:r>
-						<w:proofErr w:type="spellStart"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Solr</w:t>
-						</w:r>
-						<w:proofErr w:type="spellEnd"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t> components, to add custom full-text search functionality in their applications.</w:t>
+							<w:t>Similar </w:t>
 						</w:r>
 						<w:r>
-							<w:br/>
-						</w:r>
-					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="00DF6AD6">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="17"/>
-								<wx:t wx:val="·"/>
-								<wx:font wx:val="Symbol"/>
-							</w:listPr>
-							<w:spacing w:line="240" w:line-rule="auto"/>
-							<w:contextualSpacing/>
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-						</w:pPr>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:i/>
-								<w:i-cs/>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>In the Aftermath of </w:t>
+							<w:t>to the plot from "Superman III</w:t>
 						</w:r>
-						<w:proofErr w:type="spellStart"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:i/>
-								<w:i-cs/>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Bilski</w:t>
-						</w:r>
-						<w:proofErr w:type="spellEnd"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:i/>
-								<w:i-cs/>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t> v. </w:t>
-						</w:r>
-						<w:proofErr w:type="spellStart"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:i/>
-								<w:i-cs/>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Kappos</w:t>
-						</w:r>
-						<w:proofErr w:type="spellEnd"/>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>, 2010 PLI Handbook Series</w:t>
+							<w:t>"</w:t>
 						</w:r>
-						<w:r>
-							<w:br/>
-						</w:r>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>An overview of the current state of business method and software patents, presented at the 2010 Practicing Law Institute's Patent Litigation Seminar.</w:t>
+							<w:t>.</w:t>
 						</w:r>
-						<w:r>
-							<w:br/>
-						</w:r>
-					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="00DF6AD6">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="17"/>
-								<wx:t wx:val="·"/>
-								<wx:font wx:val="Symbol"/>
-							</w:listPr>
-							<w:spacing w:line="240" w:line-rule="auto"/>
-							<w:contextualSpacing/>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-						</w:pPr>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:i/>
-								<w:i-cs/>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>In the Aftermath of In re </w:t>
-						</w:r>
-						<w:proofErr w:type="spellStart"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:i/>
-								<w:i-cs/>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Bilski</w:t>
-						</w:r>
-						<w:proofErr w:type="spellEnd"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>, 2009 PLI Handbook Series</w:t>
-						</w:r>
-						<w:r>
-							<w:br/>
-						</w:r>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>An overview of method and software patents while the </w:t>
-						</w:r>
-						<w:proofErr w:type="spellStart"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Bilski</w:t>
-						</w:r>
-						<w:proofErr w:type="spellEnd"/>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t> appeal was pending. Presented at the 2009 Practicing Law Institute's Patent Litigation Seminar.</w:t>
-						</w:r>
-					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="005B2442">
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
 					</w:p>
 				</wx:sub-section>
+				<wx:sub-section>
+					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
+						<w:pPr>
+							<w:pStyle w:val="Heading2"/>
+						</w:pPr>
+						<w:r>
+							<w:t>Social Profiles</w:t>
+						</w:r>
+					</w:p>
+					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
+						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="17"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
+							<w:spacing w:line="240" w:line-rule="auto"/>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r wsp:rsidRPr="00F662E2">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>LinkedIn</w:t>
+						</w:r>
+						<w:r>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>: </w:t>
+						</w:r>
+						<w:hlink w:dest="http://linkedin.com/peter.gibbons">
+							<w:r wsp:rsidRPr="00F662E2">
+								<w:rPr>
+									<w:rStyle w:val="Hyperlink"/>
+									<w:sz w:val="20"/>
+								</w:rPr>
+								<w:t>peter.gibbons</w:t>
+							</w:r>
+						</w:hlink>
+					</w:p>
+					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
+						<w:pPr>
+							<w:spacing w:line="240" w:line-rule="auto"/>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+						</w:pPr>
+					</w:p>
+				</wx:sub-section>
 			</wx:sub-section>
-			<w:sectPr wsp:rsidR="005B2442" wsp:rsidSect="00974E8B">
+			<w:sectPr wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidSect="00974E8B">
 				<w:pgSz w:w="12240" w:h="15840"/>
 				<w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
 				<w:cols w:space="720"/>
