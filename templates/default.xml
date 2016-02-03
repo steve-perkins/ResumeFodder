@@ -2,22 +2,6 @@
 <?mso-application progid="Word.Document"?>
 <w:wordDocument xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
 	<w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
-	<o:DocumentProperties>
-		<o:Title>StevePerkins-resume.docx</o:Title>
-		<o:Author>Steve Perkins</o:Author>
-		<o:LastAuthor>Steve Perkins</o:LastAuthor>
-		<o:Revision>2</o:Revision>
-		<o:TotalTime>2</o:TotalTime>
-		<o:Created>2016-02-02T17:55:00Z</o:Created>
-		<o:LastSaved>2016-02-02T17:55:00Z</o:LastSaved>
-		<o:Pages>4</o:Pages>
-		<o:Words>1784</o:Words>
-		<o:Characters>10171</o:Characters>
-		<o:Lines>84</o:Lines>
-		<o:Paragraphs>23</o:Paragraphs>
-		<o:CharactersWithSpaces>11932</o:CharactersWithSpaces>
-		<o:Version>15</o:Version>
-	</o:DocumentProperties>
 	<w:fonts>
 		<w:defaultFonts w:ascii="Arial" w:fareast="Arial" w:h-ansi="Arial" w:cs="Arial"/>
 		<w:font w:name="Arial">
@@ -27,12 +11,33 @@
 			<w:pitch w:val="variable"/>
 			<w:sig w:usb-0="E0002EFF" w:usb-1="C0007843" w:usb-2="00000009" w:usb-3="00000000" w:csb-0="000001FF" w:csb-1="00000000"/>
 		</w:font>
+		<w:font w:name="Courier New">
+			<w:panose-1 w:val="02070309020205020404"/>
+			<w:charset w:val="00"/>
+			<w:family w:val="Modern"/>
+			<w:pitch w:val="fixed"/>
+			<w:sig w:usb-0="E0002EFF" w:usb-1="C0007843" w:usb-2="00000009" w:usb-3="00000000" w:csb-0="000001FF" w:csb-1="00000000"/>
+		</w:font>
+		<w:font w:name="Symbol">
+			<w:panose-1 w:val="05050102010706020507"/>
+			<w:charset w:val="02"/>
+			<w:family w:val="Roman"/>
+			<w:pitch w:val="variable"/>
+			<w:sig w:usb-0="00000000" w:usb-1="10000000" w:usb-2="00000000" w:usb-3="00000000" w:csb-0="80000000" w:csb-1="00000000"/>
+		</w:font>
+		<w:font w:name="Wingdings">
+			<w:panose-1 w:val="05000000000000000000"/>
+			<w:charset w:val="02"/>
+			<w:family w:val="auto"/>
+			<w:pitch w:val="variable"/>
+			<w:sig w:usb-0="00000000" w:usb-1="10000000" w:usb-2="00000000" w:usb-3="00000000" w:csb-0="80000000" w:csb-1="00000000"/>
+		</w:font>
 		<w:font w:name="Cambria Math">
 			<w:panose-1 w:val="02040503050406030204"/>
-			<w:charset w:val="01"/>
+			<w:charset w:val="00"/>
 			<w:family w:val="Roman"/>
-			<w:notTrueType/>
 			<w:pitch w:val="variable"/>
+			<w:sig w:usb-0="E00002FF" w:usb-1="420024FF" w:usb-2="00000000" w:usb-3="00000000" w:csb-0="0000019F" w:csb-1="00000000"/>
 		</w:font>
 		<w:font w:name="Trebuchet MS">
 			<w:panose-1 w:val="020B0603020202020204"/>
@@ -383,6 +388,89 @@
 			</w:lvl>
 		</w:listDef>
 		<w:listDef w:listDefId="3">
+			<w:lsid w:val="20E63DE9"/>
+			<w:plt w:val="HybridMultilevel"/>
+			<w:tmpl w:val="968AC5B6"/>
+			<w:lvl w:ilvl="0" w:tplc="0409000F">
+				<w:start w:val="1"/>
+				<w:lvlText w:val="%1."/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="720" w:hanging="360"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="1" w:tplc="04090019" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="4"/>
+				<w:lvlText w:val="%2."/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="1440" w:hanging="360"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="2" w:tplc="0409001B" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="2"/>
+				<w:lvlText w:val="%3."/>
+				<w:lvlJc w:val="right"/>
+				<w:pPr>
+					<w:ind w:left="2160" w:hanging="180"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="3" w:tplc="0409000F" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:lvlText w:val="%4."/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2880" w:hanging="360"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="4" w:tplc="04090019" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="4"/>
+				<w:lvlText w:val="%5."/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="3600" w:hanging="360"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="5" w:tplc="0409001B" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="2"/>
+				<w:lvlText w:val="%6."/>
+				<w:lvlJc w:val="right"/>
+				<w:pPr>
+					<w:ind w:left="4320" w:hanging="180"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="6" w:tplc="0409000F" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:lvlText w:val="%7."/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5040" w:hanging="360"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="7" w:tplc="04090019" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="4"/>
+				<w:lvlText w:val="%8."/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5760" w:hanging="360"/>
+				</w:pPr>
+			</w:lvl>
+			<w:lvl w:ilvl="8" w:tplc="0409001B" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="2"/>
+				<w:lvlText w:val="%9."/>
+				<w:lvlJc w:val="right"/>
+				<w:pPr>
+					<w:ind w:left="6480" w:hanging="180"/>
+				</w:pPr>
+			</w:lvl>
+		</w:listDef>
+		<w:listDef w:listDefId="4">
 			<w:lsid w:val="2D654886"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="2788E536"/>
@@ -495,7 +583,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="4">
+		<w:listDef w:listDefId="5">
 			<w:lsid w:val="2DC22B07"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="CD9C59AE"/>
@@ -608,7 +696,233 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="5">
+		<w:listDef w:listDefId="6">
+			<w:lsid w:val="3A2C6944"/>
+			<w:plt w:val="HybridMultilevel"/>
+			<w:tmpl w:val="24AE80F8"/>
+			<w:lvl w:ilvl="0" w:tplc="04090001">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="720" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="1" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="1440" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="2" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2160" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="3" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2880" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="4" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="3600" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="5" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="4320" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="6" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5040" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="7" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5760" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="8" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="6480" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+		</w:listDef>
+		<w:listDef w:listDefId="7">
+			<w:lsid w:val="622F5E3C"/>
+			<w:plt w:val="HybridMultilevel"/>
+			<w:tmpl w:val="CDAE32D2"/>
+			<w:lvl w:ilvl="0" w:tplc="04090001">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="720" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="1" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="1440" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="2" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2160" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="3" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="2880" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="4" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="3600" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="5" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="4320" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="6" w:tplc="04090001" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5040" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Symbol" w:h-ansi="Symbol" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="7" w:tplc="04090003" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val="o"/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="5760" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Courier New" w:h-ansi="Courier New" w:cs="Courier New" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+			<w:lvl w:ilvl="8" w:tplc="04090005" w:tentative="on">
+				<w:start w:val="1"/>
+				<w:nfc w:val="23"/>
+				<w:lvlText w:val=""/>
+				<w:lvlJc w:val="left"/>
+				<w:pPr>
+					<w:ind w:left="6480" w:hanging="360"/>
+				</w:pPr>
+				<w:rPr>
+					<w:rFonts w:ascii="Wingdings" w:h-ansi="Wingdings" w:hint="default"/>
+				</w:rPr>
+			</w:lvl>
+		</w:listDef>
+		<w:listDef w:listDefId="8">
 			<w:lsid w:val="63057A46"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="206E62E8"/>
@@ -721,7 +1035,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="6">
+		<w:listDef w:listDefId="9">
 			<w:lsid w:val="66C151D6"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="A8FC532A"/>
@@ -834,7 +1148,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="7">
+		<w:listDef w:listDefId="10">
 			<w:lsid w:val="6B6377DB"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="B7A601A4"/>
@@ -947,7 +1261,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="8">
+		<w:listDef w:listDefId="11">
 			<w:lsid w:val="72E472E0"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="B158F346"/>
@@ -1060,7 +1374,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="9">
+		<w:listDef w:listDefId="12">
 			<w:lsid w:val="7CBF01FD"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="C8529852"/>
@@ -1173,7 +1487,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="10">
+		<w:listDef w:listDefId="13">
 			<w:lsid w:val="7DCA7848"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="77767B20"/>
@@ -1286,7 +1600,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="11">
+		<w:listDef w:listDefId="14">
 			<w:lsid w:val="7ED8003E"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="D278F328"/>
@@ -1399,7 +1713,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="12">
+		<w:listDef w:listDefId="15">
 			<w:lsid w:val="7F3B546B"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="ACD264C6"/>
@@ -1512,7 +1826,7 @@
 				</w:rPr>
 			</w:lvl>
 		</w:listDef>
-		<w:listDef w:listDefId="13">
+		<w:listDef w:listDefId="16">
 			<w:lsid w:val="7FED6F01"/>
 			<w:plt w:val="Multilevel"/>
 			<w:tmpl w:val="A2BC9D8E"/>
@@ -1629,34 +1943,34 @@
 			<w:ilst w:val="2"/>
 		</w:list>
 		<w:list w:ilfo="2">
-			<w:ilst w:val="11"/>
+			<w:ilst w:val="14"/>
 		</w:list>
 		<w:list w:ilfo="3">
-			<w:ilst w:val="10"/>
-		</w:list>
-		<w:list w:ilfo="4">
 			<w:ilst w:val="13"/>
 		</w:list>
+		<w:list w:ilfo="4">
+			<w:ilst w:val="16"/>
+		</w:list>
 		<w:list w:ilfo="5">
-			<w:ilst w:val="9"/>
-		</w:list>
-		<w:list w:ilfo="6">
-			<w:ilst w:val="8"/>
-		</w:list>
-		<w:list w:ilfo="7">
-			<w:ilst w:val="4"/>
-		</w:list>
-		<w:list w:ilfo="8">
-			<w:ilst w:val="5"/>
-		</w:list>
-		<w:list w:ilfo="9">
-			<w:ilst w:val="6"/>
-		</w:list>
-		<w:list w:ilfo="10">
 			<w:ilst w:val="12"/>
 		</w:list>
+		<w:list w:ilfo="6">
+			<w:ilst w:val="11"/>
+		</w:list>
+		<w:list w:ilfo="7">
+			<w:ilst w:val="5"/>
+		</w:list>
+		<w:list w:ilfo="8">
+			<w:ilst w:val="8"/>
+		</w:list>
+		<w:list w:ilfo="9">
+			<w:ilst w:val="9"/>
+		</w:list>
+		<w:list w:ilfo="10">
+			<w:ilst w:val="15"/>
+		</w:list>
 		<w:list w:ilfo="11">
-			<w:ilst w:val="3"/>
+			<w:ilst w:val="4"/>
 		</w:list>
 		<w:list w:ilfo="12">
 			<w:ilst w:val="0"/>
@@ -1665,7 +1979,16 @@
 			<w:ilst w:val="1"/>
 		</w:list>
 		<w:list w:ilfo="14">
+			<w:ilst w:val="10"/>
+		</w:list>
+		<w:list w:ilfo="15">
 			<w:ilst w:val="7"/>
+		</w:list>
+		<w:list w:ilfo="16">
+			<w:ilst w:val="3"/>
+		</w:list>
+		<w:list w:ilfo="17">
+			<w:ilst w:val="6"/>
 		</w:list>
 	</w:lists>
 	<w:styles>
@@ -1681,107 +2004,12 @@
 			<w:lsdException w:name="heading 7"/>
 			<w:lsdException w:name="heading 8"/>
 			<w:lsdException w:name="heading 9"/>
-			<w:lsdException w:name="index 1"/>
-			<w:lsdException w:name="index 2"/>
-			<w:lsdException w:name="index 3"/>
-			<w:lsdException w:name="index 4"/>
-			<w:lsdException w:name="index 5"/>
-			<w:lsdException w:name="index 6"/>
-			<w:lsdException w:name="index 7"/>
-			<w:lsdException w:name="index 8"/>
-			<w:lsdException w:name="index 9"/>
-			<w:lsdException w:name="toc 1"/>
-			<w:lsdException w:name="toc 2"/>
-			<w:lsdException w:name="toc 3"/>
-			<w:lsdException w:name="toc 4"/>
-			<w:lsdException w:name="toc 5"/>
-			<w:lsdException w:name="toc 6"/>
-			<w:lsdException w:name="toc 7"/>
-			<w:lsdException w:name="toc 8"/>
-			<w:lsdException w:name="toc 9"/>
-			<w:lsdException w:name="Normal Indent"/>
-			<w:lsdException w:name="footnote text"/>
-			<w:lsdException w:name="annotation text"/>
-			<w:lsdException w:name="header"/>
-			<w:lsdException w:name="footer"/>
-			<w:lsdException w:name="index heading"/>
 			<w:lsdException w:name="caption"/>
-			<w:lsdException w:name="table of figures"/>
-			<w:lsdException w:name="envelope address"/>
-			<w:lsdException w:name="envelope return"/>
-			<w:lsdException w:name="footnote reference"/>
-			<w:lsdException w:name="annotation reference"/>
-			<w:lsdException w:name="line number"/>
-			<w:lsdException w:name="page number"/>
-			<w:lsdException w:name="endnote reference"/>
-			<w:lsdException w:name="endnote text"/>
-			<w:lsdException w:name="table of authorities"/>
-			<w:lsdException w:name="macro"/>
-			<w:lsdException w:name="toa heading"/>
-			<w:lsdException w:name="List"/>
-			<w:lsdException w:name="List Bullet"/>
-			<w:lsdException w:name="List Number"/>
-			<w:lsdException w:name="List 2"/>
-			<w:lsdException w:name="List 3"/>
-			<w:lsdException w:name="List 4"/>
-			<w:lsdException w:name="List 5"/>
-			<w:lsdException w:name="List Bullet 2"/>
-			<w:lsdException w:name="List Bullet 3"/>
-			<w:lsdException w:name="List Bullet 4"/>
-			<w:lsdException w:name="List Bullet 5"/>
-			<w:lsdException w:name="List Number 2"/>
-			<w:lsdException w:name="List Number 3"/>
-			<w:lsdException w:name="List Number 4"/>
-			<w:lsdException w:name="List Number 5"/>
 			<w:lsdException w:name="Title"/>
-			<w:lsdException w:name="Closing"/>
-			<w:lsdException w:name="Signature"/>
-			<w:lsdException w:name="Default Paragraph Font"/>
-			<w:lsdException w:name="Body Text"/>
-			<w:lsdException w:name="Body Text Indent"/>
-			<w:lsdException w:name="List Continue"/>
-			<w:lsdException w:name="List Continue 2"/>
-			<w:lsdException w:name="List Continue 3"/>
-			<w:lsdException w:name="List Continue 4"/>
-			<w:lsdException w:name="List Continue 5"/>
-			<w:lsdException w:name="Message Header"/>
 			<w:lsdException w:name="Subtitle"/>
-			<w:lsdException w:name="Salutation"/>
-			<w:lsdException w:name="Date"/>
-			<w:lsdException w:name="Body Text First Indent"/>
-			<w:lsdException w:name="Body Text First Indent 2"/>
-			<w:lsdException w:name="Note Heading"/>
-			<w:lsdException w:name="Body Text 2"/>
-			<w:lsdException w:name="Body Text 3"/>
-			<w:lsdException w:name="Body Text Indent 2"/>
-			<w:lsdException w:name="Body Text Indent 3"/>
-			<w:lsdException w:name="Block Text"/>
-			<w:lsdException w:name="Hyperlink"/>
-			<w:lsdException w:name="FollowedHyperlink"/>
 			<w:lsdException w:name="Strong"/>
 			<w:lsdException w:name="Emphasis"/>
-			<w:lsdException w:name="Document Map"/>
-			<w:lsdException w:name="Plain Text"/>
-			<w:lsdException w:name="E-mail Signature"/>
-			<w:lsdException w:name="HTML Top of Form"/>
-			<w:lsdException w:name="HTML Bottom of Form"/>
-			<w:lsdException w:name="Normal (Web)"/>
-			<w:lsdException w:name="HTML Acronym"/>
-			<w:lsdException w:name="HTML Address"/>
-			<w:lsdException w:name="HTML Cite"/>
-			<w:lsdException w:name="HTML Code"/>
-			<w:lsdException w:name="HTML Definition"/>
-			<w:lsdException w:name="HTML Keyboard"/>
-			<w:lsdException w:name="HTML Preformatted"/>
-			<w:lsdException w:name="HTML Sample"/>
-			<w:lsdException w:name="HTML Typewriter"/>
-			<w:lsdException w:name="HTML Variable"/>
 			<w:lsdException w:name="Normal Table"/>
-			<w:lsdException w:name="annotation subject"/>
-			<w:lsdException w:name="No List"/>
-			<w:lsdException w:name="Outline List 1"/>
-			<w:lsdException w:name="Outline List 2"/>
-			<w:lsdException w:name="Outline List 3"/>
 			<w:lsdException w:name="Table Simple 1"/>
 			<w:lsdException w:name="Table Simple 2"/>
 			<w:lsdException w:name="Table Simple 3"/>
@@ -1824,10 +2052,7 @@
 			<w:lsdException w:name="Table Web 1"/>
 			<w:lsdException w:name="Table Web 2"/>
 			<w:lsdException w:name="Table Web 3"/>
-			<w:lsdException w:name="Balloon Text"/>
-			<w:lsdException w:name="Table Grid"/>
 			<w:lsdException w:name="Table Theme"/>
-			<w:lsdException w:name="Placeholder Text"/>
 			<w:lsdException w:name="No Spacing"/>
 			<w:lsdException w:name="Light Shading"/>
 			<w:lsdException w:name="Light List"/>
@@ -1849,7 +2074,6 @@
 			<w:lsdException w:name="Medium Shading 1 Accent 1"/>
 			<w:lsdException w:name="Medium Shading 2 Accent 1"/>
 			<w:lsdException w:name="Medium List 1 Accent 1"/>
-			<w:lsdException w:name="Revision"/>
 			<w:lsdException w:name="List Paragraph"/>
 			<w:lsdException w:name="Quote"/>
 			<w:lsdException w:name="Intense Quote"/>
@@ -1936,115 +2160,11 @@
 			<w:lsdException w:name="Subtle Reference"/>
 			<w:lsdException w:name="Intense Reference"/>
 			<w:lsdException w:name="Book Title"/>
-			<w:lsdException w:name="Bibliography"/>
 			<w:lsdException w:name="TOC Heading"/>
-			<w:lsdException w:name="Plain Table 1"/>
-			<w:lsdException w:name="Plain Table 2"/>
-			<w:lsdException w:name="Plain Table 3"/>
-			<w:lsdException w:name="Plain Table 4"/>
-			<w:lsdException w:name="Plain Table 5"/>
-			<w:lsdException w:name="Grid Table Light"/>
-			<w:lsdException w:name="Grid Table 1 Light"/>
-			<w:lsdException w:name="Grid Table 2"/>
-			<w:lsdException w:name="Grid Table 3"/>
-			<w:lsdException w:name="Grid Table 4"/>
-			<w:lsdException w:name="Grid Table 5 Dark"/>
-			<w:lsdException w:name="Grid Table 6 Colorful"/>
-			<w:lsdException w:name="Grid Table 7 Colorful"/>
-			<w:lsdException w:name="Grid Table 1 Light Accent 1"/>
-			<w:lsdException w:name="Grid Table 2 Accent 1"/>
-			<w:lsdException w:name="Grid Table 3 Accent 1"/>
-			<w:lsdException w:name="Grid Table 4 Accent 1"/>
-			<w:lsdException w:name="Grid Table 5 Dark Accent 1"/>
-			<w:lsdException w:name="Grid Table 6 Colorful Accent 1"/>
-			<w:lsdException w:name="Grid Table 7 Colorful Accent 1"/>
-			<w:lsdException w:name="Grid Table 1 Light Accent 2"/>
-			<w:lsdException w:name="Grid Table 2 Accent 2"/>
-			<w:lsdException w:name="Grid Table 3 Accent 2"/>
-			<w:lsdException w:name="Grid Table 4 Accent 2"/>
-			<w:lsdException w:name="Grid Table 5 Dark Accent 2"/>
-			<w:lsdException w:name="Grid Table 6 Colorful Accent 2"/>
-			<w:lsdException w:name="Grid Table 7 Colorful Accent 2"/>
-			<w:lsdException w:name="Grid Table 1 Light Accent 3"/>
-			<w:lsdException w:name="Grid Table 2 Accent 3"/>
-			<w:lsdException w:name="Grid Table 3 Accent 3"/>
-			<w:lsdException w:name="Grid Table 4 Accent 3"/>
-			<w:lsdException w:name="Grid Table 5 Dark Accent 3"/>
-			<w:lsdException w:name="Grid Table 6 Colorful Accent 3"/>
-			<w:lsdException w:name="Grid Table 7 Colorful Accent 3"/>
-			<w:lsdException w:name="Grid Table 1 Light Accent 4"/>
-			<w:lsdException w:name="Grid Table 2 Accent 4"/>
-			<w:lsdException w:name="Grid Table 3 Accent 4"/>
-			<w:lsdException w:name="Grid Table 4 Accent 4"/>
-			<w:lsdException w:name="Grid Table 5 Dark Accent 4"/>
-			<w:lsdException w:name="Grid Table 6 Colorful Accent 4"/>
-			<w:lsdException w:name="Grid Table 7 Colorful Accent 4"/>
-			<w:lsdException w:name="Grid Table 1 Light Accent 5"/>
-			<w:lsdException w:name="Grid Table 2 Accent 5"/>
-			<w:lsdException w:name="Grid Table 3 Accent 5"/>
-			<w:lsdException w:name="Grid Table 4 Accent 5"/>
-			<w:lsdException w:name="Grid Table 5 Dark Accent 5"/>
-			<w:lsdException w:name="Grid Table 6 Colorful Accent 5"/>
-			<w:lsdException w:name="Grid Table 7 Colorful Accent 5"/>
-			<w:lsdException w:name="Grid Table 1 Light Accent 6"/>
-			<w:lsdException w:name="Grid Table 2 Accent 6"/>
-			<w:lsdException w:name="Grid Table 3 Accent 6"/>
-			<w:lsdException w:name="Grid Table 4 Accent 6"/>
-			<w:lsdException w:name="Grid Table 5 Dark Accent 6"/>
-			<w:lsdException w:name="Grid Table 6 Colorful Accent 6"/>
-			<w:lsdException w:name="Grid Table 7 Colorful Accent 6"/>
-			<w:lsdException w:name="List Table 1 Light"/>
-			<w:lsdException w:name="List Table 2"/>
-			<w:lsdException w:name="List Table 3"/>
-			<w:lsdException w:name="List Table 4"/>
-			<w:lsdException w:name="List Table 5 Dark"/>
-			<w:lsdException w:name="List Table 6 Colorful"/>
-			<w:lsdException w:name="List Table 7 Colorful"/>
-			<w:lsdException w:name="List Table 1 Light Accent 1"/>
-			<w:lsdException w:name="List Table 2 Accent 1"/>
-			<w:lsdException w:name="List Table 3 Accent 1"/>
-			<w:lsdException w:name="List Table 4 Accent 1"/>
-			<w:lsdException w:name="List Table 5 Dark Accent 1"/>
-			<w:lsdException w:name="List Table 6 Colorful Accent 1"/>
-			<w:lsdException w:name="List Table 7 Colorful Accent 1"/>
-			<w:lsdException w:name="List Table 1 Light Accent 2"/>
-			<w:lsdException w:name="List Table 2 Accent 2"/>
-			<w:lsdException w:name="List Table 3 Accent 2"/>
-			<w:lsdException w:name="List Table 4 Accent 2"/>
-			<w:lsdException w:name="List Table 5 Dark Accent 2"/>
-			<w:lsdException w:name="List Table 6 Colorful Accent 2"/>
-			<w:lsdException w:name="List Table 7 Colorful Accent 2"/>
-			<w:lsdException w:name="List Table 1 Light Accent 3"/>
-			<w:lsdException w:name="List Table 2 Accent 3"/>
-			<w:lsdException w:name="List Table 3 Accent 3"/>
-			<w:lsdException w:name="List Table 4 Accent 3"/>
-			<w:lsdException w:name="List Table 5 Dark Accent 3"/>
-			<w:lsdException w:name="List Table 6 Colorful Accent 3"/>
-			<w:lsdException w:name="List Table 7 Colorful Accent 3"/>
-			<w:lsdException w:name="List Table 1 Light Accent 4"/>
-			<w:lsdException w:name="List Table 2 Accent 4"/>
-			<w:lsdException w:name="List Table 3 Accent 4"/>
-			<w:lsdException w:name="List Table 4 Accent 4"/>
-			<w:lsdException w:name="List Table 5 Dark Accent 4"/>
-			<w:lsdException w:name="List Table 6 Colorful Accent 4"/>
-			<w:lsdException w:name="List Table 7 Colorful Accent 4"/>
-			<w:lsdException w:name="List Table 1 Light Accent 5"/>
-			<w:lsdException w:name="List Table 2 Accent 5"/>
-			<w:lsdException w:name="List Table 3 Accent 5"/>
-			<w:lsdException w:name="List Table 4 Accent 5"/>
-			<w:lsdException w:name="List Table 5 Dark Accent 5"/>
-			<w:lsdException w:name="List Table 6 Colorful Accent 5"/>
-			<w:lsdException w:name="List Table 7 Colorful Accent 5"/>
-			<w:lsdException w:name="List Table 1 Light Accent 6"/>
-			<w:lsdException w:name="List Table 2 Accent 6"/>
-			<w:lsdException w:name="List Table 3 Accent 6"/>
-			<w:lsdException w:name="List Table 4 Accent 6"/>
-			<w:lsdException w:name="List Table 5 Dark Accent 6"/>
-			<w:lsdException w:name="List Table 6 Colorful Accent 6"/>
-			<w:lsdException w:name="List Table 7 Colorful Accent 6"/>
 		</w:latentStyles>
 		<w:style w:type="paragraph" w:default="on" w:styleId="Normal">
 			<w:name w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:spacing w:line="276" w:line-rule="auto"/>
 			</w:pPr>
@@ -2060,6 +2180,7 @@
 			<wx:uiName wx:val="Heading 1"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2078,6 +2199,7 @@
 			<wx:uiName wx:val="Heading 2"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2097,6 +2219,7 @@
 			<wx:uiName wx:val="Heading 3"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2117,6 +2240,7 @@
 			<wx:uiName wx:val="Heading 4"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2136,6 +2260,7 @@
 			<wx:uiName wx:val="Heading 5"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2154,6 +2279,7 @@
 			<wx:uiName wx:val="Heading 6"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2195,6 +2321,7 @@
 			<w:name w:val="Title"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2210,6 +2337,7 @@
 			<w:name w:val="Subtitle"/>
 			<w:basedOn w:val="Normal"/>
 			<w:next w:val="Normal"/>
+			<w:rsid w:val="00974E8B"/>
 			<w:pPr>
 				<w:keepNext/>
 				<w:keepLines/>
@@ -2222,6 +2350,64 @@
 				<w:i/>
 				<w:color w:val="666666"/>
 				<w:sz w:val="26"/>
+			</w:rPr>
+		</w:style>
+		<w:style w:type="character" w:styleId="Hyperlink">
+			<w:name w:val="Hyperlink"/>
+			<w:rsid w:val="001E599A"/>
+			<w:rPr>
+				<w:color w:val="0563C1"/>
+				<w:u w:val="single"/>
+			</w:rPr>
+		</w:style>
+		<w:style w:type="paragraph" w:styleId="Header">
+			<w:name w:val="header"/>
+			<wx:uiName wx:val="Header"/>
+			<w:basedOn w:val="Normal"/>
+			<w:link w:val="HeaderChar"/>
+			<w:rsid w:val="00DF6AD6"/>
+			<w:pPr>
+				<w:tabs>
+					<w:tab w:val="center" w:pos="4680"/>
+					<w:tab w:val="right" w:pos="9360"/>
+				</w:tabs>
+			</w:pPr>
+			<w:rPr>
+				<wx:font wx:val="Arial"/>
+			</w:rPr>
+		</w:style>
+		<w:style w:type="character" w:styleId="HeaderChar">
+			<w:name w:val="Header Char"/>
+			<w:link w:val="Header"/>
+			<w:rsid w:val="00DF6AD6"/>
+			<w:rPr>
+				<w:color w:val="000000"/>
+				<w:sz w:val="22"/>
+			</w:rPr>
+		</w:style>
+		<w:style w:type="paragraph" w:styleId="Footer">
+			<w:name w:val="footer"/>
+			<wx:uiName wx:val="Footer"/>
+			<w:basedOn w:val="Normal"/>
+			<w:link w:val="FooterChar"/>
+			<w:rsid w:val="00DF6AD6"/>
+			<w:pPr>
+				<w:tabs>
+					<w:tab w:val="center" w:pos="4680"/>
+					<w:tab w:val="right" w:pos="9360"/>
+				</w:tabs>
+			</w:pPr>
+			<w:rPr>
+				<wx:font wx:val="Arial"/>
+			</w:rPr>
+		</w:style>
+		<w:style w:type="character" w:styleId="FooterChar">
+			<w:name w:val="Footer Char"/>
+			<w:link w:val="Footer"/>
+			<w:rsid w:val="00DF6AD6"/>
+			<w:rPr>
+				<w:color w:val="000000"/>
+				<w:sz w:val="22"/>
 			</w:rPr>
 		</w:style>
 	</w:styles>
@@ -2239,6 +2425,7 @@
 		<w:zoom w:percent="100"/>
 		<w:displayBackgroundShape/>
 		<w:doNotEmbedSystemFonts/>
+		<w:proofState w:spelling="clean" w:grammar="clean"/>
 		<w:defaultTabStop w:val="720"/>
 		<w:punctuationKerning/>
 		<w:characterSpacingControl w:val="DontCompress"/>
@@ -2248,7 +2435,7 @@
 		<w:alwaysShowPlaceholderText w:val="off"/>
 		<w:footnotePr>
 			<w:footnote w:type="separator">
-				<w:p wsp:rsidR="00E60FE4" wsp:rsidRDefault="00E60FE4">
+				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2258,7 +2445,7 @@
 				</w:p>
 			</w:footnote>
 			<w:footnote w:type="continuation-separator">
-				<w:p wsp:rsidR="00E60FE4" wsp:rsidRDefault="00E60FE4">
+				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2270,7 +2457,7 @@
 		</w:footnotePr>
 		<w:endnotePr>
 			<w:endnote w:type="separator">
-				<w:p wsp:rsidR="00E60FE4" wsp:rsidRDefault="00E60FE4">
+				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2280,7 +2467,7 @@
 				</w:p>
 			</w:endnote>
 			<w:endnote w:type="continuation-separator">
-				<w:p wsp:rsidR="00E60FE4" wsp:rsidRDefault="00E60FE4">
+				<w:p wsp:rsidR="00992038" wsp:rsidRDefault="00992038">
 					<w:pPr>
 						<w:spacing w:line="240" w:line-rule="auto"/>
 					</w:pPr>
@@ -2299,7 +2486,11 @@
 		</w:compat>
 		<wsp:rsids>
 			<wsp:rsidRoot wsp:val="497B5ECC"/>
+			<wsp:rsid wsp:val="001E599A"/>
 			<wsp:rsid wsp:val="005B2442"/>
+			<wsp:rsid wsp:val="00974E8B"/>
+			<wsp:rsid wsp:val="00992038"/>
+			<wsp:rsid wsp:val="00DF6AD6"/>
 			<wsp:rsid wsp:val="00E60FE4"/>
 			<wsp:rsid wsp:val="00FE3ECB"/>
 			<wsp:rsid wsp:val="01D4AD75"/>
@@ -2313,19 +2504,23 @@
 	</w:docPr>
 	<w:body>
 		<wx:sect>
-			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
+					<w:rPr>
+						<w:b/>
+						<w:sz w:val="20"/>
+					</w:rPr>
 				</w:pPr>
 				<w:r>
 					<w:rPr>
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>Steve Perkins</w:t>
+					<w:t>Peter Gibbons</w:t>
 				</w:r>
 			</w:p>
-			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
 				</w:pPr>
@@ -2334,10 +2529,10 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>4301 Gravitt Place, Duluth, GA 30096</w:t>
+					<w:t>123 Main Street, Austin, TX</w:t>
 				</w:r>
 			</w:p>
-			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
 				</w:pPr>
@@ -2346,24 +2541,52 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>404-997-3018</w:t>
+					<w:t>555</w:t>
+				</w:r>
+				<w:r wsp:rsidR="00E60FE4">
+					<w:rPr>
+						<w:b/>
+						<w:sz w:val="20"/>
+					</w:rPr>
+					<w:t>-</w:t>
+				</w:r>
+				<w:r>
+					<w:rPr>
+						<w:b/>
+						<w:sz w:val="20"/>
+					</w:rPr>
+					<w:t>555</w:t>
+				</w:r>
+				<w:r wsp:rsidR="00E60FE4">
+					<w:rPr>
+						<w:b/>
+						<w:sz w:val="20"/>
+					</w:rPr>
+					<w:t>-</w:t>
+				</w:r>
+				<w:r>
+					<w:rPr>
+						<w:b/>
+						<w:sz w:val="20"/>
+					</w:rPr>
+					<w:t>5555</w:t>
 				</w:r>
 			</w:p>
-			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
 				</w:pPr>
-				<w:r>
+				<w:r wsp:rsidRPr="001E599A">
 					<w:rPr>
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>steve@steveperkins.com</w:t>
+					<w:t>peter.gibbons@initech.com</w:t>
 				</w:r>
 			</w:p>
 			<wx:sub-section>
 				<wx:sub-section>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 						<w:pPr>
 							<w:pStyle w:val="Heading2"/>
 							<w:contextualSpacing w:val="off"/>
@@ -2371,154 +2594,77 @@
 						<aml:annotation aml:id="0" w:type="Word.Bookmark.Start" w:name="h.rtgjbyfo708" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="0" w:type="Word.Bookmark.End"/>
 						<w:r>
-							<w:t>Skills and Background</w:t>
+							<w:t>Summary</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="497B5ECC" wsp:rsidP="497B5ECC">
+					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="001E599A" wsp:rsidP="001E599A">
 						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="9"/>
-								<wx:t wx:val="●"/>
-								<wx:font wx:val="Times New Roman"/>
-							</w:listPr>
-							<w:ind w:hanging="359"/>
 							<w:contextualSpacing/>
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
 						</w:pPr>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidRPr="001E599A">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Over 15 years experience with enterprise application integration and web development, in Java and .NET environments ranging from startups to the Fortune 500.  Recent experience with microservice architecture supporting tens of millions of users and over 100 terabytes of data.</w:t>
+							<w:t>Just a straight-shooter with upper management written all over him</w:t>
+						</w:r>
+						<w:r wsp:rsidR="497B5ECC" wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>.</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="497B5ECC" wsp:rsidP="497B5ECC">
+				</wx:sub-section>
+				<wx:sub-section>
+					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
 						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="9"/>
-								<wx:t wx:val="●"/>
-								<wx:font wx:val="Times New Roman"/>
-							</w:listPr>
-							<w:ind w:hanging="359"/>
-							<w:contextualSpacing/>
+							<w:pStyle w:val="Heading2"/>
+						</w:pPr>
+						<w:r>
+							<w:t>Skills</w:t>
+						</w:r>
+					</w:p>
+					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
+						<w:pPr>
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
 						</w:pPr>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidRPr="00DF6AD6">
+							<w:rPr>
+								<w:i/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>Programming (mid-level)</w:t>
+						</w:r>
+						<w:r wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>I am highly comfortable with major Java frameworks including Spring, Hibernate/JPA, Apache Camel, and Akka.  Familiar with JEE, as well as ASP.NET on the Microsoft side.  I have worked with practically every major application server, and have recent experience with deploying microservices in Docker containers.</w:t>
+							<w:t>: C++, Java</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="497B5ECC" wsp:rsidP="497B5ECC">
+					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
 						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="9"/>
-								<wx:t wx:val="●"/>
-								<wx:font wx:val="Times New Roman"/>
-							</w:listPr>
-							<w:ind w:hanging="359"/>
-							<w:contextualSpacing/>
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
 						</w:pPr>
-						<w:r wsp:rsidRPr="497B5ECC">
+						<w:r wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
+								<w:i/>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>More than a decade of experience with messaging middleware, from MQSeries on midrange servers to RabbitMQ on commodity hardware.  Deep knowledge of HTTP-based EAI approaches such as SOAP and REST / HATEOAS.</w:t>
+							<w:t>Communication (junior)</w:t>
 						</w:r>
-					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="1504D104" wsp:rsidP="497B5ECC">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="9"/>
-								<wx:t wx:val="●"/>
-								<wx:font wx:val="Times New Roman"/>
-							</w:listPr>
-							<w:ind w:hanging="359"/>
-							<w:contextualSpacing/>
+						<w:r wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-						</w:pPr>
-						<w:r wsp:rsidRPr="1504D104">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Strong background in relational data modeling, and performance considerations for major database vendors (primarily Oracle, MySQL, and PostgreSQL).  Recent NoSQL experience with Cassandra and ElasticSearch at high scale.  Limited exposure to Hadoop and Spark for batch data processing and analysis.</w:t>
-						</w:r>
-					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="497B5ECC" wsp:rsidP="497B5ECC">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="9"/>
-								<wx:t wx:val="●"/>
-								<wx:font wx:val="Times New Roman"/>
-							</w:listPr>
-							<w:ind w:hanging="359"/>
-							<w:contextualSpacing/>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-						</w:pPr>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>I've worked with HTML/CSS and JavaScript for over 15 years.  I am extremely comfortable with jQuery, and have more recent experience with AngularJS and TypeScript.</w:t>
-						</w:r>
-					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="497B5ECC" wsp:rsidP="497B5ECC">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="9"/>
-								<wx:t wx:val="●"/>
-								<wx:font wx:val="Times New Roman"/>
-							</w:listPr>
-							<w:ind w:hanging="359"/>
-							<w:contextualSpacing/>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-						</w:pPr>
-						<w:r wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Excellent oral and written communication skills.  I've been active in Toastmasters International (a public speaking organization), and interact well with business stakeholders.  I have a background in teaching training classes, and deeply enjoy mentoring junior developers.</w:t>
-						</w:r>
-					</w:p>
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="3DFD921E" wsp:rsidP="497B5ECC">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="9"/>
-								<wx:t wx:val="●"/>
-								<wx:font wx:val="Times New Roman"/>
-							</w:listPr>
-							<w:ind w:hanging="359"/>
-							<w:contextualSpacing/>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-						</w:pPr>
-						<w:r wsp:rsidRPr="3DFD921E">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>I'm a published author, maintain a technical blog at StevePerkins.com with 5-10 thousand unique visitors per month, and am also a guest blogger for JavaCodeGeeks.com.  My GitHub account is “steve-perkins”, where I keep a number of open source personal projects and code samples.</w:t>
+							<w:t>: Verbal, Written</w:t>
 						</w:r>
 					</w:p>
 				</wx:sub-section>
@@ -2531,10 +2677,7 @@
 						<aml:annotation aml:id="1" w:type="Word.Bookmark.Start" w:name="h.q7t636trzl8i" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="1" w:type="Word.Bookmark.End"/>
 						<w:r>
-							<w:t>Experienc</w:t>
-						</w:r>
-						<w:r>
-							<w:t>e</w:t>
+							<w:t>Experience</w:t>
 						</w:r>
 					</w:p>
 					<wx:sub-section>
@@ -2546,1065 +2689,84 @@
 							<aml:annotation aml:id="2" w:type="Word.Bookmark.Start" w:name="h.te210npfwk8y" w:col-first="0" w:col-last="0"/>
 							<aml:annotation aml:id="2" w:type="Word.Bookmark.End"/>
 							<w:r>
-								<w:t>Software Architect, BetterCloud, 10/2013 - present</w:t>
+								<w:t>Software </w:t>
+							</w:r>
+							<w:r wsp:rsidR="00DF6AD6">
+								<w:t>Developer</w:t>
+							</w:r>
+							<w:r>
+								<w:t>, </w:t>
+							</w:r>
+							<w:proofErr w:type="spellStart"/>
+							<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
+								<w:t>Initech</w:t>
+							</w:r>
+							<w:proofErr w:type="spellEnd"/>
+							<w:r wsp:rsidR="00DF6AD6">
+								<w:t>, 2/1998</w:t>
+							</w:r>
+							<w:r>
+								<w:t> - present</w:t>
 							</w:r>
 						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="01D4AD75" wsp:rsidP="3DFD921E">
+						<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
+							<w:pPr>
+								<w:contextualSpacing/>
+								<w:rPr>
+									<w:sz w:val="20"/>
+								</w:rPr>
+							</w:pPr>
+							<w:r wsp:rsidRPr="00DF6AD6">
+								<w:rPr>
+									<w:sz w:val="20"/>
+								</w:rPr>
+								<w:t>Deals with the customers so the engineers don't have</w:t>
+							</w:r>
+							<w:r>
+								<w:rPr>
+									<w:sz w:val="20"/>
+								</w:rPr>
+								<w:t> to.  A people person, damn it!</w:t>
+							</w:r>
+						</w:p>
+						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
 							<w:pPr>
 								<w:listPr>
 									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
+									<w:ilfo w:val="15"/>
+									<wx:t wx:val="·"/>
+									<wx:font wx:val="Symbol"/>
 								</w:listPr>
-								<w:ind w:hanging="359"/>
 								<w:contextualSpacing/>
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
 							</w:pPr>
-							<w:r wsp:rsidRPr="01D4AD75">
+							<w:r wsp:rsidRPr="00DF6AD6">
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
-								<w:t>BetterCloud is SaaS product company offering analytics, security, and advanced administration for users of Google Apps or Microsoft Office 365.  The total data set within our domain is over 100 terabytes, growing at rate of multiple terabytes per month.</w:t>
+								<w:t>Identifying Y2K-related issues in application code.</w:t>
 							</w:r>
 						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="3DFD921E" wsp:rsidP="3DFD921E">
+						<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
 							<w:pPr>
 								<w:listPr>
 									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
+									<w:ilfo w:val="15"/>
+									<wx:t wx:val="·"/>
+									<wx:font wx:val="Symbol"/>
 								</w:listPr>
-								<w:ind w:hanging="359"/>
 								<w:contextualSpacing/>
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
 							</w:pPr>
-							<w:r wsp:rsidRPr="3DFD921E">
+							<w:r wsp:rsidRPr="00DF6AD6">
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
-								<w:t>We use a microservice architecture, with Google services written in Java and hosted on Google Cloud Platform, and Microsoft services written in C# and deployed to Azure.  Service integration primarily involves AMQP (i.e. RabbitMQ) and REST.  We are in the process of shifting to Docker-based containerization of microservice components across the board.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="3DFD921E" wsp:rsidP="3DFD921E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="3DFD921E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Responsible for design and ongoing code reviews for one to two development teams of roughly 5 members each.  Individual mentoring is emphasized, along with periodically giving group presentations at our weekly lunch-n-learn sessions.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="3DFD921E" wsp:rsidP="3DFD921E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="3DFD921E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Beyond ongoing design and code reviews, architects are charged with short-term “spike projects”, to prototype new features or implement major system re-writes.  My particular areas of specialty have been batch processing, messaging middleware, and Big Data.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="21E9FFCB" wsp:rsidP="3DFD921E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="1"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="○"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="21E9FFCB">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>I introduced BigQuery (i.e. Google’s answer to Hive or Pig running over Hadoop or Spark) into our stack for offline reporting and data analytics.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="21E9FFCB" wsp:rsidP="3DFD921E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="1"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="○"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="21E9FFCB">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Drove research and proof-of-concept projects exploring self-hosted alternatives to the Google Cloud Datastore.  We eventually landed on the Apache Cassandra distributed database, in use on the Microsoft side today.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="473C407E" wsp:rsidP="3DFD921E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="1"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="○"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>In two major concurrency-related initiatives, I re-wrote our sequential batch processing framework with multithreaded Java, and reimplemented our Java-based proxy microservice using Golang.  Throughput and costs were reduced by an order of magnitude in both cases.  </w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="3" w:type="Word.Bookmark.Start" w:name="h.6hutfz6jfnfn" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="3" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Senior Soft</w:t>
-							</w:r>
-							<w:r>
-								<w:t>ware Developer, Purchasing Power, 4/2011 - 10/2013</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="473C407E" wsp:rsidP="473C407E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="4"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Technical lead for a retail web platform, combining aspects of e-commerce and employee benefits (i.e. customers pay for large-ticket items through automatic payroll deduction).</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="4"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>The legacy commerce architecture was based on Spring web applications, interacting with a business services tier via SOAP (Apache CXF). The main database was Oracle, with some MySQL in the mix as well, making heavy use of PL/SQL and related features.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="4"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>The c</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ompany later chose to migrate the commerce architecture to Hybris, a Spring-based product offered by SAP. I was selected as the first developer to be embedded with the consulting firm bootstrapping the migration. I was responsible for driving business and </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>technical requirements, and mentoring other internal developers as they incrementally moved over from legacy development.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="4"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Integrated the new Hybris platform with in-house and third-party services (e.g. sales tax calculation, salary verification) using Rabb</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>itMQ and Spring AMQP.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="473C407E" wsp:rsidP="473C407E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="4"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Made heavy use of jQuery, and lighter use of AngularJS, in the front-end UI.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="4"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Outside of the commerce platform, I designed a system based on Spring Batch for standardizing most of the company’s batch processing needs. For some special </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>batch processes that need to be multithreaded, I used Scala and its Akka-based actor pattern.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="4"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Expected to mentor less experienced developers. Initiated a monthly “lunch-n-learn” series, where I presented on various topics and eventually coaxed more introve</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>rted developers toward presenting on topics themselves.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="4" w:type="Word.Bookmark.Start" w:name="h.agvlrw4y8vmf" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="4" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Senior Java Developer, Ericsson, 9/2010 - 4/2011</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="1"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Member of small team integrating a video-on-demand platform with a larger portal suite for content carriers. Primary areas of business logic included catalog management for video assets, tracking rentals and equipment provisioning, and limited exposure to </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>DRM encryption.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="1"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Architecture was based on EJB business components with JPA entities, running on GlassFish application servers and Oracle databases.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="1"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>First of two main initiatives was to convert catalog management from a sequential operation to be multithrea</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ded, with work spread out in parallel.  Second initiative involved shifting the functionality to be exposed through RESTful services with JAX-RS, rather than EJB remote interfaces and JAX-WS.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="5" w:type="Word.Bookmark.Start" w:name="h.zgg3fdl0eyy" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="5" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Software Developer, CNN, 8/2009 - 9/2010</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="12"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Handled back-end system</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>s integration between internal applications, as well as between CNN and outside partners. Limited front-end development as well using AJAX and JSON.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="12"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Primary projects included transitioning to new data providers for all CNN weather forecast and stock quote </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>content, and designing and building a RESTful service to lookup candidate and race information for the 2010 mid-term elections.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="12"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Public-facing content was primarily Java-based, using Spring with Hibernate. Internal applications were primarily developed in P</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>erl. Both realms involved heavy transformation of XML data via XSLT.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="12"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Expected to be largely self-directed, and take initiative in requirements-gathering and issue resolution with the newsroom producers and other business stakeholders.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="6" w:type="Word.Bookmark.Start" w:name="h.y3fih86gis0" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="6" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Software Developer, I</w:t>
-							</w:r>
-							<w:r>
-								<w:t>nternap, 11/2008 - 5/2009</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="5"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Developed and extended billing and operational systems for a publicly-traded Internet solutions company, under an agile/scrum based methodology.  The architecture consisted of Struts-based Java and legacy Perl applications, runnin</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>g on a blend of JBoss servers with Oracle databases.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="5"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Primary project was integrating operational data from a recently-acquired competitor into the company's Oracle BRM billing system.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="5"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Helped to mentor team members in acquiring the Perl skills to maintain e</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>xisting legacy code, and spearheaded efforts to migrate some Perl-based operations to the more Java-friendly Groovy scripting language.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="7" w:type="Word.Bookmark.Start" w:name="h.6w7uklptdpe1" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="7" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Software Developer, TRX, 8/2007 - 11/2008</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="11"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Developed data aggregation and mining solutions for financial clients, for the purpose of identifying useful information about consumer spending patterns.  </w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="11"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Independently developed a Java-based task management system, adopted by management for resource all</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ocation and project tracking.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="11"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Developed a web-based admin system for the business rules engine, utilizing Struts with a Hibernate data access layer and Dojo-based AJAX presentation layer.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="11"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Taught internal “lunch-and-learn” classes on areas of Java and Perl </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>development.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="8" w:type="Word.Bookmark.Start" w:name="h.d7sl06nmazwq" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="8" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Senior Consultant, Number Six Software, 6/2002 - 8/2007</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="6"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Primarily I was on-site for over 5 years with the Manheim division of Cox Enterprises.  Helped design and build the first release of OnlineVehicleExchange.com, an dealer-to-dealer automot</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ive auction system. The platform was based on WebSphere Commerce, with data storage in DB2. </w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="6"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Had lead responsibility for the multi-threaded messaging subsystem (JMS), connecting the Linux and Java-based application server to legacy IBM midrange inventory s</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ervers. Also responsible for areas of the presentation layer, and helped develop the log4j-based logging subsystem.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="2"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Before rolling off onto my next project, I wrote a prototype as the company evaluated migrating away from WebSphere Commerce. The approach u</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>sed replaced WebSphere Commerce, EJB 2.0, and WebSphere with Spring, Hibernate, and clustered Tomcat.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="2"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>For the last two years on the client site, I was a team lead in the company’s security and identity management initiative. This project incorporated Tivol</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>i Identity Manager and Tivoli Access Manager to unify the company’s multiple user registries, and provide single-signon (SSO) authentication for internal applications.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="7"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>In addition to client delivery for Cox Enterprises, I also periodically taught training </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>courses for the consulting firm's corporate education division. Classes taught included IBM WebSphere Administration, XML/XSL Development, and a six-month evening class on Java Programming.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.lhjeffscnw1u" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Senior Consultant, Palarco Consulting, 7/2001 - 6/2002</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="13"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Worked on a</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t> series of short-term subcontract engagements for American Bank Note Company, Georgia Farm Bureau, and Mohawk Carpet.  The role of our firm in the larger projects was specialized in integrating IBM legacy midrange servers with WebSphere Commerce applicatio</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ns.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="13"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Internally, I taught training classes to our RPG developers who were migrating to Java development.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="10" w:type="Word.Bookmark.Start" w:name="h.z7q10f6ug3t" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="10" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Consultant, Context Integration, 1/2000 - 7/2001</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="8"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Worked on an overall team of over two-dozen developers on an 18-month engagement with Georgia Pacific, </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>constructing a B2B commerce application. The web front-end was built using </w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>BroadVision One-to-One Commerce with an Oracle database, integrated with 11 billing and inventory systems (AS/400’s and HP-9000’s) nationwide via C++ and CORBA, and IBM MQSeries.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="8"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Wa</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>s the youngest consultant in the company to be promoted to Senior Consultant level, and served as the team lead for this integration system in the final phase of iterative development.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="8"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>At the conclusion of this project, I wrote a white paper about a design</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t> pattern I developed which was recognized by the CTO of BroadVision and included in their company technical knowledgebase.</w:t>
+								<w:t>As many as four people working right underneath me.</w:t>
 							</w:r>
 						</w:p>
 					</wx:sub-section>
@@ -3615,51 +2777,35 @@
 							<w:pStyle w:val="Heading2"/>
 							<w:contextualSpacing w:val="off"/>
 						</w:pPr>
-						<aml:annotation aml:id="11" w:type="Word.Bookmark.Start" w:name="h.niav2fuhrvxc" w:col-first="0" w:col-last="0"/>
-						<aml:annotation aml:id="11" w:type="Word.Bookmark.End"/>
+						<aml:annotation aml:id="3" w:type="Word.Bookmark.Start" w:name="h.6hutfz6jfnfn" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="4" w:type="Word.Bookmark.Start" w:name="h.niav2fuhrvxc" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="3" w:type="Word.Bookmark.End"/>
+						<aml:annotation aml:id="4" w:type="Word.Bookmark.End"/>
 						<w:r>
 							<w:t>Education</w:t>
 						</w:r>
 					</w:p>
 					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00DF6AD6">
 							<w:pPr>
 								<w:pStyle w:val="Heading3"/>
 								<w:contextualSpacing w:val="off"/>
 							</w:pPr>
-							<aml:annotation aml:id="12" w:type="Word.Bookmark.Start" w:name="h.x22jpt133j12" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="12" w:type="Word.Bookmark.End"/>
+							<aml:annotation aml:id="5" w:type="Word.Bookmark.Start" w:name="h.x22jpt133j12" w:col-first="0" w:col-last="0"/>
+							<aml:annotation aml:id="5" w:type="Word.Bookmark.End"/>
+							<w:r wsp:rsidRPr="00DF6AD6">
+								<w:t>University of Austin</w:t>
+							</w:r>
 							<w:r>
-								<w:t>Georgia State University, 6/2010</w:t>
+								<w:t>, 12/1997</w:t>
 							</w:r>
 						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:r>
+						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00DF6AD6">
+							<w:r wsp:rsidRPr="00DF6AD6">
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
-								<w:t>J.D.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="13" w:type="Word.Bookmark.Start" w:name="h.hfhp23fle4cj" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="13" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Georgia Southwestern State University, 12/1999</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>B.S. Computer Science (minor in Business Management)</w:t>
+								<w:t>B.S. Computer Science</w:t>
 							</w:r>
 						</w:p>
 					</wx:sub-section>
@@ -3670,401 +2816,223 @@
 							<w:pStyle w:val="Heading2"/>
 							<w:contextualSpacing w:val="off"/>
 						</w:pPr>
-						<aml:annotation aml:id="14" w:type="Word.Bookmark.Start" w:name="h.cipecsiv79km" w:col-first="0" w:col-last="0"/>
-						<aml:annotation aml:id="14" w:type="Word.Bookmark.End"/>
+						<aml:annotation aml:id="6" w:type="Word.Bookmark.Start" w:name="h.hfhp23fle4cj" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="7" w:type="Word.Bookmark.Start" w:name="h.cipecsiv79km" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="6" w:type="Word.Bookmark.End"/>
+						<aml:annotation aml:id="7" w:type="Word.Bookmark.End"/>
 						<w:r>
 							<w:t>Publications</w:t>
 						</w:r>
 					</w:p>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="15" w:type="Word.Bookmark.Start" w:name="h.b8yy8rn005ki" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="15" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Author</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="497B5ECC">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="10"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:i/>
-									<w:i-cs/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Hibernate Search by Example</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, Packt Publishing, ISBN 184951920X</w:t>
-							</w:r>
-							<w:r>
-								<w:br/>
-							</w:r>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>A Java developer’s guide to using Hibernate with Apache Lucene and Solr components, to add custom full-text search funct</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ionality in their applications.</w:t>
-							</w:r>
-							<w:r>
-								<w:br/>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="497B5ECC">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="10"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:i/>
-									<w:i-cs/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>In the Aftermath of Bilski v. Kappos</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, 2010 PLI Handbook Series</w:t>
-							</w:r>
-							<w:r>
-								<w:br/>
-							</w:r>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>An overview of the current state of business method and software patents, presented at the 2010 Practicing Law Institute's Patent Litigation Seminar.</w:t>
-							</w:r>
-							<w:r>
-								<w:br/>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="497B5ECC">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="10"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:i/>
-									<w:i-cs/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>In the Aftermath of In re Bilski</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, 2009 PLI Handbook Series</w:t>
-							</w:r>
-							<w:r>
-								<w:br/>
-							</w:r>
-							<w:r wsp:rsidRPr="497B5ECC">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>An overview of method and software patents while the Bilski appeal was pending. Presented at the 2009 Practicing Law Institute's Patent Litigation Seminar.</w:t>
-							</w:r>
-						</w:p>
-					</wx:sub-section>
-					<wx:sub-section>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:pStyle w:val="Heading3"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:contextualSpacing w:val="off"/>
-							</w:pPr>
-							<aml:annotation aml:id="16" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
-							<aml:annotation aml:id="16" w:type="Word.Bookmark.End"/>
-							<w:r>
-								<w:t>Technical Reviewer</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="14"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:i/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Scala for Java Develop</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:i/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ers</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, by Thomas Alexandre, ISBN 1783283637</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="473C407E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="14"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:i/>
-									<w:i-cs/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>PostgreSQL Administration Essentials</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, by Hans-Jürgen Schönig, ISBN </w:t>
-							</w:r>
-							<w:r wsp:rsidR="473C407E" wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>1783988983</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="473C407E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="14"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:i/>
-									<w:i-cs/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Building Web Applications in Spring Web MVC</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, by </w:t>
-							</w:r>
-							<w:r wsp:rsidR="473C407E" wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Koushik Kothagal, </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>ISBN </w:t>
-							</w:r>
-							<w:r wsp:rsidR="473C407E" wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>9781783286539</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="14"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r>
-								<w:rPr>
-									<w:i/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Angular UI Development</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, by Matthias Nehlsen and Ami</w:t>
-							</w:r>
-							<w:r>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>t Gharat, ISBN 9781783288472</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="473C407E">
-							<w:pPr>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="14"/>
-									<wx:t wx:val="●"/>
-									<wx:font wx:val="Times New Roman"/>
-								</w:listPr>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-								<w:ind w:hanging="359"/>
-								<w:contextualSpacing/>
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:i/>
-									<w:i-cs/>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Angular Testing Cookbook</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>, by </w:t>
-							</w:r>
-							<w:r wsp:rsidR="473C407E" wsp:rsidRPr="473C407E">
-								<w:rPr>
-									<w:sz w:val="20"/>
-								</w:rPr>
-								<w:t>Simon Bailey, ISBN 1783983744</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="005B2442"/>
-					</wx:sub-section>
-				</wx:sub-section>
-			</wx:sub-section>
-			<w:sectPr wsp:rsidR="005B2442">
-				<w:ftr w:type="odd">
-					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="00DF6AD6">
 						<w:pPr>
-							<w:jc w:val="right"/>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="17"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
+							<w:spacing w:line="240" w:line-rule="auto"/>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
 						</w:pPr>
-						<w:r>
+						<aml:annotation aml:id="8" w:type="Word.Bookmark.Start" w:name="h.b8yy8rn005ki" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="8" w:type="Word.Bookmark.End"/>
+						<w:r wsp:rsidRPr="497B5ECC">
 							<w:rPr>
-								<w:sz w:val="16"/>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Steve Perkins, 404-997-3018, steve@steveperkins.com</w:t>
+							<w:t>Hibernate Search by Example</w:t>
 						</w:r>
-						<w:r>
+						<w:r wsp:rsidRPr="497B5ECC">
 							<w:rPr>
-								<w:sz w:val="16"/>
+								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:tab/>
+							<w:t>, </w:t>
 						</w:r>
-						<w:r>
-							<w:fldChar w:fldCharType="begin"/>
-						</w:r>
-						<w:r>
-							<w:instrText>PAGE</w:instrText>
-						</w:r>
-						<w:r>
-							<w:fldChar w:fldCharType="separate"/>
-						</w:r>
-						<w:r wsp:rsidR="00FE3ECB">
+						<w:proofErr w:type="spellStart"/>
+						<w:r wsp:rsidRPr="497B5ECC">
 							<w:rPr>
-								<w:noProof/>
+								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>1</w:t>
+							<w:t>Packt</w:t>
+						</w:r>
+						<w:proofErr w:type="spellEnd"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t> Publishing, ISBN 184951920X</w:t>
 						</w:r>
 						<w:r>
-							<w:fldChar w:fldCharType="end"/>
+							<w:br/>
+						</w:r>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>A Java developer’s guide to using Hibernate with Apache Lucene and </w:t>
+						</w:r>
+						<w:proofErr w:type="spellStart"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>Solr</w:t>
+						</w:r>
+						<w:proofErr w:type="spellEnd"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t> components, to add custom full-text search functionality in their applications.</w:t>
+						</w:r>
+						<w:r>
+							<w:br/>
 						</w:r>
 					</w:p>
-				</w:ftr>
+					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="00DF6AD6">
+						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="17"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
+							<w:spacing w:line="240" w:line-rule="auto"/>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>In the Aftermath of </w:t>
+						</w:r>
+						<w:proofErr w:type="spellStart"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>Bilski</w:t>
+						</w:r>
+						<w:proofErr w:type="spellEnd"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t> v. </w:t>
+						</w:r>
+						<w:proofErr w:type="spellStart"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>Kappos</w:t>
+						</w:r>
+						<w:proofErr w:type="spellEnd"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>, 2010 PLI Handbook Series</w:t>
+						</w:r>
+						<w:r>
+							<w:br/>
+						</w:r>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>An overview of the current state of business method and software patents, presented at the 2010 Practicing Law Institute's Patent Litigation Seminar.</w:t>
+						</w:r>
+						<w:r>
+							<w:br/>
+						</w:r>
+					</w:p>
+					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4" wsp:rsidP="00DF6AD6">
+						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="17"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
+							<w:spacing w:line="240" w:line-rule="auto"/>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+						</w:pPr>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>In the Aftermath of In re </w:t>
+						</w:r>
+						<w:proofErr w:type="spellStart"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>Bilski</w:t>
+						</w:r>
+						<w:proofErr w:type="spellEnd"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>, 2009 PLI Handbook Series</w:t>
+						</w:r>
+						<w:r>
+							<w:br/>
+						</w:r>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>An overview of method and software patents while the </w:t>
+						</w:r>
+						<w:proofErr w:type="spellStart"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>Bilski</w:t>
+						</w:r>
+						<w:proofErr w:type="spellEnd"/>
+						<w:r wsp:rsidRPr="497B5ECC">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t> appeal was pending. Presented at the 2009 Practicing Law Institute's Patent Litigation Seminar.</w:t>
+						</w:r>
+					</w:p>
+					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="005B2442">
+						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
+					</w:p>
+				</wx:sub-section>
+			</wx:sub-section>
+			<w:sectPr wsp:rsidR="005B2442" wsp:rsidSect="00974E8B">
 				<w:pgSz w:w="12240" w:h="15840"/>
 				<w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
 				<w:cols w:space="720"/>

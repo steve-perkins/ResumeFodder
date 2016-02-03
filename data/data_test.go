@@ -147,6 +147,7 @@ func GenerateTestResumeData() ResumeData {
 			Email:   "peter.gibbons@initech.com",
 			Summary: "Just a straight-shooter with upper managment written all over him",
 			Location: Location{
+				// TODO: Add street address and phone number
 				City:   "Austin",
 				Region: "TX",
 			},
@@ -189,6 +190,7 @@ func GenerateTestResumeData() ResumeData {
 				Keywords: []string{"Verbal", "Written"},
 			},
 		},
+		// TODO: Add publications
 	}
 	return data
 }
