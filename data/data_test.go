@@ -146,10 +146,16 @@ func GenerateTestResumeData() ResumeData {
 			Name:    "Peter Gibbons",
 			Email:   "peter.gibbons@initech.com",
 			Summary: "Just a straight-shooter with upper managment written all over him",
+			Highlights: []string{
+				"Once did nothing for an entire day.",
+				"It was everything I thought it could be.",
+			},
 			Location: Location{
-				// TODO: Add street address and phone number
-				City:   "Austin",
-				Region: "TX",
+				Address:    "123 Main Street",
+				City:       "Austin",
+				Region:     "TX",
+				PostalCode: "55555",
+				Phone:      "555-555-5555",
 			},
 			Profiles: []SocialProfile{
 				{
@@ -158,15 +164,19 @@ func GenerateTestResumeData() ResumeData {
 				},
 			},
 		},
-		Work: []Work{
+		WorkGroups: []WorkGroup{
 			{
-				Company:   "Initech",
-				Position:  "Software Developer",
-				StartDate: "1998-02-01",
-				Summary:   "Deals with the customers so the engineers don't have to.  A people person, damn it!",
-				Highlights: []string{
-					"Identifying Y2K-related issues in application code.",
-					"As many as four people working right underneath me.",
+				Work: []Work{
+					{
+						Company:   "Initech",
+						Position:  "Software Developer",
+						StartDate: "1998-02-01",
+						Summary:   "Deals with the customers so the engineers don't have to.  A people person, damn it!",
+						Highlights: []string{
+							"Identifying Y2K-related issues in application code.",
+							"As many as four people working right underneath me.",
+						},
+					},
 				},
 			},
 		},
@@ -190,7 +200,19 @@ func GenerateTestResumeData() ResumeData {
 				Keywords: []string{"Verbal", "Written"},
 			},
 		},
-		// TODO: Add publications
+		PublicationGroups: []PublicationGroup{
+			{
+				Publications: []Publication{
+					{
+						Name: "Money Laundering for Dummies",
+						Publisher: "John Wiley & Sons",
+						ReleaseDate: "1999-06-01",
+						ISBN: "xxxxxxxxxxx",
+						Summary: "Similar to the plot from \"Superman III\"",
+					},
+				},
+			},
+		},
 	}
 	return data
 }

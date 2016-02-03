@@ -8,25 +8,26 @@ import (
 
 // ResumeData is the outermost container for resume data.
 type ResumeData struct {
-	XMLName      xml.Name      `xml:"resume" json:"-"`
-	Basics       Basics        `xml:"basics" json:"basics"`
-	Work         []Work        `xml:"work" json:"work"`
-	Education    []Education   `xml:"education" json:"education"`
-	Publications []Publication `xml:"publications" json:"publications"`
-	Skills       []Skill       `xml:"skills" json:"skills"`
+	XMLName           xml.Name           `xml:"resume" json:"-"`
+	Basics            Basics             `xml:"basics" json:"basics"`
+	WorkGroups        []WorkGroup        `xml:"workGroups" json:"workGroups"` // Non-standard
+	Education         []Education        `xml:"education" json:"education"`
+	PublicationGroups []PublicationGroup `xml:"publicationGroup" json:"publicationGroup"` // Non-standard
+	Skills            []Skill            `xml:"skills" json:"skills"`
 }
 
 type Basics struct {
-	Name     string          `xml:"name" json:"name"`
-	Label    string          `xml:"label" json:"label"`
-	Picture  string          `xml:"picture" json:"picture"`
-	Email    string          `xml:"email" json:"email"`
-	Phone    string          `xml:"phone" json:"phone"`
-	Degree   string          `xml:"degree" json:"degree"`
-	Website  string          `xml:"website" json:"website"`
-	Summary  string          `xml:"summary" json:"summary"`
-	Location Location        `xml:"location" json:"location"`
-	Profiles []SocialProfile `xml:"profiles" json:"profiles"`
+	Name       string          `xml:"name" json:"name"`
+	Label      string          `xml:"label" json:"label"`
+	Picture    string          `xml:"picture" json:"picture"`
+	Email      string          `xml:"email" json:"email"`
+	Phone      string          `xml:"phone" json:"phone"`
+	Degree     string          `xml:"degree" json:"degree"`
+	Website    string          `xml:"website" json:"website"`
+	Summary    string          `xml:"summary" json:"summary"`
+	Highlights []string        `xml:"highlights" json:"highlights"` // Non-standard
+	Location   Location        `xml:"location" json:"location"`
+	Profiles   []SocialProfile `xml:"profiles" json:"profiles"`
 }
 
 type Location struct {
@@ -35,12 +36,18 @@ type Location struct {
 	City        string `xml:"city" json:"city"`
 	CountryCode string `xml:"countryCode" json:"countryCode"`
 	Region      string `xml:"region" json:"region"`
+	Phone       string `xml:"phone" json:"phone"` // Non-standard
 }
 
 type SocialProfile struct {
 	Network  string `xml:"network" json:"network"`
 	Username string `xml:"username" json:"username"`
 	Url      string `xml:"url" json:"url"`
+}
+
+type WorkGroup struct {
+	Name string `xml:"Name" json:"Name"`
+	Work []Work `xml:"work" json:"work"`
 }
 
 type Work struct {
@@ -63,12 +70,18 @@ type Education struct {
 	Courses     []string `xml:"courses" json:"courses"`
 }
 
+type PublicationGroup struct {
+	Name         string        `xml:"name" json:"name"`
+	Publications []Publication `xml:"publications" json:"publications"`
+}
+
 type Publication struct {
 	Name        string `xml:"name" json:"name"`
 	Publisher   string `xml:"publisher" json:"publisher"`
 	ReleaseDate string `xml:"releaseDate" json:"releaseDate"`
 	Website     string `xml:"website" json:"website"`
 	Summary     string `xml:"summary" json:"summary"`
+	ISBN        string `xml:"isbn" json:"isbn"` // Non-standard
 }
 
 type Skill struct {
@@ -92,9 +105,13 @@ func NewResumeData() ResumeData {
 			Location: Location{},
 			Profiles: []SocialProfile{{}},
 		},
-		Work: []Work{
+		WorkGroups: []WorkGroup{
 			{
-				Highlights: []string{""},
+				Work: []Work{
+					{
+						Highlights: []string{""},
+					},
+				},
 			},
 		},
 		Education: []Education{
@@ -102,7 +119,11 @@ func NewResumeData() ResumeData {
 				Courses: []string{""},
 			},
 		},
-		Publications: []Publication{{}},
+		PublicationGroups: []PublicationGroup{
+			{
+				Publications: []Publication{{}},
+			},
+		},
 		Skills: []Skill{
 			{
 				Keywords: []string{""},
