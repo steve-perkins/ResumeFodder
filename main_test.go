@@ -1,6 +1,7 @@
 package main_test
 
 import (
+	"errors"
 	"github.com/steve-perkins/resume"
 	"testing"
 )
@@ -87,8 +88,56 @@ func TestConvert_Valid(t *testing.T) {
 	}
 }
 
-func TestExport(t *testing.T) {
+func TestExport_NoArg(t *testing.T) {
+	_, _, err := main.ParseArgs([]string{"resume.exe", "export"})
+	if err == nil || err.Error() != "You must specify input and output filenames (e.g. \"resume.exe export resume.xml resume.doc\"), and optionally a template name." {
+		t.Fatalf("err should be [You must specify input and output filenames (e.g. \"resume.exe export resume.xml resume.doc\"), and optionally a template name.], found [%s]\n", err)
+	}
+}
 
-	// TODO... test no args, bad source filename, bad target filename, missing or bad template filename, valid inputs
+func TestExport_InvalidSourceFilename(t *testing.T) {
+	// Source must be XML or JSON
+	_, _, err := main.ParseArgs([]string{"resume.exe", "export", "bad_extension.foo", "resume.doc"})
+	if err == nil || err.Error() != "Source file must have an '.xml' or '.json' extension." {
+		t.Fatalf("err should be [Source file must have an '.xml' or '.json' extension.], found [%s]\n", err)
+	}
+}
 
+func TestExport_InvalidTargetFilename(t *testing.T) {
+	// Target must be DOC or XML
+	_, _, err := main.ParseArgs([]string{"resume.exe", "export", "resume.xml", "bad_extension.foo"})
+	if err == nil || err.Error() != "Target file must have a '.doc' or '.xml' extension." {
+		t.Fatalf("err should be [Target file must have a '.doc' or '.xml' extension.], found [%s]\n", err)
+	}
+}
+
+func TestExport_InvalidTemplateFilename(t *testing.T) {
+	// Template must be DOC or XML
+	_, _, err := main.ParseArgs([]string{"resume.exe", "export", "resume.xml", "resume.doc", "templates/bad_extension.foo"})
+	if err == nil || err.Error() != "Template file must have a '.doc' or '.xml' extension." {
+		t.Fatalf("err should be [Template file must have a '.doc' or '.xml' extension.], found [%s]\n", err)
+	}
+}
+
+func TestExport_NoTemplateFilename(t *testing.T) {
+	_, args, err := main.ParseArgs([]string{"resume.exe", "export", "resume.xml", "resume.doc"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if args[2] != "defaultTemplate.xml" {
+		t.Fatal(errors.New("When no template file is specified, the default value of \"defaultTemplate.xml\" should be used"))
+	}
+}
+
+func TestExport_Valid(t *testing.T) {
+	command, args, err := main.ParseArgs([]string{"resume.exe", "export", "resume.xml", "resume.doc", "templates/default.xml"})
+	if command != "export" {
+		t.Fatalf("command should be [export], found [%s]\n", command)
+	}
+	if len(args) != 3 || args[0] != "resume.xml" || args[1] != "resume.doc" || args[2] != "templates/default.xml" {
+		t.Fatalf("args should be [resume.xml resume.json templates/default.xml], found %s\n", args)
+	}
+	if err != nil {
+		t.Fatalf("err should be nil, found [%s]\n", err)
+	}
 }
