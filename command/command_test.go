@@ -107,6 +107,7 @@ func GenerateTestResumeData() data.ResumeData {
 				{
 					Network:  "LinkedIn",
 					Username: "peter.gibbons",
+					Url: "http://linkedin.com/peter.gibbons",
 				},
 			},
 		},
@@ -160,7 +161,7 @@ func GenerateTestResumeData() data.ResumeData {
 				Name:        "Money Laundering for Dummies",
 				Publisher:   "John Wiley & Sons",
 				ReleaseDate: "1999-06-01",
-				ISBN:        "xxxxxxxxxxx",
+				ISBN:        "1234567890X",
 				Summary:     "Similar to the plot from \"Superman III\"",
 			},
 		},

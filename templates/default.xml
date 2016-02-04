@@ -2751,7 +2751,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>{{ .Basics.Name }}</w:t>
+					<w:t>{{ html .Basics.Name }}</w:t>
 				</w:r>
 			</w:p>
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
@@ -2763,7 +2763,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>{{ .Basics.Location.Address }}, {{ .Basics.Location.City }}, {{ .Basics.Location.Region }}</w:t>
+					<w:t>{{ html .Basics.Location.Address }}, {{ html .Basics.Location.City }}, {{ html .Basics.Location.Region }}</w:t>
 				</w:r>
 			</w:p>
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
@@ -2775,7 +2775,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>{{ .Basics.Phone }}</w:t>
+					<w:t>{{ html .Basics.Phone }}</w:t>
 				</w:r>
 			</w:p>
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
@@ -2787,7 +2787,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>{{ .Basics.Email }}</w:t>
+					<w:t>{{ html .Basics.Email }}</w:t>
 				</w:r>
 			</w:p>
 			<wx:sub-section>
@@ -2814,7 +2814,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ .Basics.Summary }}</w:t>
+							<w:t>{{ html .Basics.Summary }}</w:t>
 						</w:r>
 					</w:p>
 					{{ range .Basics.Highlights }}
@@ -2835,7 +2835,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ . }}</w:t>
+							<w:t>{{ html . }}</w:t>
 						</w:r>
 					</w:p>
 					{{ end }}
@@ -2866,7 +2866,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ .Name }}: </w:t>
+							<w:t>{{ html .Name }}: </w:t>
 						</w:r>
 						<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
@@ -2899,19 +2899,19 @@
 							<aml:annotation aml:id="2" w:type="Word.Bookmark.Start" w:name="h.te210npfwk8y" w:col-first="0" w:col-last="0"/>
 							<aml:annotation aml:id="2" w:type="Word.Bookmark.End"/>
 							<w:r>
-								<w:t>{{ .Position }}</w:t>
+								<w:t>{{ html .Position }}</w:t>
 							</w:r>
 							<w:r>
 								<w:t>, </w:t>
 							</w:r>
 							<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
-								<w:t>{{ .Company }}</w:t>
+								<w:t>{{ html .Company }}</w:t>
 							</w:r>
 							<w:r wsp:rsidR="00DF6AD6">
-								<w:t>, {{ .StartDate }}</w:t>
+								<w:t>, {{ html .StartDate }}</w:t>
 							</w:r>
 							<w:r>
-								<w:t> - {{ .EndDate }}</w:t>
+								<w:t> - {{ html .EndDate }}</w:t>
 							</w:r>
 						</w:p>
 						<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
@@ -2925,7 +2925,7 @@
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
-								<w:t>{{ .Summary }}</w:t>
+								<w:t>{{ html .Summary }}</w:t>
 							</w:r>
 						</w:p>
 						{{ range .Highlights }}
@@ -2946,7 +2946,7 @@
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
-								<w:t>{{ . }}</w:t>
+								<w:t>{{ html . }}</w:t>
 							</w:r>
 						</w:p>
 						{{ end }}
@@ -2968,6 +2968,7 @@
 						</w:r>
 					</w:p>
 					<wx:sub-section>
+						{{ range .Education }}
 						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00DF6AD6">
 							<w:pPr>
 								<w:pStyle w:val="Heading3"/>
@@ -2976,10 +2977,10 @@
 							<aml:annotation aml:id="5" w:type="Word.Bookmark.Start" w:name="h.x22jpt133j12" w:col-first="0" w:col-last="0"/>
 							<aml:annotation aml:id="5" w:type="Word.Bookmark.End"/>
 							<w:r wsp:rsidRPr="00DF6AD6">
-								<w:t>University of Austin</w:t>
+								<w:t>{{ html .Institution }}</w:t>
 							</w:r>
 							<w:r>
-								<w:t>, 12/1997</w:t>
+								<w:t>, {{ html .EndDate }}</w:t>
 							</w:r>
 						</w:p>
 						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00DF6AD6">
@@ -2987,9 +2988,10 @@
 								<w:rPr>
 									<w:sz w:val="20"/>
 								</w:rPr>
-								<w:t>B.S. Computer Science</w:t>
+								<w:t>{{ html .Area }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
 					</wx:sub-section>
 				</wx:sub-section>
 				<wx:sub-section>
@@ -3006,6 +3008,7 @@
 							<w:t>Publications</w:t>
 						</w:r>
 					</w:p>
+					{{ range .Publications }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:listPr>
@@ -3028,7 +3031,7 @@
 								<w:i-cs/>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Money Laundering for Dummies</w:t>
+							<w:t>{{ html .Name }}</w:t>
 						</w:r>
 						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
 							<w:rPr>
@@ -3040,7 +3043,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>John Wiley &amp; Sons</w:t>
+							<w:t>{{ html .Publisher }}</w:t>
 						</w:r>
 						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
 							<w:rPr>
@@ -3052,7 +3055,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>xxxxxxxxxxx</w:t>
+							<w:t>{{ html .ISBN }}</w:t>
 						</w:r>
 						<w:r wsp:rsidR="00E60FE4">
 							<w:br/>
@@ -3061,29 +3064,12 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Similar </w:t>
-						</w:r>
-						<w:r>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>to the plot from "Superman III</w:t>
-						</w:r>
-						<w:r wsp:rsidRPr="00F662E2">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>"</w:t>
-						</w:r>
-						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>.</w:t>
+							<w:t>{{ html .Summary }}</w:t>
 						</w:r>
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
 					</w:p>
+					{{ end }}
 				</wx:sub-section>
 				<wx:sub-section>
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
@@ -3094,6 +3080,7 @@
 							<w:t>Social Profiles</w:t>
 						</w:r>
 					</w:p>
+					{{ range .Basics.Profiles }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:listPr>
@@ -3112,7 +3099,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>LinkedIn</w:t>
+							<w:t>{{ html .Network }}</w:t>
 						</w:r>
 						<w:r>
 							<w:rPr>
@@ -3120,16 +3107,17 @@
 							</w:rPr>
 							<w:t>: </w:t>
 						</w:r>
-						<w:hlink w:dest="http://linkedin.com/peter.gibbons">
+						<w:hlink w:dest="{{ .Url }}">
 							<w:r wsp:rsidRPr="00F662E2">
 								<w:rPr>
 									<w:rStyle w:val="Hyperlink"/>
 									<w:sz w:val="20"/>
 								</w:rPr>
-								<w:t>peter.gibbons</w:t>
+								<w:t>{{ html .Username }}</w:t>
 							</w:r>
 						</w:hlink>
 					</w:p>
+					{{ end }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:spacing w:line="240" w:line-rule="auto"/>
