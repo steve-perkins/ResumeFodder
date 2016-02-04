@@ -8,6 +8,7 @@ import (
 	"path"
 	"strings"
 	"text/template"
+	"time"
 )
 
 // InitResume writes a new, empty resume data file to the destination specified by the filename argument.  That
@@ -48,9 +49,31 @@ func ConvertResume(inputFilename, outputFilename string) error {
 //   https://www.microsoft.com/en-us/download/details.aspx?id=101
 func ExportResume(inputFilename, outputFilename, templateFilename string) error {
 
+	// Initialize the template engine
+	funcMap := template.FuncMap{
+		"MYYYY": func(s string) string {
+			const inputFormat = "2006-01-02"
+			dateValue, err := time.Parse(inputFormat, s)
+			if err != nil {
+				return s
+			}
+			const outputFormat = "1/2006"
+			return dateValue.Format(outputFormat)
+		},
+	}
+	// TODO: Why does this work when loading the template file into a string and calling "Parse()", but not when loading the template file directly with "ParseFiles()"?
+	templateBytes, err := ioutil.ReadFile(templateFilename)
+	if err != nil {
+		return err
+	}
+	templateString := string(templateBytes)
+	resumeTemplate, err := template.New("resume").Funcs(funcMap).Parse(templateString) // .ParseFiles(templateFilename)
+	if err != nil {
+		return err
+	}
+
 	// Load the resume data
 	var resumeData data.ResumeData
-	var err error
 	extension := strings.ToLower(path.Ext(inputFilename))
 	if extension == ".xml" {
 		resumeData, err = data.FromXmlFile(inputFilename)
@@ -61,18 +84,6 @@ func ExportResume(inputFilename, outputFilename, templateFilename string) error 
 	}
 	if err != nil {
 		return nil
-	}
-
-	// Initialize the template engine
-	// TODO: Why does this work when loading the template file into a string and calling "Parse()", but not when loading the template file directly with "ParseFiles()"?
-	templateBytes, err := ioutil.ReadFile(templateFilename)
-	if err != nil {
-		return err
-	}
-	templateString := string(templateBytes)
-	resumeTemplate, err := template.New("resume").Parse(templateString) // .ParseFiles(templateFilename)
-	if err != nil {
-		return err
 	}
 
 	// Open the output file and execute the template engine

@@ -2738,6 +2738,7 @@
 	</w:docPr>
 	<w:body>
 		<wx:sect>
+			{{ if .Basics.Name }}
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
@@ -2754,6 +2755,8 @@
 					<w:t>{{ html .Basics.Name }}</w:t>
 				</w:r>
 			</w:p>
+			{{ end }}
+			{{ if or .Basics.Location.Address .Basics.Location.City .Basics.Location.Region }}
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
@@ -2763,9 +2766,11 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>{{ html .Basics.Location.Address }}, {{ html .Basics.Location.City }}, {{ html .Basics.Location.Region }}</w:t>
+					<w:t>{{ if .Basics.Location.Address }}{{ html .Basics.Location.Address }}{{ if or .Basics.Location.City .Basics.Location.Region}}, {{ end }}{{ end }}{{ if .Basics.Location.City }}{{ html .Basics.Location.City }}{{ if .Basics.Location.Region}}, {{ end }}{{ end }}{{ if .Basics.Location.Region }}{{ html .Basics.Location.Region }}{{ end }}</w:t>
 				</w:r>
 			</w:p>
+			{{ end }}
+			{{ if .Basics.Phone }}
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
@@ -2778,6 +2783,8 @@
 					<w:t>{{ html .Basics.Phone }}</w:t>
 				</w:r>
 			</w:p>
+			{{ end }}
+			{{ if .Basics.Email }}
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 				<w:pPr>
 					<w:jc w:val="center"/>
@@ -2790,7 +2797,9 @@
 					<w:t>{{ html .Basics.Email }}</w:t>
 				</w:r>
 			</w:p>
+			{{ end }}
 			<wx:sub-section>
+				{{ if or .Basics.Summary .Basics.Highlights }}
 				<wx:sub-section>
 					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
 						<w:pPr>
@@ -2803,6 +2812,7 @@
 							<w:t>Summary</w:t>
 						</w:r>
 					</w:p>
+					{{ if .Basics.Summary }}
 					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="001E599A" wsp:rsidP="001E599A">
 						<w:pPr>
 							<w:contextualSpacing/>
@@ -2817,6 +2827,7 @@
 							<w:t>{{ html .Basics.Summary }}</w:t>
 						</w:r>
 					</w:p>
+					{{ end }}
 					{{ range .Basics.Highlights }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
@@ -2840,6 +2851,8 @@
 					</w:p>
 					{{ end }}
 				</wx:sub-section>
+				{{ end }}
+				{{ if .Skills }}
 				<wx:sub-section>
 					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
 						<w:pPr>
@@ -2866,7 +2879,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ html .Name }}: </w:t>
+							<w:t>{{ html .Name }}{{ if .Keywords }}: {{ end }}</w:t>
 						</w:r>
 						<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
@@ -2877,6 +2890,8 @@
 					</w:p>
 					{{ end }}
 				</wx:sub-section>
+				{{ end }}
+				{{ if .Work }}
 				<wx:sub-section>
 					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
 						<w:pPr>
@@ -2905,15 +2920,13 @@
 								<w:t>, </w:t>
 							</w:r>
 							<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
-								<w:t>{{ html .Company }}</w:t>
-							</w:r>
-							<w:r wsp:rsidR="00DF6AD6">
-								<w:t>, {{ html .StartDate }}</w:t>
+								<w:t>{{ html .Company }}{{ if .StartDate }}, {{ html .StartDate | MYYYY }} - {{ end }}</w:t>
 							</w:r>
 							<w:r>
-								<w:t> - {{ html .EndDate }}</w:t>
+								<w:t>{{ if .EndDate }}{{ html .EndDate | MYYYY }}{{ else }}Present{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ if .Summary }}
 						<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
 							<w:pPr>
 								<w:contextualSpacing/>
@@ -2928,6 +2941,7 @@
 								<w:t>{{ html .Summary }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
 						{{ range .Highlights }}
 						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
 							<w:pPr>
@@ -2953,6 +2967,8 @@
 						{{ end }}
 					</wx:sub-section>
 				</wx:sub-section>
+				{{ end }}
+				{{ if .Education }}
 				<wx:sub-section>
 					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
 						<w:pPr>
@@ -2980,7 +2996,7 @@
 								<w:t>{{ html .Institution }}</w:t>
 							</w:r>
 							<w:r>
-								<w:t>, {{ html .EndDate }}</w:t>
+								<w:t>, {{ html .EndDate | MYYYY }}</w:t>
 							</w:r>
 						</w:p>
 						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00DF6AD6">
@@ -2994,6 +3010,8 @@
 						{{ end }}
 					</wx:sub-section>
 				</wx:sub-section>
+				{{ end }}
+				{{ if .Publications }}
 				<wx:sub-section>
 					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
 						<w:pPr>
@@ -3031,25 +3049,13 @@
 								<w:i-cs/>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ html .Name }}</w:t>
-						</w:r>
-						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>, </w:t>
+							<w:t>{{ html .Name }}{{ if or .Publisher .ISBN }}, {{ end }}</w:t>
 						</w:r>
 						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ html .Publisher }}</w:t>
-						</w:r>
-						<w:r wsp:rsidR="00E60FE4" wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>, ISBN </w:t>
+							<w:t>{{ html .Publisher }}{{ if .ISBN }}, {{ end }}</w:t>
 						</w:r>
 						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
@@ -3057,6 +3063,7 @@
 							</w:rPr>
 							<w:t>{{ html .ISBN }}</w:t>
 						</w:r>
+						{{ if .Summary }}
 						<w:r wsp:rsidR="00E60FE4">
 							<w:br/>
 						</w:r>
@@ -3066,11 +3073,14 @@
 							</w:rPr>
 							<w:t>{{ html .Summary }}</w:t>
 						</w:r>
+						{{ end }}
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
 					</w:p>
 					{{ end }}
 				</wx:sub-section>
+				{{ end }}
+				{{ if .Basics.Profiles }}
 				<wx:sub-section>
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
@@ -3099,14 +3109,9 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ html .Network }}</w:t>
+							<w:t>{{ html .Network }}{{ if .Username }}, {{ end }}</w:t>
 						</w:r>
-						<w:r>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>: </w:t>
-						</w:r>
+						{{ if .Url }}
 						<w:hlink w:dest="{{ .Url }}">
 							<w:r wsp:rsidRPr="00F662E2">
 								<w:rPr>
@@ -3116,6 +3121,14 @@
 								<w:t>{{ html .Username }}</w:t>
 							</w:r>
 						</w:hlink>
+						{{ else }}
+						<w:r>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+                            <w:t>{{ html .Username }}</w:t>
+						</w:r>
+						{{ end }}
 					</w:p>
 					{{ end }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
@@ -3128,6 +3141,7 @@
 						</w:pPr>
 					</w:p>
 				</wx:sub-section>
+				{{ end }}
 			</wx:sub-section>
 			<w:sectPr wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidSect="00974E8B">
 				<w:pgSz w:w="12240" w:h="15840"/>
