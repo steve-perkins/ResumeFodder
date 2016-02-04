@@ -61,7 +61,8 @@ func ExportResume(inputFilename, outputFilename, templateFilename string) error 
 			return dateValue.Format(outputFormat)
 		},
 	}
-	// TODO: Why does this work when loading the template file into a string and calling "Parse()", but not when loading the template file directly with "ParseFiles()"?
+	// For some reason, I'm getting blank final results when loading templates via "ParseFiles()"... but it DOES work
+	// when I first read the template contents into a string and load that via "Parse()".
 	templateBytes, err := ioutil.ReadFile(templateFilename)
 	if err != nil {
 		return err
