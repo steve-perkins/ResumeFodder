@@ -1,6 +1,8 @@
-package command
+package command_test
 
 import (
+	"github.com/steve-perkins/resume"
+	"github.com/steve-perkins/resume/command"
 	"github.com/steve-perkins/resume/data"
 	"os"
 	"path/filepath"
@@ -11,10 +13,10 @@ import (
 func TestInitResume(t *testing.T) {
 	// Delete any pre-existing test file now, and then also clean up afterwards
 	filename := filepath.Join(os.TempDir(), "testresume.xml")
-	deleteFileIfExists(t, filename)
-	defer deleteFileIfExists(t, filename)
+	main.DeleteFileIfExists(t, filename)
+	defer main.DeleteFileIfExists(t, filename)
 
-	err := InitResume(filename)
+	err := command.InitResume(filename)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -30,18 +32,18 @@ func TestInitResume(t *testing.T) {
 
 func TestConvertResume(t *testing.T) {
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
-	deleteFileIfExists(t, xmlFilename)
-	defer deleteFileIfExists(t, xmlFilename)
+	main.DeleteFileIfExists(t, xmlFilename)
+	defer main.DeleteFileIfExists(t, xmlFilename)
 
 	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
-	deleteFileIfExists(t, jsonFilename)
-	defer deleteFileIfExists(t, jsonFilename)
+	main.DeleteFileIfExists(t, jsonFilename)
+	defer main.DeleteFileIfExists(t, jsonFilename)
 
-	err := InitResume(xmlFilename)
+	err := command.InitResume(xmlFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
-	err = ConvertResume(xmlFilename, jsonFilename)
+	err = command.ConvertResume(xmlFilename, jsonFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -57,20 +59,20 @@ func TestConvertResume(t *testing.T) {
 }
 
 func TestExportResume(t *testing.T) {
+	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
+	main.DeleteFileIfExists(t, xmlFilename)
+	defer main.DeleteFileIfExists(t, xmlFilename)
 
-	// TODO... implement ExportResume
-
-	err := ExportResume("resume.xml", "resume.doc", "defaultTemplate.xml")
-	if err.Error() != "ExportResume function is not yet implemented." {
-		t.Fatalf("err should be [ExportResume function is not yet implemented.], found [%s]\n", err)
+	resumeData := main.GenerateTestResumeData()
+	err := data.ToXmlFile(resumeData, xmlFilename)
+	if err != nil {
+		t.Fatal(err)
 	}
-}
 
-func deleteFileIfExists(t *testing.T, filename string) {
-	if _, err := os.Stat(filename); err == nil {
-		err := os.Remove(filename)
-		if err != nil {
-			t.Fatal(err)
-		}
+	outputFilename := filepath.Join(os.TempDir(), "resume.doc")
+	templateFilename := filepath.Join("..", "templates", "default.xml")
+	err = command.ExportResume(xmlFilename, outputFilename, templateFilename)
+	if err != nil {
+		t.Fatal(err)
 	}
 }

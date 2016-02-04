@@ -1,6 +1,8 @@
-package data
+package data_test
 
 import (
+	"github.com/steve-perkins/resume"
+	"github.com/steve-perkins/resume/data"
 	"os"
 	"path/filepath"
 	"reflect"
@@ -8,16 +10,16 @@ import (
 )
 
 func TestXmlConversion(t *testing.T) {
-	originalData := GenerateTestResumeData()
+	originalData := main.GenerateTestResumeData()
 
 	// Convert the data structure to a string of XML text
-	xml, err := ToXmlString(originalData)
+	xml, err := data.ToXmlString(originalData)
 	if err != nil {
 		t.Fatal(err)
 	}
 
 	// Parse that XML text into a new resume data structure
-	fromXmlData, err := FromXmlString(xml)
+	fromXmlData, err := data.FromXmlString(xml)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -29,13 +31,13 @@ func TestXmlConversion(t *testing.T) {
 }
 
 func TestJsonConversion(t *testing.T) {
-	originalData := GenerateTestResumeData()
+	originalData := main.GenerateTestResumeData()
 
-	json, err := ToJsonString(originalData)
+	json, err := data.ToJsonString(originalData)
 	if err != nil {
 		t.Fatal(err)
 	}
-	fromJsonData, err := FromJsonString(json)
+	fromJsonData, err := data.FromJsonString(json)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -46,21 +48,21 @@ func TestJsonConversion(t *testing.T) {
 }
 
 func TestXmlToJsonConversion(t *testing.T) {
-	originalData := GenerateTestResumeData()
+	originalData := main.GenerateTestResumeData()
 
-	xml, err := ToXmlString(originalData)
+	xml, err := data.ToXmlString(originalData)
 	if err != nil {
 		t.Fatal(err)
 	}
-	fromXmlData, err := FromXmlString(xml)
+	fromXmlData, err := data.FromXmlString(xml)
 	if err != nil {
 		t.Fatal(err)
 	}
-	json, err := ToJsonString(fromXmlData)
+	json, err := data.ToJsonString(fromXmlData)
 	if err != nil {
 		t.Fatal(err)
 	}
-	fromJsonData, err := FromJsonString(json)
+	fromJsonData, err := data.FromJsonString(json)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -71,21 +73,21 @@ func TestXmlToJsonConversion(t *testing.T) {
 }
 
 func TestJsonToXmlConversion(t *testing.T) {
-	originalData := GenerateTestResumeData()
+	originalData := main.GenerateTestResumeData()
 
-	json, err := ToJsonString(originalData)
+	json, err := data.ToJsonString(originalData)
 	if err != nil {
 		t.Fatal(err)
 	}
-	fromJsonData, err := FromJsonString(json)
+	fromJsonData, err := data.FromJsonString(json)
 	if err != nil {
 		t.Fatal(err)
 	}
-	xml, err := ToXmlString(fromJsonData)
+	xml, err := data.ToXmlString(fromJsonData)
 	if err != nil {
 		t.Fatal(err)
 	}
-	fromXmlData, err := FromXmlString(xml)
+	fromXmlData, err := data.FromXmlString(xml)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -98,18 +100,18 @@ func TestJsonToXmlConversion(t *testing.T) {
 func TestXmlFileConversion(t *testing.T) {
 	// Delete any pre-existing XML test file now, and then also clean up afterwards
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
-	deleteFileIfExists(t, xmlFilename)
-	defer deleteFileIfExists(t, xmlFilename)
+	main.DeleteFileIfExists(t, xmlFilename)
+	defer main.DeleteFileIfExists(t, xmlFilename)
 
 	// Write a resume data structure to an XML test file in the temp directory
-	originalData := GenerateTestResumeData()
-	err := ToXmlFile(originalData, xmlFilename)
+	originalData := main.GenerateTestResumeData()
+	err := data.ToXmlFile(originalData, xmlFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
 
 	// Parse that XML file back into a new resume data structure
-	fromXmlData, err := FromXmlFile(xmlFilename)
+	fromXmlData, err := data.FromXmlFile(xmlFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -122,82 +124,19 @@ func TestXmlFileConversion(t *testing.T) {
 
 func TestJsonFileConversion(t *testing.T) {
 	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
-	deleteFileIfExists(t, jsonFilename)
-	defer deleteFileIfExists(t, jsonFilename)
+	main.DeleteFileIfExists(t, jsonFilename)
+	defer main.DeleteFileIfExists(t, jsonFilename)
 
-	originalData := GenerateTestResumeData()
-	err := ToJsonFile(originalData, jsonFilename)
+	originalData := main.GenerateTestResumeData()
+	err := data.ToJsonFile(originalData, jsonFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
-	fromJsonData, err := FromJsonFile(jsonFilename)
+	fromJsonData, err := data.FromJsonFile(jsonFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if !reflect.DeepEqual(originalData, fromJsonData) {
 		t.Fatal("Resume data after JSON conversion doesn't match the original")
-	}
-}
-
-// A helper function to generate fake `ResumeData` structs, for use by the various test functions.
-func GenerateTestResumeData() ResumeData {
-	data := ResumeData{
-		Basics: Basics{
-			Name:    "Peter Gibbons",
-			Email:   "peter.gibbons@initech.com",
-			Summary: "Just a straight-shooter with upper managment written all over him",
-			Location: Location{
-				City:   "Austin",
-				Region: "TX",
-			},
-			Profiles: []SocialProfile{
-				{
-					Network:  "LinkedIn",
-					Username: "peter.gibbons",
-				},
-			},
-		},
-		Work: []Work{
-			{
-				Company:   "Initech",
-				Position:  "Software Developer",
-				StartDate: "1998-02-01",
-				Summary:   "Deals with the customers so the engineers don't have to.  A people person, damn it!",
-				Highlights: []string{
-					"Identifying Y2K-related issues in application code.",
-					"As many as four people working right underneath me.",
-				},
-			},
-		},
-		Education: []Education{
-			{
-				Institution: "University of Austin",
-				Area:        "B.S. Computer Science",
-				StartDate:   "1993-09-01",
-				EndDate:     "1997-12-01",
-			},
-		},
-		Skills: []Skill{
-			{
-				Name:     "Programming",
-				Level:    "Mid-level",
-				Keywords: []string{"C++", "Java"},
-			},
-			{
-				Name:     "Communication",
-				Level:    "Junior",
-				Keywords: []string{"Verbal", "Written"},
-			},
-		},
-	}
-	return data
-}
-
-func deleteFileIfExists(t *testing.T, filename string) {
-	if _, err := os.Stat(filename); err == nil {
-		err := os.Remove(filename)
-		if err != nil {
-			t.Fatal(err)
-		}
 	}
 }

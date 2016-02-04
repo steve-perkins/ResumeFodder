@@ -118,7 +118,7 @@ func ParseArgs(args []string) (string, []string, error) {
 			templateFilename = args[4]
 		}
 		templateExtension := strings.ToLower(path.Ext(templateFilename))
-		if templateExtension != ".doc" && inputExtension != ".xml" {
+		if templateExtension != ".doc" && templateExtension != ".xml" {
 			return "", nil, errors.New("Template file must have a '.doc' or '.xml' extension.")
 		}
 		return "export", []string{inputFilename, outputFilename, templateFilename}, nil
