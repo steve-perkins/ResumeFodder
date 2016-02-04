@@ -8,24 +8,57 @@ import (
 
 // ResumeData is the outermost container for resume data.
 type ResumeData struct {
-	XMLName           xml.Name           `xml:"resume" json:"-"`
-	Basics            Basics             `xml:"basics" json:"basics"`
-	WorkGroups        []WorkGroup        `xml:"workGroups" json:"workGroups"` // Non-standard
-	Education         []Education        `xml:"education" json:"education"`
-	PublicationGroups []PublicationGroup `xml:"publicationGroup" json:"publicationGroup"` // Non-standard
-	Skills            []Skill            `xml:"skills" json:"skills"`
+	XMLName xml.Name `xml:"resume" json:"-"`
+	Basics  Basics   `xml:"basics" json:"basics"`
+	Work    []Work   `xml:"work" json:"work"`
+	// AdditionalWork is an extra field, not found within the standard JSON-Resume spec.  It is intended to store
+	// employment history that should be presented differently from that in the main "Work" field.
+	//
+	// Specifically, if you have a lengthy work history, then you might store the oldest jobs in this field... so that
+	// a template can present them in abbreviated format (i.e. no highlights), with perhaps a "Further details
+	// available upon request"-type note.  It could similarly be used for high-school or college jobs that are
+	// only worth mentioning for entry-level candidates only.
+	//
+	// Obviously, the records in this extra field would be ignored if you used your data file with a standard
+	// JSON-Resume processor.  Otherwise, migration would require you to move any "AdditionalWork" records to the
+	// "Work" field.
+	AdditionalWork []Work        `xml:"additionalWork" json:"additionalWork"`
+	Education      []Education   `xml:"education" json:"education"`
+	Publications   []Publication `xml:"publications" json:"publications"`
+	// AdditionalPublications is an extra field, not found within the standard JSON-Resume spec.  It is intended to
+	// store publications that should be presented differently from those in the main "Publications" field.
+	//
+	// Specifically, if you collaborated on publications in which you were not an author or co-author (e.g. a technical
+	// reviewer instead), then you might store those publications here so that a template can present them
+	// without implying that you were an author.
+	//
+	// Obviously, the records in this extra field would be ignored if you used your data file with a standard
+	// JSON-Resume processor.  Otherwise, migration would require you to move any "AdditionalPublications" records to
+	// the "Publications" field.
+	AdditionalPublications []Publication `xml:"additionalPublications" json:"additionalPublications"`
+	Skills                 []Skill       `xml:"skills" json:"skills"`
 }
 
+// Basics is a container for top-level resume data.  These fields could just as well hang off the parent "ResumeData"
+// struct, but this structure mirrors how the JSON-Resume spec arranges them.
 type Basics struct {
-	Name       string          `xml:"name" json:"name"`
-	Label      string          `xml:"label" json:"label"`
-	Picture    string          `xml:"picture" json:"picture"`
-	Email      string          `xml:"email" json:"email"`
-	Phone      string          `xml:"phone" json:"phone"`
-	Degree     string          `xml:"degree" json:"degree"`
-	Website    string          `xml:"website" json:"website"`
-	Summary    string          `xml:"summary" json:"summary"`
-	Highlights []string        `xml:"highlights" json:"highlights"` // Non-standard
+	Name    string `xml:"name" json:"name"`
+	Label   string `xml:"label" json:"label"`
+	Picture string `xml:"picture" json:"picture"`
+	Email   string `xml:"email" json:"email"`
+	Phone   string `xml:"phone" json:"phone"`
+	Degree  string `xml:"degree" json:"degree"`
+	Website string `xml:"website" json:"website"`
+	Summary string `xml:"summary" json:"summary"`
+	// Highlights is an extra field, not found within the standard JSON-Resume spec.  It is intended for additional
+	// top-level information, that a template might present with a bullet-point list or other similar formatting
+	// next to the top-level "Summary" field.
+	//
+	// Obviously, the records in this extra field would be ignored if you used your data file with a standard
+	// JSON-Resume processor.  Once the other JSON-Resume processors gain mature support for HTML and/or Markdown
+	// line-break formatting within field values, then perhaps you could migrate "Highlights" data to within the
+	// "Summary" field.
+	Highlights []string        `xml:"highlights" json:"highlights"`
 	Location   Location        `xml:"location" json:"location"`
 	Profiles   []SocialProfile `xml:"profiles" json:"profiles"`
 }
@@ -36,18 +69,12 @@ type Location struct {
 	City        string `xml:"city" json:"city"`
 	CountryCode string `xml:"countryCode" json:"countryCode"`
 	Region      string `xml:"region" json:"region"`
-	Phone       string `xml:"phone" json:"phone"` // Non-standard
 }
 
 type SocialProfile struct {
 	Network  string `xml:"network" json:"network"`
 	Username string `xml:"username" json:"username"`
 	Url      string `xml:"url" json:"url"`
-}
-
-type WorkGroup struct {
-	Name string `xml:"Name" json:"Name"`
-	Work []Work `xml:"work" json:"work"`
 }
 
 type Work struct {
@@ -81,7 +108,10 @@ type Publication struct {
 	ReleaseDate string `xml:"releaseDate" json:"releaseDate"`
 	Website     string `xml:"website" json:"website"`
 	Summary     string `xml:"summary" json:"summary"`
-	ISBN        string `xml:"isbn" json:"isbn"` // Non-standard
+	// ISBN is an extra field, not found within the standard JSON-Resume spec.  Obviously, this value will be
+	// ignored if you used your data file with another JSON-Resume processor.  You could perhaps migrate by
+	// cramming this info into the "Summary" field.
+	ISBN string `xml:"isbn" json:"isbn"`
 }
 
 type Skill struct {
@@ -105,13 +135,14 @@ func NewResumeData() ResumeData {
 			Location: Location{},
 			Profiles: []SocialProfile{{}},
 		},
-		WorkGroups: []WorkGroup{
+		Work: []Work{
 			{
-				Work: []Work{
-					{
-						Highlights: []string{""},
-					},
-				},
+				Highlights: []string{""},
+			},
+		},
+		AdditionalWork: []Work{
+			{
+				Highlights: []string{""},
 			},
 		},
 		Education: []Education{
@@ -119,11 +150,8 @@ func NewResumeData() ResumeData {
 				Courses: []string{""},
 			},
 		},
-		PublicationGroups: []PublicationGroup{
-			{
-				Publications: []Publication{{}},
-			},
-		},
+		Publications:           []Publication{{}},
+		AdditionalPublications: []Publication{{}},
 		Skills: []Skill{
 			{
 				Keywords: []string{""},

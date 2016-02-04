@@ -91,6 +91,7 @@ func GenerateTestResumeData() data.ResumeData {
 		Basics: data.Basics{
 			Name:    "Peter Gibbons",
 			Email:   "peter.gibbons@initech.com",
+			Phone:   "555-555-5555",
 			Summary: "Just a straight-shooter with upper management written all over him.",
 			Highlights: []string{
 				"Once did nothing for an entire day.",
@@ -101,7 +102,6 @@ func GenerateTestResumeData() data.ResumeData {
 				City:       "Austin",
 				Region:     "TX",
 				PostalCode: "55555",
-				Phone:      "555-555-5555",
 			},
 			Profiles: []data.SocialProfile{
 				{
@@ -110,19 +110,28 @@ func GenerateTestResumeData() data.ResumeData {
 				},
 			},
 		},
-		WorkGroups: []data.WorkGroup{
+		Work: []data.Work{
 			{
-				Work: []data.Work{
-					{
-						Company:   "Initech",
-						Position:  "Software Developer",
-						StartDate: "1998-02-01",
-						Summary:   "Deals with the customers so the engineers don't have to.  A people person, damn it!",
-						Highlights: []string{
-							"Identifying Y2K-related issues in application code.",
-							"As many as four people working right underneath me.",
-						},
-					},
+				Company:   "Initech",
+				Position:  "Software Developer",
+				StartDate: "1998-02-01",
+				Summary:   "Deals with the customers so the engineers don't have to.  A people person, damn it!",
+				Highlights: []string{
+					"Identifying Y2K-related issues in application code.",
+					"As many as four people working right underneath me.",
+				},
+			},
+		},
+		AdditionalWork: []data.Work{
+			{
+				Company:   "Flingers",
+				Position:  "Burger Flipper",
+				StartDate: "1993-08-01",
+				EndDate:   "1998-01-31",
+				Summary:   "Paying my way through school with an exciting opportunity in the fast-food service industry.",
+				Highlights: []string{
+					"Wore 37 pieces of flair.",
+					"A terrific smile.",
 				},
 			},
 		},
@@ -146,17 +155,20 @@ func GenerateTestResumeData() data.ResumeData {
 				Keywords: []string{"Verbal", "Written"},
 			},
 		},
-		PublicationGroups: []data.PublicationGroup{
+		Publications: []data.Publication{
 			{
-				Publications: []data.Publication{
-					{
-						Name:        "Money Laundering for Dummies",
-						Publisher:   "John Wiley & Sons",
-						ReleaseDate: "1999-06-01",
-						ISBN:        "xxxxxxxxxxx",
-						Summary:     "Similar to the plot from \"Superman III\"",
-					},
-				},
+				Name:        "Money Laundering for Dummies",
+				Publisher:   "John Wiley & Sons",
+				ReleaseDate: "1999-06-01",
+				ISBN:        "xxxxxxxxxxx",
+				Summary:     "Similar to the plot from \"Superman III\"",
+			},
+		},
+		AdditionalPublications: []data.Publication{
+			{
+				Name:        "Washington High School Class of 1993 Yearbook",
+				ReleaseDate: "1993-06-01",
+				Summary:     "Served as understudy to the assistant editor for my high school yearbook.",
 			},
 		},
 	}
