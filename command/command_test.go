@@ -57,12 +57,22 @@ func TestConvertResume(t *testing.T) {
 }
 
 func TestExportResume(t *testing.T) {
+	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
+	deleteFileIfExists(t, xmlFilename)
+	defer deleteFileIfExists(t, xmlFilename)
 
-	// TODO... implement ExportResume
+	// TODO: Can we somehow use the "data.GenerateTestResumeData()" version from "data_test.go"?
+	resumeData := GenerateTestResumeData()
+	err := data.ToXmlFile(resumeData, xmlFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
 
-	err := ExportResume("resume.xml", "resume.doc", "defaultTemplate.xml")
-	if err.Error() != "ExportResume function is not yet implemented." {
-		t.Fatalf("err should be [ExportResume function is not yet implemented.], found [%s]\n", err)
+	outputFilename := filepath.Join(os.TempDir(), "resume.doc")
+	templateFilename := filepath.Join("..", "templates", "default.xml")
+	err = ExportResume(xmlFilename, outputFilename, templateFilename)
+	if err != nil {
+		t.Fatal(err)
 	}
 }
 
@@ -73,4 +83,82 @@ func deleteFileIfExists(t *testing.T, filename string) {
 			t.Fatal(err)
 		}
 	}
+}
+
+// A helper function to generate fake `ResumeData` structs, for use by the various test functions.
+func GenerateTestResumeData() data.ResumeData {
+	data := data.ResumeData{
+		Basics: data.Basics{
+			Name:    "Peter Gibbons",
+			Email:   "peter.gibbons@initech.com",
+			Summary: "Just a straight-shooter with upper management written all over him.",
+			Highlights: []string{
+				"Once did nothing for an entire day.",
+				"It was everything I thought it could be.",
+			},
+			Location: data.Location{
+				Address:    "123 Main Street",
+				City:       "Austin",
+				Region:     "TX",
+				PostalCode: "55555",
+				Phone:      "555-555-5555",
+			},
+			Profiles: []data.SocialProfile{
+				{
+					Network:  "LinkedIn",
+					Username: "peter.gibbons",
+				},
+			},
+		},
+		WorkGroups: []data.WorkGroup{
+			{
+				Work: []data.Work{
+					{
+						Company:   "Initech",
+						Position:  "Software Developer",
+						StartDate: "1998-02-01",
+						Summary:   "Deals with the customers so the engineers don't have to.  A people person, damn it!",
+						Highlights: []string{
+							"Identifying Y2K-related issues in application code.",
+							"As many as four people working right underneath me.",
+						},
+					},
+				},
+			},
+		},
+		Education: []data.Education{
+			{
+				Institution: "University of Austin",
+				Area:        "B.S. Computer Science",
+				StartDate:   "1993-09-01",
+				EndDate:     "1997-12-01",
+			},
+		},
+		Skills: []data.Skill{
+			{
+				Name:     "Programming",
+				Level:    "Mid-level",
+				Keywords: []string{"C++", "Java"},
+			},
+			{
+				Name:     "Communication",
+				Level:    "Junior",
+				Keywords: []string{"Verbal", "Written"},
+			},
+		},
+		PublicationGroups: []data.PublicationGroup{
+			{
+				Publications: []data.Publication{
+					{
+						Name:        "Money Laundering for Dummies",
+						Publisher:   "John Wiley & Sons",
+						ReleaseDate: "1999-06-01",
+						ISBN:        "xxxxxxxxxxx",
+						Summary:     "Similar to the plot from \"Superman III\"",
+					},
+				},
+			},
+		},
+	}
+	return data
 }

@@ -2751,7 +2751,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>Peter Gibbons</w:t>
+					<w:t>{{ .Basics.Name }}</w:t>
 				</w:r>
 			</w:p>
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
@@ -2763,7 +2763,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>123 Main Street, Austin, TX</w:t>
+					<w:t>{{ .Basics.Location.Address }}, {{ .Basics.Location.City }}, {{ .Basics.Location.Region }}</w:t>
 				</w:r>
 			</w:p>
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
@@ -2775,35 +2775,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>555</w:t>
-				</w:r>
-				<w:r wsp:rsidR="00E60FE4">
-					<w:rPr>
-						<w:b/>
-						<w:sz w:val="20"/>
-					</w:rPr>
-					<w:t>-</w:t>
-				</w:r>
-				<w:r>
-					<w:rPr>
-						<w:b/>
-						<w:sz w:val="20"/>
-					</w:rPr>
-					<w:t>555</w:t>
-				</w:r>
-				<w:r wsp:rsidR="00E60FE4">
-					<w:rPr>
-						<w:b/>
-						<w:sz w:val="20"/>
-					</w:rPr>
-					<w:t>-</w:t>
-				</w:r>
-				<w:r>
-					<w:rPr>
-						<w:b/>
-						<w:sz w:val="20"/>
-					</w:rPr>
-					<w:t>5555</w:t>
+					<w:t>{{ .Basics.Location.Phone }}</w:t>
 				</w:r>
 			</w:p>
 			<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="001E599A">
@@ -2815,7 +2787,7 @@
 						<w:b/>
 						<w:sz w:val="20"/>
 					</w:rPr>
-					<w:t>peter.gibbons@initech.com</w:t>
+					<w:t>{{ .Basics.Email }}</w:t>
 				</w:r>
 			</w:p>
 			<wx:sub-section>
@@ -2842,15 +2814,10 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Just a straight-shooter with upper management written all over him</w:t>
-						</w:r>
-						<w:r wsp:rsidR="497B5ECC" wsp:rsidRPr="497B5ECC">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>.</w:t>
+							<w:t>{{ .Basics.Summary }}</w:t>
 						</w:r>
 					</w:p>
+					{{ range .Basics.Highlights }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:listPr>
@@ -2868,29 +2835,10 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Once did nothing for an entire day.</w:t>
+							<w:t>{{ . }}</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="18"/>
-								<wx:t wx:val="·"/>
-								<wx:font wx:val="Symbol"/>
-							</w:listPr>
-							<w:contextualSpacing/>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-						</w:pPr>
-						<w:r>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>It was everything I thought it could be.</w:t>
-						</w:r>
-					</w:p>
+					{{ end }}
 				</wx:sub-section>
 				<wx:sub-section>
 					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
@@ -2901,6 +2849,7 @@
 							<w:t>Skills</w:t>
 						</w:r>
 					</w:p>
+					{{ range .Skills }}
 					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:listPr>
@@ -2917,40 +2866,16 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>Programming</w:t>
+							<w:t>{{ .Name }}: </w:t>
 						</w:r>
 						<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>: C++, Java</w:t>
+							<w:t>{{ range $index, $element := .Keywords }}{{ . }}{{ if not $index }}, {{ end }}{{ end }}</w:t>
 						</w:r>
 					</w:p>
-					<w:p wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00F662E2">
-						<w:pPr>
-							<w:listPr>
-								<w:ilvl w:val="0"/>
-								<w:ilfo w:val="19"/>
-								<wx:t wx:val="·"/>
-								<wx:font wx:val="Symbol"/>
-							</w:listPr>
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-						</w:pPr>
-						<w:r wsp:rsidRPr="00F662E2">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>Communication</w:t>
-						</w:r>
-						<w:r wsp:rsidRPr="00DF6AD6">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>: Verbal, Written</w:t>
-						</w:r>
-					</w:p>
+					{{ end }}
 				</wx:sub-section>
 				<wx:sub-section>
 					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
