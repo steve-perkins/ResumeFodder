@@ -64,47 +64,47 @@ func ParseArgs(args []string) (string, []string, error) {
 	case "init":
 		var filename string
 		if len(args) < 3 {
-			filename = "resume.xml"
+			filename = "resume.json"
 		} else {
 			filename = args[2]
 		}
 		extension := strings.ToLower(path.Ext(filename))
 		if extension != ".xml" && extension != ".json" {
-			err := errors.New("Filename to initialize must have an '.xml' or '.json' extension.")
+			err := errors.New("Filename to initialize must have a '.json' or '.xml' extension.")
 			return "", nil, err
 		}
 		return "init", []string{filename}, nil
 
 	case "convert":
 		if len(args) < 4 {
-			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume.exe convert resume.xml resume.json\")")
+			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume convert resume.json resume.xml\")")
 		}
 		inputFilename := args[2]
 		inputExtension := strings.ToLower(path.Ext(inputFilename))
-		if inputExtension != ".xml" && inputExtension != ".json" {
-			return "", nil, errors.New("Source file must have an '.xml' or '.json' extension.")
+		if inputExtension != ".json" && inputExtension != ".xml" {
+			return "", nil, errors.New("Source file must have a '.json' or '.xml' extension.")
 		}
 		outputFilename := args[3]
 		outputExtension := strings.ToLower(path.Ext(outputFilename))
-		if outputExtension != ".xml" && outputExtension != ".json" {
-			return "", nil, errors.New("Target file must have an '.xml' or '.json' extension.")
-		}
-		if inputExtension == ".xml" && outputExtension != ".json" {
-			return "", nil, errors.New("When converting an XML source file, the target filename must have a '.json' extension")
+		if outputExtension != ".json" && outputExtension != ".xml" {
+			return "", nil, errors.New("Target file must have a '.json' or '.xml' extension.")
 		}
 		if inputExtension == ".json" && outputExtension != ".xml" {
 			return "", nil, errors.New("When converting a JSON source file, the target filename must have an '.xml' extension")
+		}
+		if inputExtension == ".xml" && outputExtension != ".json" {
+			return "", nil, errors.New("When converting an XML source file, the target filename must have a '.json' extension")
 		}
 		return "convert", []string{inputFilename, outputFilename}, nil
 
 	case "export":
 		if len(args) < 4 {
-			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume.exe export resume.xml resume.doc\"), and optionally a template name.")
+			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume export resume.json resume.doc\"), and optionally a template name.")
 		}
 		inputFilename := args[2]
 		inputExtension := strings.ToLower(path.Ext(inputFilename))
-		if inputExtension != ".xml" && inputExtension != ".json" {
-			return "", nil, errors.New("Source file must have an '.xml' or '.json' extension.")
+		if inputExtension != ".json" && inputExtension != ".xml" {
+			return "", nil, errors.New("Source file must have a '.json' or '.xml' extension.")
 		}
 		outputFilename := args[3]
 		outputExtension := strings.ToLower(path.Ext(outputFilename))
@@ -113,7 +113,7 @@ func ParseArgs(args []string) (string, []string, error) {
 		}
 		var templateFilename string
 		if len(args) < 5 {
-			templateFilename = "defaultTemplate.xml"
+			templateFilename = "plain.xml"
 		} else {
 			templateFilename = args[4]
 		}
@@ -133,9 +133,61 @@ func ParseArgs(args []string) (string, []string, error) {
 // usage displays information about this application and its supported arguments, and then terminates
 // the application.
 func usage() {
+	fmt.Println(`
+Usage:
 
-	// TODO... write full usage text
+   resume COMMAND <args>
 
-	fmt.Println("\nUsage...")
+... where "COMMAND" is one of the following:
+
+	init    - Create a new empty resume data file
+	convert - Convert a JSON-formatted resume data file into XML
+	          format, or vice-versa
+	export  - Process and resume data file with a given template,
+	          to publish a Microsoft Word resume file
+
+Full details for each command:
+
+resume init <filename>
+resume init resume.xml
+
+	Will generate an empty resume data file with the specified
+	filename, which must have either a '.json' or '.xml' file
+	extension.
+
+	If no filename is specified, then a data file will be created
+	with filename 'resume.json'.
+
+resume convert <input filename> <output filename>
+resume convert resume.xml resume.json
+
+	The resume data file specified by the first parameter will
+	be converted to the filename specified by the second parameter.
+
+	If the second file already exists, then any contents will
+	be overwritten.  Both filenames must have either a '.json' or
+	'.xml' file extension.
+
+resume export <data filename> <output filename> <template filename>
+resume export resume.json resume.doc templates/plain.xml
+
+	The resume data file specified by the first parameter will
+	published as a Microsoft Word file with the name specified by
+	the second parameter.  The template file specified by the third
+	parameter will be used to generate the output.
+
+	The data filename must have either a '.json' or '.xml' file
+	extension.  The output will be a Microsoft Word 2003 XML file,
+	and its name must have either a '.doc' or '.xml' file
+	extension.  The template file must likewise be a Word 2003
+	XML file (with Go template tags), and its name too must have
+	either a '.doc' or '.xml' extension.
+
+	If the specified template is not found in the current working
+	directory, then the application will look under a "templates"
+	subdirectory in the current working directory.  If no template
+	is specified, the the application will use the "plain.xml"
+	template.
+`)
 	os.Exit(0)
 }

@@ -22,8 +22,8 @@ func TestInit_NoArg(t *testing.T) {
 	if command != "init" {
 		t.Fatalf("command should be [init], found [%s]\n", command)
 	}
-	if len(args) != 1 || args[0] != "resume.xml" {
-		t.Fatalf("args should be [resume.xml], found %s\n", args)
+	if len(args) != 1 || args[0] != "resume.json" {
+		t.Fatalf("args should be [resume.json], found %s\n", args)
 	}
 	if err != nil {
 		t.Fatalf("err should be nil, found [%s]\n", err)
@@ -32,8 +32,8 @@ func TestInit_NoArg(t *testing.T) {
 
 func TestInit_InvalidFilename(t *testing.T) {
 	_, _, err := main.ParseArgs([]string{"resume.exe", "init", "bad_extension.foo"})
-	if err == nil || err.Error() != "Filename to initialize must have an '.xml' or '.json' extension." {
-		t.Fatalf("err should be [Filename to initialize must have an '.xml' or '.json' extension.], found [%s]\n", err)
+	if err == nil || err.Error() != "Filename to initialize must have a '.json' or '.xml' extension." {
+		t.Fatalf("err should be [Filename to initialize must have a '.json' or '.xml' extension.], found [%s]\n", err)
 	}
 }
 
@@ -52,20 +52,20 @@ func TestInit_Valid(t *testing.T) {
 
 func TestConvert_NoArgs(t *testing.T) {
 	_, _, err := main.ParseArgs([]string{"resume.exe", "convert"})
-	if err == nil || err.Error() != "You must specify input and output filenames (e.g. \"resume.exe convert resume.xml resume.json\")" {
-		t.Fatalf("err should be [You must specify input and output filenames (e.g. \"resume.exe convert resume.xml resume.json\")], found [%s]\n", err)
+	if err == nil || err.Error() != "You must specify input and output filenames (e.g. \"resume convert resume.json resume.xml\")" {
+		t.Fatalf("err should be [You must specify input and output filenames (e.g. \"resume convert resume.json resume.xml\")], found [%s]\n", err)
 	}
 }
 
 func TestConvert_InvalidFilename(t *testing.T) {
 	// Source and target must be XML or JSON
 	_, _, err := main.ParseArgs([]string{"resume.exe", "convert", "bad_extension.foo", "resume.json"})
-	if err == nil || err.Error() != "Source file must have an '.xml' or '.json' extension." {
-		t.Fatalf("err should be [Source file must have an '.xml' or '.json' extension.], found [%s]\n", err)
+	if err == nil || err.Error() != "Source file must have a '.json' or '.xml' extension." {
+		t.Fatalf("err should be [Source file must have a '.json' or '.xml' extension.], found [%s]\n", err)
 	}
 	_, _, err = main.ParseArgs([]string{"resume.exe", "convert", "resume.xml", "bad_extension.foo"})
-	if err == nil || err.Error() != "Target file must have an '.xml' or '.json' extension." {
-		t.Fatalf("err should be [Target file must have an '.xml' or '.json' extension.], found [%s]\n", err)
+	if err == nil || err.Error() != "Target file must have a '.json' or '.xml' extension." {
+		t.Fatalf("err should be [Target file must have a '.json' or '.xml' extension.], found [%s]\n", err)
 	}
 
 	// Conversion from one format must be to the other
@@ -94,16 +94,16 @@ func TestConvert_Valid(t *testing.T) {
 
 func TestExport_NoArg(t *testing.T) {
 	_, _, err := main.ParseArgs([]string{"resume.exe", "export"})
-	if err == nil || err.Error() != "You must specify input and output filenames (e.g. \"resume.exe export resume.xml resume.doc\"), and optionally a template name." {
-		t.Fatalf("err should be [You must specify input and output filenames (e.g. \"resume.exe export resume.xml resume.doc\"), and optionally a template name.], found [%s]\n", err)
+	if err == nil || err.Error() != "You must specify input and output filenames (e.g. \"resume export resume.json resume.doc\"), and optionally a template name." {
+		t.Fatalf("err should be [You must specify input and output filenames (e.g. \"resume export resume.json resume.doc\"), and optionally a template name.], found [%s]\n", err)
 	}
 }
 
 func TestExport_InvalidSourceFilename(t *testing.T) {
 	// Source must be XML or JSON
 	_, _, err := main.ParseArgs([]string{"resume.exe", "export", "bad_extension.foo", "resume.doc"})
-	if err == nil || err.Error() != "Source file must have an '.xml' or '.json' extension." {
-		t.Fatalf("err should be [Source file must have an '.xml' or '.json' extension.], found [%s]\n", err)
+	if err == nil || err.Error() != "Source file must have a '.json' or '.xml' extension." {
+		t.Fatalf("err should be [Source file must have a '.json' or '.xml' extension.], found [%s]\n", err)
 	}
 }
 
@@ -128,8 +128,8 @@ func TestExport_NoTemplateFilename(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if args[2] != "defaultTemplate.xml" {
-		t.Fatal(errors.New("When no template file is specified, the default value of \"defaultTemplate.xml\" should be used"))
+	if args[2] != "plain.xml" {
+		t.Fatal(errors.New("When no template file is specified, the default value of \"plain.xml\" should be used"))
 	}
 }
 
