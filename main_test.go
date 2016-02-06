@@ -3,6 +3,10 @@ package main_test
 import (
 	"errors"
 	"github.com/steve-perkins/resume"
+	"github.com/steve-perkins/resume/command"
+	"github.com/steve-perkins/resume/data"
+	"os"
+	"path/filepath"
 	"testing"
 )
 
@@ -139,5 +143,27 @@ func TestExport_Valid(t *testing.T) {
 	}
 	if err != nil {
 		t.Fatalf("err should be nil, found [%s]\n", err)
+	}
+}
+
+// Tests that when the export command can't find a template at the specified location, that the command will try
+// prepending that with the "templates" directory.  This test logically belongs in the "command/command_test.go" test
+// file, but instead lives here because it requires the current working directory to be the project root.
+func TestExportResume_TemplateDefaultPath(t *testing.T) {
+	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
+	main.DeleteFileIfExists(t, xmlFilename)
+	defer main.DeleteFileIfExists(t, xmlFilename)
+
+	resumeData := main.GenerateTestResumeData()
+	err := data.ToXmlFile(resumeData, xmlFilename)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	outputFilename := filepath.Join(os.TempDir(), "resume.doc")
+	templateFilename := "default.xml"
+	err = command.ExportResume(xmlFilename, outputFilename, templateFilename)
+	if err != nil {
+		t.Fatal(err)
 	}
 }

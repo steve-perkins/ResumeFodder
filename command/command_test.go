@@ -58,7 +58,8 @@ func TestConvertResume(t *testing.T) {
 	}
 }
 
-func TestExportResume(t *testing.T) {
+// See also "TestExportResume_TemplateDefaultPath()", in the root-level "main_test.go" test file.
+func TestExportResume_TemplateRelativePath(t *testing.T) {
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
 	main.DeleteFileIfExists(t, xmlFilename)
 	defer main.DeleteFileIfExists(t, xmlFilename)

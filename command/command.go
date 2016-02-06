@@ -2,10 +2,12 @@ package command
 
 import (
 	"errors"
+	"fmt"
 	"github.com/steve-perkins/resume/data"
 	"io/ioutil"
 	"os"
 	"path"
+	"path/filepath"
 	"strings"
 	"text/template"
 	"time"
@@ -65,7 +67,14 @@ func ExportResume(inputFilename, outputFilename, templateFilename string) error 
 	// when I first read the template contents into a string and load that via "Parse()".
 	templateBytes, err := ioutil.ReadFile(templateFilename)
 	if err != nil {
-		return err
+		// Look for template files at the raw path provided.  If not found, then try looking for then beneath
+		// the "templates" subdirectory
+		templatePath := filepath.Join("templates", templateFilename)
+		templateBytes, err = ioutil.ReadFile(templatePath)
+		if err != nil {
+			message := fmt.Sprintf("Could not find %s or %s", templateFilename, templatePath)
+			return errors.New(message)
+		}
 	}
 	templateString := string(templateBytes)
 	resumeTemplate, err := template.New("resume").Funcs(funcMap).Parse(templateString) // .ParseFiles(templateFilename)

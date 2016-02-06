@@ -3074,6 +3074,9 @@
 							<w:t>{{ html .Summary }}</w:t>
 						</w:r>
 						{{ end }}
+						<w:r wsp:rsidR="00E60FE4">
+							<w:br/>
+						</w:r>
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
 					</w:p>

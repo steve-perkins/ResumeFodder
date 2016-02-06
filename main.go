@@ -27,13 +27,13 @@ func main() {
 		}
 	case "convert":
 		if err := command.ConvertResume(args[0], args[1]); err == nil {
-			fmt.Println("Converted resume data file \"%s\" has been created.\n", args[1])
+			fmt.Printf("Converted resume data file \"%s\" has been created.\n", args[1])
 		} else {
 			fmt.Println(err)
 		}
 	case "export":
 		if err := command.ExportResume(args[0], args[1], args[2]); err == nil {
-			fmt.Println("Resume has been exported to \"%s\" using template \"%s\".\n", args[1], args[2])
+			fmt.Printf("Resume has been exported to \"%s\" using template \"%s\".\n", args[1], args[2])
 		} else {
 			fmt.Println(err)
 		}
