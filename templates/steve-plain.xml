@@ -2877,6 +2877,7 @@
 						</w:pPr>
 						<w:r>
 							<w:rPr>
+								<w:b/>
 								<w:sz w:val="20"/>
 							</w:rPr>
 							<w:t>{{ html .Name }}{{ if .Keywords }}: {{ end }}</w:t>
@@ -2885,7 +2886,7 @@
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ range $index, $element := .Keywords }}{{ . }}{{ if not $index }}, {{ end }}{{ end }}</w:t>
+							<w:t>{{ range $index, $element := .Keywords }}{{ if ne $index 0 }}, {{ end }}{{ . }}{{ end }}</w:t>
 						</w:r>
 					</w:p>
 					{{ end }}
@@ -2968,6 +2969,61 @@
 					</wx:sub-section>
 				</wx:sub-section>
 				{{ end }}
+				{{ if .AdditionalWork }}
+				<wx:sub-section>
+					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+						<w:pPr>
+							<w:pStyle w:val="Heading2"/>
+							<w:contextualSpacing w:val="off"/>
+						</w:pPr>
+						<aml:annotation aml:id="1" w:type="Word.Bookmark.Start" w:name="h.q7t636trzl8i" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="1" w:type="Word.Bookmark.End"/>
+						<w:r>
+							<w:t>Prior Experience (further detail available upon request)</w:t>
+						</w:r>
+					</w:p>
+					<wx:sub-section>
+						{{ range .AdditionalWork }}
+						<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+							<w:pPr>
+								<w:pStyle w:val="Heading3"/>
+								<w:contextualSpacing w:val="off"/>
+							</w:pPr>
+							<aml:annotation aml:id="2" w:type="Word.Bookmark.Start" w:name="h.te210npfwk8y" w:col-first="0" w:col-last="0"/>
+							<aml:annotation aml:id="2" w:type="Word.Bookmark.End"/>
+							<w:r>
+								<w:t>{{ html .Position }}</w:t>
+							</w:r>
+							<w:r>
+								<w:t>, </w:t>
+							</w:r>
+							<w:r wsp:rsidR="00DF6AD6" wsp:rsidRPr="00DF6AD6">
+								<w:t>{{ html .Company }}{{ if .StartDate }}, {{ html .StartDate | MYYYY }} - {{ end }}</w:t>
+							</w:r>
+							<w:r>
+								<w:t>{{ if .EndDate }}{{ html .EndDate | MYYYY }}{{ else }}Present{{ end }}</w:t>
+							</w:r>
+						</w:p>
+						{{ if .Summary }}
+						<w:p wsp:rsidR="00DF6AD6" wsp:rsidRDefault="00DF6AD6" wsp:rsidP="00DF6AD6">
+							<w:pPr>
+								<w:contextualSpacing/>
+								<w:rPr>
+									<w:sz w:val="20"/>
+								</w:rPr>
+							</w:pPr>
+							<w:r wsp:rsidRPr="00DF6AD6">
+								<w:rPr>
+									<w:sz w:val="20"/>
+								</w:rPr>
+								<w:t>{{ html .Summary }}</w:t>
+							</w:r>
+						</w:p>
+						{{ end }}
+						{{ end }}
+					</wx:sub-section>
+				</wx:sub-section>
+				{{ end }}
 				{{ if .Education }}
 				<wx:sub-section>
 					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
@@ -3026,7 +3082,8 @@
 							<w:t>Publications</w:t>
 						</w:r>
 					</w:p>
-					{{ range .Publications }}
+                    {{ $numberOfPublications := len .Publications }}
+					{{ range $index, $element := .Publications }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:listPr>
@@ -3049,24 +3106,28 @@
 								<w:i-cs/>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ html .Name }}{{ if or .Publisher .ISBN }}, {{ end }}</w:t>
+							<w:t>{{ html .Name }}</w:t>
 						</w:r>
+						{{ if .Publisher }}
 						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ html .Publisher }}{{ if .ISBN }}, {{ end }}</w:t>
+							<w:t>, {{ html .Publisher }}</w:t>
 						</w:r>
+						{{ end }}
+						{{ if .ISBN }}
 						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>{{ html .ISBN }}</w:t>
+							<w:t>, ISBN {{ html .ISBN }}</w:t>
 						</w:r>
-						{{ if .Summary }}
+						{{ end }}
 						<w:r wsp:rsidR="00E60FE4">
 							<w:br/>
 						</w:r>
+						{{ if .Summary }}
 						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
@@ -3074,9 +3135,73 @@
 							<w:t>{{ html .Summary }}</w:t>
 						</w:r>
 						{{ end }}
+						{{ if lt (plus1 $index) $numberOfPublications}}
 						<w:r wsp:rsidR="00E60FE4">
 							<w:br/>
 						</w:r>
+						{{ end }}
+						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
+					</w:p>
+					{{ end }}
+				</wx:sub-section>
+				{{ end }}
+				{{ if .AdditionalPublications }}
+				<wx:sub-section>
+					<w:p wsp:rsidR="005B2442" wsp:rsidRDefault="00E60FE4">
+						<w:pPr>
+							<w:pStyle w:val="Heading2"/>
+							<w:contextualSpacing w:val="off"/>
+						</w:pPr>
+						<aml:annotation aml:id="6" w:type="Word.Bookmark.Start" w:name="h.hfhp23fle4cj" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="7" w:type="Word.Bookmark.Start" w:name="h.cipecsiv79km" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="6" w:type="Word.Bookmark.End"/>
+						<aml:annotation aml:id="7" w:type="Word.Bookmark.End"/>
+						<w:r>
+							<w:t>Additional Publications (technical reviewer)</w:t>
+						</w:r>
+					</w:p>
+					{{ range .AdditionalPublications }}
+					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
+						<w:pPr>
+							<w:listPr>
+								<w:ilvl w:val="0"/>
+								<w:ilfo w:val="17"/>
+								<wx:t wx:val="·"/>
+								<wx:font wx:val="Symbol"/>
+							</w:listPr>
+							<w:spacing w:line="240" w:line-rule="auto"/>
+							<w:contextualSpacing/>
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+						</w:pPr>
+						<aml:annotation aml:id="8" w:type="Word.Bookmark.Start" w:name="h.b8yy8rn005ki" w:col-first="0" w:col-last="0"/>
+						<aml:annotation aml:id="8" w:type="Word.Bookmark.End"/>
+						<w:r wsp:rsidRPr="00F662E2">
+							<w:rPr>
+								<w:i/>
+								<w:i-cs/>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>{{ html .Name }}</w:t>
+						</w:r>
+						{{ if .Summary }}
+						<w:r wsp:rsidRPr="00F662E2">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>, {{ html .Summary }}</w:t>
+						</w:r>
+						{{ end }}
+						{{ if .ISBN }}
+						<w:r wsp:rsidRPr="00F662E2">
+							<w:rPr>
+								<w:sz w:val="20"/>
+							</w:rPr>
+							<w:t>, ISBN {{ html .ISBN }}</w:t>
+						</w:r>
+						{{ end }}
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.End"/>
 					</w:p>

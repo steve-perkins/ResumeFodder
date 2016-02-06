@@ -7,21 +7,13 @@
     "phone": "404-997-3018",
     "degree": "",
     "website": "www.steveperkins.com",
-    "summary": "",
+    "summary": "Over 15 years of experience with enterprise application integration and web development, in environments ranging from startups to the Fortune 500.  Recent experience with microservice architecture, supporting tens of millions of users and over 100 terabytes of data.",
     "highlights": [
-      "Over 15 years experience with enterprise application integration and web development, in Java and .NET environments ranging from startups to the Fortune 500.  Recent experience with microservice architecture supporting tens of millions of users and over 100 terabytes of data.",
+      "Lengthy leadership experience, up to managing multiple development teams simultaneously.  I have a background in teaching training classes, and deeply enjoy mentoring junior developers.",
 
-      "I am highly comfortable with major Java frameworks including Spring, Hibernate/JPA, Apache Camel, and Akka.  Familiar with JEE, as well as ASP.NET on the Microsoft side.  I have worked with practically every major application server, and have recent experience with deploying microservices in Docker containers.",
+      "Excellent oral and written communication skills.  I've been active in Toastmasters International (a public speaking organization), and interact well with clients and business stakeholders.",
 
-      "More than a decade of experience with messaging middleware, from MQSeries on midrange servers to RabbitMQ on commodity hardware.  Deep knowledge of HTTP-based EAI approaches such as SOAP and REST / HATEOAS.",
-
-      "Strong background in relational data modeling, and performance considerations for major database vendors (primarily Oracle, MySQL, and PostgreSQL).  Recent NoSQL experience with Cassandra and ElasticSearch at high scale.  Limited exposure to Hadoop and Spark for batch data processing and analysis.",
-
-      "I've worked with HTML/CSS and JavaScript for over 15 years.  I am extremely comfortable with jQuery, and have more recent experience with AngularJS and TypeScript.",
-
-      "Excellent oral and written communication skills.  I've been active in Toastmasters International (a public speaking organization), and interact well with business stakeholders.  I have a background in teaching training classes, and deeply enjoy mentoring junior developers.",
-
-      "I'm a published author, maintain a technical blog at StevePerkins.com with 5-10 thousand unique visitors per month, and am also a guest blogger for JavaCodeGeeks.com.  My GitHub account is “steve-perkins”, where I keep a number of open source personal projects and code samples."
+      "Am a published author.  I maintain a technical blog at StevePerkins.com with ~10,000 unique visitors per month, and am also a guest blogger for JavaCodeGeeks.com.  My GitHub account (\"steve-perkins\") hosts a number of open source personal projects and code samples."
     ],
     "location": {
       "address": "4301 Gravitt Place",
@@ -130,7 +122,7 @@
       "website": "",
       "startDate": "2008-11-01",
       "endDate": "2009-05-01",
-      "summary": "",
+      "summary": "Placeholder summary for Internap job",
       "highlights": [
         "Developed and extended billing and operational systems for a publicly-traded Internet solutions company, under an agile/scrum based methodology.  The architecture consisted of Struts-based Java and legacy Perl applications, running on a blend of JBoss servers with Oracle databases.",
 
@@ -145,7 +137,7 @@
       "website": "",
       "startDate": "2007-08-01",
       "endDate": "2008-11-01",
-      "summary": "",
+      "summary": "Placeholder summary for TRX job",
       "highlights": [
         "Developed data aggregation and mining solutions for financial clients, for the purpose of identifying useful information about consumer spending patterns.",
 
@@ -162,7 +154,7 @@
       "website": "",
       "startDate": "2002-06-01",
       "endDate": "2007-08-01",
-      "summary": "",
+      "summary": "Placeholder summary for Number Six Software job",
       "highlights": [
         "Primarily I was on-site for over 5 years with the Manheim division of Cox Enterprises.  Helped design and build the first release of OnlineVehicleExchange.com, an dealer-to-dealer automotive auction system. The platform was based on WebSphere Commerce, with data storage in DB2.",
 
@@ -181,7 +173,7 @@
       "website": "",
       "startDate": "2001-07-01",
       "endDate": "2002-06-02",
-      "summary": "",
+      "summary": "Placeholder summary for Palarco Consulting job",
       "highlights": [
         "Worked on a series of short-term subcontract engagements for American Bank Note Company, Georgia Farm Bureau, and Mohawk Carpet.  The role of our firm in the larger projects was specialized in integrating IBM legacy midrange servers with WebSphere Commerce applications.",
 
@@ -194,7 +186,7 @@
       "website": "",
       "startDate": "2000-01-01",
       "endDate": "2001-07-01",
-      "summary": "",
+      "summary": "Placeholder summary for Context Integration job",
       "highlights": [
         "Worked on an overall team of over two-dozen developers on an 18-month engagement with Georgia Pacific, constructing a B2B commerce application. The web front-end was built using BroadVision One-to-One Commerce with an Oracle database, integrated with 11 billing and inventory systems (AS/400’s and HP-9000’s) nationwide via C++ and CORBA, and IBM MQSeries.",
 
@@ -294,6 +286,28 @@
       "website": "",
       "summary": "by Simon Bailey",
       "ISBN": "1783983744"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": ["Java", "Go", "Scala", "C#", "JavaScript", "TypeScript"]
+    },
+    {
+      "name": "Frameworks / Libraries",
+      "keywords": ["Spring", "JEE", "JPA/Hibernate", "JAX-RS/Jersey", "ASP.NET", "jQuery", "AngularJS 1.x/2.x"]
+    },
+    {
+      "name": "Data",
+      "keywords": ["Oracle", "DB2", "MySQL/Percona", "PostgreSQL", "MongoDB", "Cassandra", "Redis", "Elasticsearch", "Apache Spark"]
+    },
+    {
+      "name": "Middleware",
+      "keywords": ["RabbitMQ", "Kafka", "Apache Camel"]
+    },
+    {
+      "name": "Environment / Infrastructure",
+      "keywords": ["Continuous Integration (Jenkins)", "Docker", "Mesos/Marathon", "Google Cloud Platform", "Microsoft Azure", "Amazon Web Services"]
     }
   ]
 }
