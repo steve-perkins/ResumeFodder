@@ -1,0 +1,110 @@
+{
+  "basics": {
+    "name": "Peter Gibbons",
+    "label": "",
+    "picture": "",
+    "email": "peter.gibbons@initech.com",
+    "phone": "555-555-5555",
+    "degree": "",
+    "website": "",
+    "summary": "Just a straight-shooter with upper management written all over him",
+    "highlights": [
+      "Once did nothing for an entire day.",
+      "It was everything I thought it could be."
+    ],
+    "location": {
+      "address": "123 Main Street",
+      "postalCode": "55555",
+      "city": "Austin",
+      "countryCode": "",
+      "region": "TX"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "peter.gibbons",
+        "url": "http://linkedin.com/peter.gibbons"
+      }
+    ]
+  },
+  "workLabel": "Professional Experience",
+  "work": [
+    {
+      "company": "Initech",
+      "position": "Software Developer",
+      "website": "",
+      "startDate": "1998-02-01",
+      "endDate": "",
+      "summary": "Deals with the customers so the engineers don't have to.  A people person, damn it!",
+      "highlights": [
+        "Identifying Y2K-related issues in application code.",
+        "As many as four people working right underneath me."
+      ]
+    }
+  ],
+  "additionalWorkLabel": "Academic Work Experience",
+  "additionalWork": [
+    {
+      "company": "Flingers",
+      "position": "Server",
+      "website": "",
+      "startDate": "1993-08-01",
+      "endDate": "1998-01-31",
+      "summary": "Paying my way through school with an exciting opportunity in the fast-food service industry.",
+      "highlights": [
+        "Wore 37 pieces of flair.",
+        "A terrific smile."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Austin",
+      "area": "B.S. Computer Science",
+      "studyType": "",
+      "startDate": "1993-09-01",
+      "endDate": "1997-12-01",
+      "gpa": ""
+    }
+  ],
+  "publicationsLabel": "Publications",
+  "publications": [
+    {
+      "name": "Money Laundering for Dummies",
+      "publisher": "John Wiley \u0026 Sons",
+      "releaseDate": "1999-06-01",
+      "website": "",
+      "summary": "Similar to the plot from \"Superman III\"",
+      "isbn": "1234567890X"
+    }
+  ],
+  "additionalPublicationsLabel": "Academic Publications",
+  "additionalPublications": [
+    {
+      "name": "Washington High School Class of 1993 Yearbook",
+      "publisher": "",
+      "releaseDate": "1993-06-01",
+      "website": "",
+      "summary": "Served as understudy to the assistant editor for my high school yearbook.",
+      "isbn": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "Mid-level",
+      "keywords": [
+        "C++",
+        "Java"
+      ]
+    },
+    {
+      "name": "Communication",
+      "level": "Junior",
+      "keywords": [
+        "Verbal",
+        "Written"
+      ]
+    }
+  ]
+}
