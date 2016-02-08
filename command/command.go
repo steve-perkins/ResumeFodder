@@ -53,6 +53,12 @@ func ExportResume(inputFilename, outputFilename, templateFilename string) error 
 
 	// Initialize the template engine
 	funcMap := template.FuncMap{
+		"plus1": func(x int) int {
+			return x + 1
+		},
+		"toUpper": func(s string) string {
+			return strings.ToUpper(s)
+		},
 		"MYYYY": func(s string) string {
 			const inputFormat = "2006-01-02"
 			dateValue, err := time.Parse(inputFormat, s)
@@ -61,9 +67,6 @@ func ExportResume(inputFilename, outputFilename, templateFilename string) error 
 			}
 			const outputFormat = "1/2006"
 			return dateValue.Format(outputFormat)
-		},
-		"plus1": func(x int) int {
-			return x + 1
 		},
 	}
 	// For some reason, I'm getting blank final results when loading templates via "ParseFiles()"... but it DOES work
