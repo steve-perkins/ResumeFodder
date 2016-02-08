@@ -35,6 +35,7 @@
       }
     ]
   },
+  "workLabel": "Recent Experience",
   "work": [
     {
       "company": "BetterCloud",
@@ -42,10 +43,8 @@
       "website": "",
       "startDate": "2013-10-01",
       "endDate": "",
-      "summary": "",
+      "summary": "BetterCloud is SaaS product company offering analytics, security, and advanced administration for users of Google Apps or Microsoft Office 365.  The total data set within our domain is over 100 terabytes , growing at rate of multiple terabytes per month.",
       "highlights": [
-        "BetterCloud is SaaS product company offering analytics, security, and advanced administration for users of Google Apps or Microsoft Office 365.  The total data set within our domain is over 100 terabytes , growing at rate of multiple terabytes per month.",
-
         "We use a microservice architecture, with Google services written in Java and hosted on Google Cloud Platform, and Microsoft services written in C# and deployed to Azure.  Service integration primarily involves AMQP (i.e. RabbitMQ) and REST.  We are in the process of shifting to Docker - based containerization of microservice components across the board.",
 
         "Responsible for design and ongoing code reviews for one to two development teams of roughly 5 members each.  Individual mentoring is emphasized, along with periodically giving group presentations at our weekly lunch-n-learn sessions.",
@@ -65,10 +64,8 @@
       "website": "",
       "startDate": "2011-04-01",
       "endDate": "2013-10-01",
-      "summary": "",
+      "summary": "Technical lead for a retail web platform, combining aspects of e-commerce and employee benefits (i.e. customers pay for large-ticket items through automatic payroll deduction).",
       "highlights": [
-        "Technical lead for a retail web platform, combining aspects of e-commerce and employee benefits (i.e. customers pay for large-ticket items through automatic payroll deduction).",
-
         "The legacy commerce architecture was based on Spring web applications, interacting with a business services tier via SOAP (Apache CXF). The main database was Oracle, with some MySQL in the mix as well, making heavy use of PL/SQL and related features.",
 
         "The company later chose to migrate the commerce architecture to Hybris, a Spring-based product offered by SAP. I was selected as the first developer to be embedded with the consulting firm bootstrapping the migration. I was responsible for driving business and technical requirements, and mentoring other internal developers as they incrementally moved over from legacy development.",
@@ -81,14 +78,17 @@
 
         "Expected to mentor less experienced developers. Initiated a monthly “lunch-n-learn” series, where I presented on various topics and eventually coaxed more introverted developers toward presenting on topics themselves."
       ]
-    },
+    }
+  ],
+  "additionalWorkLabel": "Prior Experience",
+  "additionalWork": [
     {
       "company": "Ericsson",
       "position": "Senior Java Developer",
       "website": "",
       "startDate": "2010-09-01",
       "endDate": "2011-04-11",
-      "summary": "",
+      "summary": "Placeholder summary for Ericsson job",
       "highlights": [
         "Member of small team integrating a video-on-demand platform with a larger portal suite for content carriers. Primary areas of business logic included catalog management for video assets, tracking rentals and equipment provisioning, and limited exposure to DRM encryption.",
 
@@ -103,7 +103,7 @@
       "website": "",
       "startDate": "2009-08-01",
       "endDate": "2010-09-01",
-      "summary": "",
+      "summary": "Placeholder summary for CNN job",
       "highlights": [
         "Handled back-end systems integration between internal applications, as well as between CNN and outside partners. Limited front-end development as well using AJAX and JSON.",
 
@@ -113,9 +113,7 @@
 
         "Expected to be largely self-directed, and take initiative in requirements-gathering and issue resolution with the newsroom producers and other business stakeholders."
       ]
-    }
-  ],
-  "additionalWork": [
+    },
     {
       "company": "Internap",
       "position": "Software Developer",
@@ -220,6 +218,7 @@
       ]
     }
   ],
+  "publicationsLabel": "Publications (author)",
   "publications": [
     {
       "name": "Hibernate Search by Example",
@@ -246,6 +245,7 @@
       "ISBN": ""
     }
   ],
+  "additionalPublicationsLabel": "Additional Publications (technical reviewer)",
   "additionalPublications": [
     {
       "name": "Scala for Java Developers",

@@ -44,6 +44,7 @@ func GenerateTestResumeData() data.ResumeData {
 				},
 			},
 		},
+		WorkLabel: "Professional Experience",
 		AdditionalWork: []data.Work{
 			{
 				Company:   "Flingers",
@@ -57,6 +58,7 @@ func GenerateTestResumeData() data.ResumeData {
 				},
 			},
 		},
+		AdditionalWorkLabel: "Academic Work Experience",
 		Education: []data.Education{
 			{
 				Institution: "University of Austin",
@@ -86,6 +88,7 @@ func GenerateTestResumeData() data.ResumeData {
 				Summary:     "Similar to the plot from \"Superman III\"",
 			},
 		},
+		PublicationsLabel: "Publications",
 		AdditionalPublications: []data.Publication{
 			{
 				Name:        "Washington High School Class of 1993 Yearbook",
@@ -93,6 +96,7 @@ func GenerateTestResumeData() data.ResumeData {
 				Summary:     "Served as understudy to the assistant editor for my high school yearbook.",
 			},
 		},
+		AdditionalPublicationsLabel: "Academic Publications",
 	}
 	return data
 }
