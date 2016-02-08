@@ -2902,7 +2902,7 @@
 						<aml:annotation aml:id="1" w:type="Word.Bookmark.Start" w:name="h.q7t636trzl8i" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="1" w:type="Word.Bookmark.End"/>
 						<w:r>
-							<w:t>Experience</w:t>
+							<w:t>{{ if .WorkLabel }}{{ .WorkLabel }}{{ else }}Experience{{ end }}</w:t>
 						</w:r>
 					</w:p>
 					<wx:sub-section>
@@ -2979,7 +2979,7 @@
 						<aml:annotation aml:id="1" w:type="Word.Bookmark.Start" w:name="h.q7t636trzl8i" w:col-first="0" w:col-last="0"/>
 						<aml:annotation aml:id="1" w:type="Word.Bookmark.End"/>
 						<w:r>
-							<w:t>Additional Experience (further detail available upon request)</w:t>
+							<w:t>{{ if .AdditionalWorkLabel }}{{ .AdditionalWorkLabel }}{{ else }}Additional Experience{{ end }}</w:t>
 						</w:r>
 					</w:p>
 					<wx:sub-section>
@@ -3079,7 +3079,7 @@
 						<aml:annotation aml:id="6" w:type="Word.Bookmark.End"/>
 						<aml:annotation aml:id="7" w:type="Word.Bookmark.End"/>
 						<w:r>
-							<w:t>Publications</w:t>
+							<w:t>{{ if .PublicationsLabel }}{{ .PublicationsLabel }}{{ else }}Publications{{ end }}</w:t>
 						</w:r>
 					</w:p>
                     {{ $numberOfPublications := len .Publications }}
@@ -3158,11 +3158,10 @@
 						<aml:annotation aml:id="6" w:type="Word.Bookmark.End"/>
 						<aml:annotation aml:id="7" w:type="Word.Bookmark.End"/>
 						<w:r>
-							<w:t>Additional Publications</w:t>
+							<w:t>{{ if .AdditionalPublicationsLabel }}{{ .AdditionalPublicationsLabel }}{{ else }}Additional Publications{{ end }}</w:t>
 						</w:r>
 					</w:p>
-                    {{ $numberOfAdditionalPublications := len .AdditionalPublications }}
-					{{ range $index, $element := .AdditionalPublications }}
+					{{ range .AdditionalPublications }}
 					<w:p wsp:rsidR="00F662E2" wsp:rsidRPr="00F662E2" wsp:rsidRDefault="00F662E2" wsp:rsidP="00F662E2">
 						<w:pPr>
 							<w:listPr>
@@ -3187,12 +3186,12 @@
 							</w:rPr>
 							<w:t>{{ html .Name }}</w:t>
 						</w:r>
-						{{ if .Publisher }}
+						{{ if .Summary }}
 						<w:r wsp:rsidRPr="00F662E2">
 							<w:rPr>
 								<w:sz w:val="20"/>
 							</w:rPr>
-							<w:t>, {{ html .Publisher }}</w:t>
+							<w:t>, {{ html .Summary }}</w:t>
 						</w:r>
 						{{ end }}
 						{{ if .ISBN }}
@@ -3201,22 +3200,6 @@
 								<w:sz w:val="20"/>
 							</w:rPr>
 							<w:t>, ISBN {{ html .ISBN }}</w:t>
-						</w:r>
-						{{ end }}
-						<w:r wsp:rsidR="00E60FE4">
-							<w:br/>
-						</w:r>
-						{{ if .Summary }}
-						<w:r wsp:rsidRPr="00F662E2">
-							<w:rPr>
-								<w:sz w:val="20"/>
-							</w:rPr>
-							<w:t>{{ html .Summary }}</w:t>
-						</w:r>
-						{{ end }}
-						{{ if lt (plus1 $index) $numberOfAdditionalPublications}}
-						<w:r wsp:rsidR="00E60FE4">
-							<w:br/>
 						</w:r>
 						{{ end }}
 						<aml:annotation aml:id="9" w:type="Word.Bookmark.Start" w:name="h.3938ffbn5sv" w:col-first="0" w:col-last="0"/>
@@ -3232,7 +3215,7 @@
 							<w:pStyle w:val="Heading2"/>
 						</w:pPr>
 						<w:r>
-							<w:t>Social Profiles</w:t>
+							<w:t>Profiles</w:t>
 						</w:r>
 					</w:p>
 					{{ range .Basics.Profiles }}
