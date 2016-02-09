@@ -2,21 +2,6 @@
 <?mso-application progid="Word.Document"?>
 <w:wordDocument xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
 	<w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
-	<o:DocumentProperties>
-		<o:Author>Steve Perkins</o:Author>
-		<o:LastAuthor>Steve Perkins</o:LastAuthor>
-		<o:Revision>2</o:Revision>
-		<o:TotalTime>71</o:TotalTime>
-		<o:Created>2016-02-07T18:48:00Z</o:Created>
-		<o:LastSaved>2016-02-09T17:30:00Z</o:LastSaved>
-		<o:Pages>3</o:Pages>
-		<o:Words>994</o:Words>
-		<o:Characters>5671</o:Characters>
-		<o:Lines>47</o:Lines>
-		<o:Paragraphs>13</o:Paragraphs>
-		<o:CharactersWithSpaces>6652</o:CharactersWithSpaces>
-		<o:Version>15</o:Version>
-	</o:DocumentProperties>
 	<w:fonts>
 		<w:defaultFonts w:ascii="Calibri" w:fareast="Calibri" w:h-ansi="Calibri" w:cs="Times New Roman"/>
 		<w:font w:name="Times New Roman">
@@ -1078,14 +1063,16 @@
 							<w:tcW w:w="3500" w:type="pct"/>
 							<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
 						</w:tcPr>
+						{{ if .Basics.Name }}
 						<w:p wsp:rsidR="00F354C8" wsp:rsidRDefault="00F354C8" wsp:rsidP="00F354C8">
 							<w:pPr>
 								<w:pStyle w:val="Title"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Steve Perkins</w:t>
+								<w:t>{{ html .Basics.Name }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
 						<w:p wsp:rsidR="00F354C8" wsp:rsidRPr="00F354C8" wsp:rsidRDefault="00F354C8" wsp:rsidP="00F354C8"/>
 						<w:p wsp:rsidR="00F354C8" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00F354C8" wsp:rsidP="00F354C8">
 							<w:pPr>
@@ -1098,6 +1085,7 @@
 								<w:t>Summary</w:t>
 							</w:r>
 						</w:p>
+						{{ if or .Basics.Summary .Basics.Highlights }}
 						<w:p wsp:rsidR="00F354C8" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00F354C8" wsp:rsidP="00F354C8">
 							<w:pPr>
 								<w:keepLines/>
@@ -1105,9 +1093,10 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Over 15 years of experience with enterprise application integration and web development, in environments ranging from startups to the Fortune 500.</w:t>
+								<w:t>{{ html .Basics.Summary }}</w:t>
 							</w:r>
 						</w:p>
+						{{ range .Basics.Highlights }}
 						<w:p wsp:rsidR="00F354C8" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00F354C8" wsp:rsidP="00F354C8">
 							<w:pPr>
 								<w:pStyle w:val="ListParagraph"/>
@@ -1123,45 +1112,12 @@
 								<w:ind w:left="342" w:hanging="180"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Lengthy leadership experience, up to managing multiple development teams simultaneously.  I have a background in teaching training classes, and deeply enjoy mentoring junior developers.</w:t>
+								<w:t>{{ html . }}</w:t>
 							</w:r>
 						</w:p>
-						<w:p wsp:rsidR="00F354C8" wsp:rsidRDefault="00F354C8" wsp:rsidP="00F354C8">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="1"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="342" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Excellent oral and written communication skills.  I've been active in Toastmasters International (a public speaking organization), and interact well with clients and business stakeholders.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00F354C8" wsp:rsidRDefault="00F354C8" wsp:rsidP="00F354C8">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="1"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="342" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Published author.  I maintain a technical blog with ~10,000 unique visitors per month, and am also a guest blogger for JavaCodeGeeks.com.  My GitHub account hosts a number of open source personal projects and code samples.</w:t>
-							</w:r>
-						</w:p>
+						{{ end }}
+						{{ end }}
+						{{ if .Work }}
 						<w:p wsp:rsidR="00B44824" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00B44824" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:pStyle w:val="Heading1"/>
@@ -1170,9 +1126,10 @@
 								<w:spacing w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Recent Experience</w:t>
+								<w:t>{{ if .WorkLabel }}{{ html .WorkLabel }}{{ else }}Experience{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ range .Work }}
 						<w:p wsp:rsidR="00B44824" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00294F25" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:pStyle w:val="Heading2"/>
@@ -1182,7 +1139,7 @@
 							</w:pPr>
 							<w:proofErr w:type="spellStart"/>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>BetterCloud</w:t>
+								<w:t>{{ html .Company }}</w:t>
 							</w:r>
 							<w:proofErr w:type="spellEnd"/>
 							<w:r wsp:rsidRPr="00826FD0">
@@ -1192,9 +1149,10 @@
 								<w:rPr>
 									<w:i/>
 								</w:rPr>
-								<w:t>Software Architect</w:t>
+								<w:t>{{ html .Position }}</w:t>
 							</w:r>
 						</w:p>
+						{{ if .StartDate }}
 						<w:p wsp:rsidR="00294F25" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00294F25" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
@@ -1202,32 +1160,23 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>October 2013 – Present</w:t>
+								<w:t>{{ html .StartDate | MMMMYYYY }} - {{ if .EndDate }}{{ html .EndDate | MMMMYYYY }}{{ else }}Present{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
+						{{ if .Summary }}
 						<w:p wsp:rsidR="00B44824" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
 								<w:widowControl w:val="off"/>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
-							<w:proofErr w:type="spellStart"/>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>BetterCloud</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> is SaaS product company offering analytics, security, and advanced administration for users of Google Apps or Microsoft Office 365.  The total data set within our domain is over 100 </w:t>
-							</w:r>
-							<w:proofErr w:type="gramStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>terabytes ,</w:t>
-							</w:r>
-							<w:proofErr w:type="gramEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> growing at rate of multiple terabytes per month.</w:t>
+								<w:t>{{ html .Summary }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
+						{{ range .Highlights }}
 						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:pStyle w:val="ListParagraph"/>
@@ -1243,163 +1192,10 @@
 								<w:ind w:left="337" w:hanging="180"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>We use a </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>microservice</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> architecture, with Google services written in Java and hosted on Google Cloud Platform, and Microsoft services written in C# and deployed to Azure.  Service integration primarily involves AMQP (i.e. </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>RabbitMQ</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>) and REST.  We are in the process of shifting to Docker - based containerization of </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>microservice</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> components across the board.</w:t>
+								<w:t>{{ html . }}</w:t>
 							</w:r>
 						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="2"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Responsible for design and ongoing code reviews for one to two development teams of roughly 5 members each.  Individual mentoring is emphasized, along with periodically giving group presentations at our weekly lunch-n-learn sessions.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="2"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Beyond ongoing design and code reviews, architects are charged with short-term “spike projects”, to prototype new features or implement major system re-writes.  My particular areas of specialty have been batch processing, messaging middleware, and Big Data.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="2"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>I introduced </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>BigQuery</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> (i.e. Google’s answer to Hive or Pig running over Hadoop or Spark) into our stack for offline reporting and data analytics.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="2"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Drove research and proof-of-concept projects exploring self-hosted alternatives to the Google Cloud </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Datastore</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>.  We eventually landed on the Apache Cassandra distributed database, in use on the Microsoft side today.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="2"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>In two major concurrency-related initiatives, I re-wrote our sequential batch processing framework with multithreaded Java, and </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>reimplemented</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> our Java-based proxy </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>microservice</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> using </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Golang</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>.  Throughput and costs were reduced by an order of magnitude in both cases.</w:t>
-							</w:r>
-						</w:p>
+						{{ end }}
 						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
@@ -1407,176 +1203,9 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="Heading2"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Purchasing Power – </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Senior Software Developer</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>April 2011 – December 2013</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Technical lead for a retail web platform, combining aspects of e-commerce and employee benefits (i.e. customers pay for large-ticket items through automatic </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>payroll deduction).</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>The legacy commerce architecture was based on </w:t>
-							</w:r>
-							<w:proofErr w:type="gramStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Spring</w:t>
-							</w:r>
-							<w:proofErr w:type="gramEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> web applications, interacting with a business services tier via SOAP (Apache CXF). The main database was Oracle, with some MySQL in the mix as well, making heavy use of PL/SQL and related features.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>The company later chose to migrate the commerce architecture to Hybris, a Spring-based product offered by SAP. I was selected as the first developer to be embedded with the consulting firm bootstrapping the migration. I was responsible for driving business and technical requirements, and mentoring other internal developers as they incrementally moved over from legacy development.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Integrated the new Hybris platform with in-house and third-party services (e.g. sales tax calculation, salary verification) using </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>RabbitMQ</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> and Spring AMQP.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Made heavy use of jQuery, and lighter use of AngularJS, in the front-end UI.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Outside of the commerce platform, I designed a system based on Spring Batch for standardizing most of the company’s batch processing needs. For some special batch processes that need to be multithreaded, I used Scala and its </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Akka</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>-based actor pattern.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="3"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="337" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Expected to mentor less experienced developers. Initiated a monthly “lunch-n-learn” series, where I presented on various topics and eventually coaxed more introverted developers toward presenting on topics themselves.</w:t>
-							</w:r>
-						</w:p>
+						{{ end }}
+						{{ end }}
+						{{ if .AdditionalWork }}
 						<w:p wsp:rsidR="00B44824" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00B44824" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:pStyle w:val="Heading1"/>
@@ -1585,109 +1214,19 @@
 								<w:spacing w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Prior Experience</w:t>
+								<w:t>{{ if .AdditionalWorkLabel }}{{ html .AdditionalWorkLabel }}{{ else }}Additional Experience{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ range .AdditionalWork }}
 						<w:p wsp:rsidR="006C429C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:pStyle w:val="Heading2"/>
 								<w:spacing w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Ericsson – </w:t>
+								<w:t>{{ .Company }}</w:t>
 							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Senior Java Developer</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>September 2010 – April </w:t>
-							</w:r>
-							<w:r wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0">
-								<w:t>2011</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Placeholder summary for Ericsson job</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
-						<w:p wsp:rsidR="006C429C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="Heading2"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>CNN – </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Software Developer</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>August 2009 – September </w:t>
-							</w:r>
-							<w:r wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0">
-								<w:t>2010</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Placeholder summary for CNN job</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
-						<w:p wsp:rsidR="006C429C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="Heading2"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Internap</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
+							{{ if .Position }}
 							<w:r wsp:rsidRPr="00826FD0">
 								<w:t> – </w:t>
 							</w:r>
@@ -1695,9 +1234,11 @@
 								<w:rPr>
 									<w:i/>
 								</w:rPr>
-								<w:t>Software Developer</w:t>
+								<w:t>{{ .Position }}</w:t>
 							</w:r>
+							{{ end }}
 						</w:p>
+						{{ if .StartDate }}
 						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
@@ -1705,12 +1246,11 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>November 2008 – May </w:t>
-							</w:r>
-							<w:r wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0">
-								<w:t>2009</w:t>
+								<w:t>{{ html .StartDate | MMMMYYYY }}{{ if .EndDate }} – {{ html .EndDate | MMMMYYYY }}{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
+						{{ if .Summary }}
 						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
@@ -1718,210 +1258,19 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Placeholder summary for </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Internap</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> job</w:t>
+								<w:t>{{ html .Summary }}</w:t>
 							</w:r>
 						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
-						<w:p wsp:rsidR="006C429C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="Heading2"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>TRX – </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Software Developer</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>August 2007 – November </w:t>
-							</w:r>
-							<w:r wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0">
-								<w:t>2008</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Placeholder summary for TRX job</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
-						<w:p wsp:rsidR="006C429C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="Heading2"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Cox Enterprises – </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Senior Consultant</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>June 2002 – August </w:t>
-							</w:r>
-							<w:r wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0">
-								<w:t>2007</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Placeholder summary for Number Six Software job</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
-						<w:p wsp:rsidR="006C429C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="Heading2"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Palarco</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> Consulting – </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Senior Consultant</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>July 2001 – June </w:t>
-							</w:r>
-							<w:r wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0">
-								<w:t>2002</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Placeholder summary for </w:t>
-							</w:r>
-							<w:proofErr w:type="spellStart"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Palarco</w:t>
-							</w:r>
-							<w:proofErr w:type="spellEnd"/>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> Consulting job</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
-						<w:p wsp:rsidR="006C429C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:pStyle w:val="Heading2"/>
-								<w:spacing w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Context Integration – </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Consultant</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="006C429C" wsp:rsidP="00826FD0">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>January 2000 – July </w:t>
-							</w:r>
-							<w:r wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0">
-								<w:t>2001</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00B44824" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00F354C8">
-							<w:pPr>
-								<w:keepLines/>
-								<w:widowControl w:val="off"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>Placeholder summary for Context Integration job</w:t>
-							</w:r>
-						</w:p>
+						{{ end }}
+						<!--<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">-->
+							<!--<w:pPr>-->
+								<!--<w:keepLines/>-->
+								<!--<w:widowControl w:val="off"/>-->
+								<!--<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>-->
+							<!--</w:pPr>-->
+						<!--</w:p>-->
+						{{ end }}
+						{{ end }}
 					</w:tc>
 					<w:tc>
 						<w:tcPr>

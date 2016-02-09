@@ -68,6 +68,15 @@ func ExportResume(inputFilename, outputFilename, templateFilename string) error 
 			const outputFormat = "1/2006"
 			return dateValue.Format(outputFormat)
 		},
+		"MMMMYYYY": func(s string) string {
+			const inputFormat = "2006-01-02"
+			dateValue, err := time.Parse(inputFormat, s)
+			if err != nil {
+				return s
+			}
+			const outputFormat = "January 2006"
+			return dateValue.Format(outputFormat)
+		},
 	}
 	// For some reason, I'm getting blank final results when loading templates via "ParseFiles()"... but it DOES work
 	// when I first read the template contents into a string and load that via "Parse()".
