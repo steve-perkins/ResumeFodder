@@ -2242,61 +2242,84 @@
 								<w:t>CONTACT</w:t>
 							</w:r>
 						</w:p>
+						{{ if .Basics.Location.Address }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00235936">
-								<w:t>4301 Gravitt Place</w:t>
+								<w:t>{{ html .Basics.Location.Address }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
+						{{ if or .Basics.Location.City .Basics.Location.Region .Basics.Location.PostalCode }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
+							{{ if .Basics.Location.City }}
 							<w:r wsp:rsidRPr="00235936">
-								<w:t>Duluth, GA 30096</w:t>
+								<w:t>{{ html .Basics.Location.City }}{{ if .Basics.Location.Region }}, {{ end }}</w:t>
 							</w:r>
+							{{ end }}
+							{{ if .Basics.Location.Region }}
+							<w:r wsp:rsidRPr="00235936">
+								<w:t>{{ html .Basics.Location.Region }} </w:t>
+							</w:r>
+							{{ end }}
+							{{ if .Basics.Location.PostalCode }}
+							<w:r wsp:rsidRPr="00235936">
+								<w:t>{{ html .Basics.Location.PostalCode }}</w:t>
+							</w:r>
+							{{ end }}
 						</w:p>
+						{{ end }}
+						{{ if .Basics.Phone }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00235936">
-								<w:t>404-997-3018</w:t>
+								<w:t>{{ html .Basics.Phone }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
+						{{ if .Basics.Email }}
 						<w:p wsp:rsidR="0023139C" wsp:rsidRPr="00235936" wsp:rsidRDefault="00235936" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
-							<w:hlink w:dest="mailto:steve@steveperkins.com">
+							<w:hlink w:dest="mailto:{{ html .Basics.Email }}">
 								<w:r wsp:rsidR="0023139C" wsp:rsidRPr="00235936">
 									<w:rPr>
 										<w:rStyle w:val="Hyperlink"/>
 									</w:rPr>
-									<w:t>steve@steveperkins.com</w:t>
+									<w:t>{{ html .Basics.Email }}</w:t>
 								</w:r>
 							</w:hlink>
 						</w:p>
+						{{ end }}
+						{{ if .Basics.Website }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00235936" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
-							<w:hlink w:dest="http://steveperkins.com">
+							<w:hlink w:dest="{{ html .Basics.Website }}">
 								<w:r wsp:rsidR="0023139C" wsp:rsidRPr="00235936">
 									<w:rPr>
 										<w:rStyle w:val="Hyperlink"/>
 									</w:rPr>
-									<w:t>http://steveperkins.com</w:t>
+									<w:t>{{ html .Basics.Website }}</w:t>
 								</w:r>
 							</w:hlink>
 						</w:p>
+						{{ end }}
 						<w:p wsp:rsidR="0023139C" wsp:rsidRPr="00235936" wsp:rsidRDefault="0023139C" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 						</w:p>
+						{{ range .Basics.Profiles }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
@@ -2305,59 +2328,33 @@
 								<w:rPr>
 									<w:b/>
 								</w:rPr>
-								<w:t>GitHub</w:t>
-							</w:r>
-							<w:r wsp:rsidR="0023139C" wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-								</w:rPr>
-								<w:t>:</w:t>
+								<w:t>{{ .Network }}: </w:t>
 							</w:r>
 							<w:r wsp:rsidR="0023139C" wsp:rsidRPr="00235936">
 								<w:t>  </w:t>
 							</w:r>
-							<w:hlink w:dest="https://github.com/steve-perkins">
+							{{ if .Url }}
+							<w:hlink w:dest="{{ .Url }}">
 								<w:r wsp:rsidRPr="00235936">
 									<w:rPr>
 										<w:rStyle w:val="Hyperlink"/>
 									</w:rPr>
-									<w:t>steve-perkins</w:t>
+									<w:t>{{ .Username }}</w:t>
 								</w:r>
 							</w:hlink>
-						</w:p>
-						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-								</w:rPr>
-								<w:t>LinkedIn</w:t>
-							</w:r>
+							{{ else }}
 							<w:r wsp:rsidR="0023139C" wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-								</w:rPr>
-								<w:t>:</w:t>
+								<w:t>{{ .Username }}</w:t>
 							</w:r>
-							<w:r wsp:rsidR="0023139C" wsp:rsidRPr="00235936">
-								<w:t>  </w:t>
-							</w:r>
-							<w:hlink w:dest="https://www.linkedin.com/in/perkinssteve/">
-								<w:r wsp:rsidRPr="00235936">
-									<w:rPr>
-										<w:rStyle w:val="Hyperlink"/>
-									</w:rPr>
-									<w:t>perkinssteve</w:t>
-								</w:r>
-							</w:hlink>
+							{{ end }}
 						</w:p>
+						{{ end }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 						</w:p>
+						{{ if .Skills }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00235936" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
@@ -2395,6 +2392,7 @@
 								<w:t>SKILLS</w:t>
 							</w:r>
 						</w:p>
+						{{ range .Skills }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
@@ -2408,7 +2406,7 @@
 									<w:b/>
 									<w:color w:val="5B9BD5"/>
 								</w:rPr>
-								<w:t>Languages:</w:t>
+								<w:t>{{ html .Name }}:</w:t>
 							</w:r>
 						</w:p>
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
@@ -2417,114 +2415,17 @@
 								<w:ind w:left="162"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00235936">
-								<w:t>Java, Go, Scala, C#, JavaScript, TypeScript</w:t>
+                                <w:t>{{ range $index, $element := .Keywords }}{{ if ne $index 0 }}, {{ end }}{{ . }}{{ end }}</w:t>
 							</w:r>
 						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-								<w:t>Frameworks / Libraries:</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>Spring, JEE, JPA/Hibernate, JAX-RS/Jersey, ASP.NET, jQuery, AngularJS 1.x/2.x</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-								<w:t>Data: </w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>Oracle, DB2, MySQL/Percona, PostgreSQL, MongoDB, Cassandra, Redis, Elasticsearch, Apache Spark</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-								<w:t>Middleware: </w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>RabbitMQ, Kafka, Apache Camel</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-									<w:color w:val="5B9BD5"/>
-								</w:rPr>
-								<w:t>Environment / Infrastructure: </w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>Continuous Integration (Jenkins), Docker, Mesos/Marathon, Google Cloud Platform, Microsoft Azure, Amazon Web Services</w:t>
-							</w:r>
-						</w:p>
+						{{ end }}
+						{{ end }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 						</w:p>
+						{{ if .Education }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00235936" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
@@ -2562,6 +2463,7 @@
 								<w:t>EDUCATION</w:t>
 							</w:r>
 						</w:p>
+						{{ range .Education }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
@@ -2573,49 +2475,27 @@
 								<w:rPr>
 									<w:b/>
 								</w:rPr>
-								<w:t>Georgia State University, 6/2010</w:t>
+								<w:t>{{ html .Institution }}{{ if .EndDate }}, {{ MYYYY .EndDate }}{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ if .Area }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00235936">
-								<w:t>J.D.</w:t>
+								<w:t>{{ html .Area }}</w:t>
 							</w:r>
 						</w:p>
+						{{ end }}
 						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 						</w:p>
-						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:rPr>
-									<w:b/>
-								</w:rPr>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:b/>
-								</w:rPr>
-								<w:t>Georgia Southwestern State University, 12/1999</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00141701" wsp:rsidRPr="00235936" wsp:rsidRDefault="00141701" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>B.S. Computer Science (minor in Business Management)</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
+						{{ end }}
+						{{ end }}
+						{{ if .Publications }}
 						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00235936" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
@@ -2650,9 +2530,10 @@
 									<w:rFonts w:fareast="Calibri"/>
 									<wx:font wx:val="Calibri Light"/>
 								</w:rPr>
-								<w:t>PUBLICATIONS</w:t>
+								<w:t>{{ if .PublicationsLabel }}{{ html .PublicationsLabel }}{{ else }}PUBLICATIONS{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ range .Publications }}
 						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:pStyle w:val="ListParagraph"/>
@@ -2669,53 +2550,24 @@
 								<w:rPr>
 									<w:i/>
 								</w:rPr>
-								<w:t>Hibernate Search by Example</w:t>
+								<w:t>{{ html .Name }}</w:t>
 							</w:r>
+							{{ if .Publisher }}
 							<w:r wsp:rsidRPr="00235936">
-								<w:t>, Packt Publishing, ISBN 184951920X</w:t>
+								<w:t>, {{ html .Publisher }}</w:t>
 							</w:r>
+							{{ end }}
+							{{ if .ISBN }}
 							<w:r wsp:rsidRPr="00235936">
-								<w:br/>
-								<w:t>A Java developer’s guide to using Hibernate with Apache Lucene and Solr components, to </w:t>
+								<w:t>, ISBN {{ html .ISBN }}</w:t>
 							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>add custom full-text search functionality in their applications.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162" w:hanging="180"/>
-							</w:pPr>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="11"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>In the Aftermath of Bilski v. Kappos</w:t>
-							</w:r>
-							<w:r wsp:rsidR="0035198D" wsp:rsidRPr="00235936">
-								<w:t>,</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t> 2010 PLI Handbook Series</w:t>
-							</w:r>
+							{{ end }}
+							{{ if .Summary }}
 							<w:r wsp:rsidRPr="00235936">
 								<w:br/>
-								<w:t>An overview of the current state of business method and software patents, presented at the 2010 Practicing Law Institute's Patent Litigation Seminar.</w:t>
+								<w:t>{{ html .Summary }}</w:t>
 							</w:r>
+							{{ end }}
 						</w:p>
 						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
 							<w:pPr>
@@ -2723,41 +2575,9 @@
 								<w:ind w:left="162" w:hanging="180"/>
 							</w:pPr>
 						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="11"/>
-									<wx:t wx:val="·"/>
-									<wx:font wx:val="Symbol"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162" w:hanging="180"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>In the Aftermath of In re Bilski</w:t>
-							</w:r>
-							<w:r wsp:rsidR="0035198D" wsp:rsidRPr="00235936">
-								<w:t>, </w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>2009 PLI Handbook Series</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:br/>
-								<w:t>An overview of method and software patents while the Bilski appeal was pending. Presented at the 2009 Practicing Law Institute's Patent Litigation Seminar.</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-							</w:pPr>
-						</w:p>
+						{{ end }}
+						{{ end }}
+						{{ if .AdditionalPublications }}
 						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00235936" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
@@ -2791,9 +2611,10 @@
 									<w:rFonts w:fareast="Calibri"/>
 									<wx:font wx:val="Calibri Light"/>
 								</w:rPr>
-								<w:t>ADDITIONAL PUBLICATIONS (TECHNICAL REVIEWER)</w:t>
+								<w:t>{{ if .AdditionalPublicationsLabel }}{{ html .AdditionalPublicationsLabel }}{{ else }}ADDITIONAL PUBLICATIONS{{ end }}</w:t>
 							</w:r>
 						</w:p>
+						{{ range .AdditionalPublications }}
 						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
 							<w:pPr>
 								<w:pStyle w:val="ListParagraph"/>
@@ -2810,100 +2631,21 @@
 								<w:rPr>
 									<w:i/>
 								</w:rPr>
-								<w:t>Scala for Java Developers</w:t>
+								<w:t>{{ html .Name }}</w:t>
 							</w:r>
+							{{ if .Summary }}
 							<w:r wsp:rsidRPr="00235936">
-								<w:t>, by Thomas Alexandre, ISBN 1783283637</w:t>
+								<w:t>, {{ html .Summary }}</w:t>
 							</w:r>
+							{{ end }}
+							{{ if .ISBN }}
+							<w:r wsp:rsidRPr="00235936">
+								<w:t>ISBN {{ html .ISBN }}</w:t>
+							</w:r>
+							{{ end }}
 						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="7"/>
-									<wx:t wx:val="•"/>
-									<wx:font wx:val="Calibri"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162" w:hanging="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>PostgreSQL Administration Essentials</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>, by Hans-Jürgen Schönig, ISBN 1783988983</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="7"/>
-									<wx:t wx:val="•"/>
-									<wx:font wx:val="Calibri"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162" w:hanging="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Building Web Applications in Spring Web MVC</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>, by Koushik Kothagal, ISBN 9781783286539</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="00345272" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="7"/>
-									<wx:t wx:val="•"/>
-									<wx:font wx:val="Calibri"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162" w:hanging="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Angular UI Development, by Matthias Nehlsen and Amit Gharat</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>, ISBN 9781783288472</w:t>
-							</w:r>
-						</w:p>
-						<w:p wsp:rsidR="0023139C" wsp:rsidRPr="00235936" wsp:rsidRDefault="00345272" wsp:rsidP="00235936">
-							<w:pPr>
-								<w:pStyle w:val="ListParagraph"/>
-								<w:listPr>
-									<w:ilvl w:val="0"/>
-									<w:ilfo w:val="7"/>
-									<wx:t wx:val="•"/>
-									<wx:font wx:val="Calibri"/>
-								</w:listPr>
-								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
-								<w:ind w:left="162" w:hanging="162"/>
-							</w:pPr>
-							<w:r wsp:rsidRPr="00235936">
-								<w:rPr>
-									<w:i/>
-								</w:rPr>
-								<w:t>Angular Testing Cookbook</w:t>
-							</w:r>
-							<w:r wsp:rsidRPr="00235936">
-								<w:t>, by Simon Bailey, ISBN 1783983744</w:t>
-							</w:r>
-						</w:p>
+						{{ end }}
+						{{ end }}
 					</w:tc>
 				</w:tr>
 			</w:tbl>
