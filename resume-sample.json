@@ -7,9 +7,9 @@
     "phone": "555-555-5555",
     "degree": "",
     "website": "",
-    "summary": "Just a straight-shooter with upper management written all over him",
+    "summary": "Just a straight-shooter, with upper management written all over him.",
     "highlights": [
-      "Once did nothing for an entire day.",
+      "I once did nothing for an entire day.",
       "It was everything I thought it could be."
     ],
     "location": {
@@ -30,15 +30,39 @@
   "workLabel": "Professional Experience",
   "work": [
     {
+      "company": "Magazine Clearinghouse",
+      "position": "Door-to-Door Salesperson",
+      "website": "",
+      "startDate": "2002-05-01",
+      "endDate": "",
+      "summary": "Magazine Clearinghouse is the nation's leader in door-to-door magazine sales.  Provides opportunities to people who used to be addicted to crack, etc.",
+      "highlights": [
+        "Sold up to 30 magazine subscriptions in a single day.",
+        "Make more money than I ever did working for Initech."
+      ]
+    },
+    {
       "company": "Initech",
-      "position": "Software Developer",
+      "position": "Software Development Manager",
       "website": "",
       "startDate": "1998-02-01",
-      "endDate": "",
-      "summary": "Deals with the customers so the engineers don't have to.  A people person, damn it!",
+      "endDate": "2002-05-01",
+      "summary": "Initech is an innovative financial services firm, and TPS Report processor.  However, we also know how to relax and have fun, such as with our Hawaiian Shirt Fridays program.",
       "highlights": [
-        "Identifying Y2K-related issues in application code.",
-        "As many as four people working right underneath me."
+        "Outstanding multitasker, I dealt with seven different bosses simultaneously.  Seven, Bob.",
+        "Promoted to management, I had s many as four people working right underneath me."
+      ]
+    },
+    {
+      "company": "Initrode",
+      "position": "Software Developer",
+      "website": "",
+      "startDate": "1996-02-01",
+      "endDate": "1998-02-01",
+      "summary": "Ehh... it's work.",
+      "highlights": [
+        "Responsible for identifying Y2K-related issues in application code.",
+        "Diagnosed 'PC Load Letter' issues.  I actually do know what that means."
       ]
     }
   ],
@@ -49,7 +73,7 @@
       "position": "Server",
       "website": "",
       "startDate": "1993-08-01",
-      "endDate": "1998-01-31",
+      "endDate": "1996-02-01",
       "summary": "Paying my way through school with an exciting opportunity in the fast-food service industry.",
       "highlights": [
         "Wore 37 pieces of flair.",
