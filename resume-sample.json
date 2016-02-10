@@ -1,0 +1,134 @@
+{
+  "basics": {
+    "name": "Peter Gibbons",
+    "label": "",
+    "picture": "",
+    "email": "peter.gibbons@initech.com",
+    "phone": "555-555-5555",
+    "degree": "",
+    "website": "",
+    "summary": "Just a straight-shooter, with upper management written all over him.",
+    "highlights": [
+      "I once did nothing for an entire day.",
+      "It was everything I thought it could be."
+    ],
+    "location": {
+      "address": "123 Main Street",
+      "postalCode": "55555",
+      "city": "Austin",
+      "countryCode": "",
+      "region": "TX"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "peter.gibbons",
+        "url": "http://linkedin.com/peter.gibbons"
+      }
+    ]
+  },
+  "workLabel": "Professional Experience",
+  "work": [
+    {
+      "company": "Magazine Clearinghouse",
+      "position": "Door-to-Door Salesperson",
+      "website": "",
+      "startDate": "2002-05-01",
+      "endDate": "",
+      "summary": "Magazine Clearinghouse is the nation's leader in door-to-door magazine sales.  Provides opportunities to people who used to be addicted to crack, etc.",
+      "highlights": [
+        "Sold up to 30 magazine subscriptions in a single day.",
+        "Make more money than I ever did working for Initech."
+      ]
+    },
+    {
+      "company": "Initech",
+      "position": "Software Development Manager",
+      "website": "",
+      "startDate": "1998-02-01",
+      "endDate": "2002-05-01",
+      "summary": "Initech is an innovative financial services firm, and TPS Report processor.  However, we also know how to relax and have fun, such as with our Hawaiian Shirt Fridays program.",
+      "highlights": [
+        "Outstanding multitasker, I dealt with seven different bosses simultaneously.  Seven, Bob.",
+        "Promoted to management, I had s many as four people working right underneath me."
+      ]
+    },
+    {
+      "company": "Initrode",
+      "position": "Software Developer",
+      "website": "",
+      "startDate": "1996-02-01",
+      "endDate": "1998-02-01",
+      "summary": "Ehh... it's work.",
+      "highlights": [
+        "Responsible for identifying Y2K-related issues in application code.",
+        "Diagnosed 'PC Load Letter' issues.  I actually do know what that means."
+      ]
+    }
+  ],
+  "additionalWorkLabel": "Academic Work Experience",
+  "additionalWork": [
+    {
+      "company": "Flingers",
+      "position": "Server",
+      "website": "",
+      "startDate": "1993-08-01",
+      "endDate": "1996-02-01",
+      "summary": "Paying my way through school with an exciting opportunity in the fast-food service industry.",
+      "highlights": [
+        "Wore 37 pieces of flair.",
+        "A terrific smile."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Austin",
+      "area": "B.S. Computer Science",
+      "studyType": "",
+      "startDate": "1993-09-01",
+      "endDate": "1997-12-01",
+      "gpa": ""
+    }
+  ],
+  "publicationsLabel": "Publications",
+  "publications": [
+    {
+      "name": "Money Laundering for Dummies",
+      "publisher": "John Wiley \u0026 Sons",
+      "releaseDate": "1999-06-01",
+      "website": "",
+      "summary": "Similar to the plot from \"Superman III\"",
+      "isbn": "1234567890X"
+    }
+  ],
+  "additionalPublicationsLabel": "Academic Publications",
+  "additionalPublications": [
+    {
+      "name": "Washington High School Class of 1993 Yearbook",
+      "publisher": "",
+      "releaseDate": "1993-06-01",
+      "website": "",
+      "summary": "Served as understudy to the assistant editor for my high school yearbook.",
+      "isbn": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "Mid-level",
+      "keywords": [
+        "C++",
+        "Java"
+      ]
+    },
+    {
+      "name": "Communication",
+      "level": "Junior",
+      "keywords": [
+        "Verbal",
+        "Written"
+      ]
+    }
+  ]
+}

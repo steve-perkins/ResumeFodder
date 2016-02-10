@@ -22,9 +22,17 @@ type ResumeData struct {
 	// Obviously, the records in this extra field would be ignored if you used your data file with a standard
 	// JSON-Resume processor.  Otherwise, migration would require you to move any "AdditionalWork" records to the
 	// "Work" field.
-	AdditionalWork []Work        `xml:"additionalWork" json:"additionalWork"`
-	Education      []Education   `xml:"education" json:"education"`
-	Publications   []Publication `xml:"publications" json:"publications"`
+	AdditionalWork []Work `xml:"additionalWork" json:"additionalWork"`
+	// WorkLabel is an extra field, not found within the standard JSON-Resume spec.  It is intended to tell templates
+	// how to present the "Work" and "AdditionalWork" sections, when both are used (e.g. "Recent Experience"
+	// versus "Prior Experience").
+	WorkLabel string `xml:"workLabel" json:"workLabel"`
+	// AdditionalWorkLabel is an extra field, not found within the standard JSON-Resume spec.  It is intended to tell
+	// templates how to present the "Work" and "AdditionalWork" sections, when both are used (e.g. "Recent Experience"
+	// versus "Prior Experience").
+	AdditionalWorkLabel string        `xml:"additionalWorkLabel" json:"additionalWorkLabel"`
+	Education           []Education   `xml:"education" json:"education"`
+	Publications        []Publication `xml:"publications" json:"publications"`
 	// AdditionalPublications is an extra field, not found within the standard JSON-Resume spec.  It is intended to
 	// store publications that should be presented differently from those in the main "Publications" field.
 	//
@@ -35,8 +43,16 @@ type ResumeData struct {
 	// Obviously, the records in this extra field would be ignored if you used your data file with a standard
 	// JSON-Resume processor.  Otherwise, migration would require you to move any "AdditionalPublications" records to
 	// the "Publications" field.
-	AdditionalPublications []Publication `xml:"additionalPublications" json:"additionalPublications"`
-	Skills                 []Skill       `xml:"skills" json:"skills"`
+	AdditionalPublications      []Publication `xml:"additionalPublications" json:"additionalPublications"`
+	// PublicationsLabel is an extra field, not found within the standard JSON-Resume spec.  It is intended to tell
+	// templates how to present the "Publications" and "AdditionalPublications" sections, when both are used
+	// (e.g. "Publications (Author)" versus "Publications (Technical Reviewer)").
+	PublicationsLabel           string        `xml:"publicationsLabel" json:"publicationsLabel"`
+	// AdditionalPublicationsLabel is an extra field, not found within the standard JSON-Resume spec.  It is intended
+	// to tell templates how to present the "Publications" and "AdditionalPublications" sections, when both are used
+	// (e.g. "Publications (Author)" versus "Publications (Technical Reviewer)").
+	AdditionalPublicationsLabel string        `xml:"additionalPublicationsLabel" json:"additionalPublicationsLabel"`
+	Skills                      []Skill       `xml:"skills" json:"skills"`
 }
 
 // Basics is a container for top-level resume data.  These fields could just as well hang off the parent "ResumeData"
