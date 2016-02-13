@@ -1,6 +1,10 @@
 Resume Template Processor
 =========================
 
+> NOTE: Primary development has moved over to GitLab:  https://gitlab.com/steve-perkins/resume.  If
+> you're reading this on GitHub, then note that this repo is a mirror which can sometimes be slightly
+> out of date.
+
 Intro
 -----
 A command-line utility for generating resumes or CV's, inspired by
