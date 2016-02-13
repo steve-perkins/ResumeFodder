@@ -1426,7 +1426,8 @@
 								<w:t>Skills</w:t>
 							</w:r>
 						</w:p>
-						{{ range .Skills }}
+                        {{ $numberOfSkills := len .Skills }}
+                        {{ range $index, $element := .Skills }}
 						<w:p wsp:rsidR="00B44824" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00BA2E9A" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
@@ -1455,6 +1456,7 @@
                                 <w:t>{{ range $index, $element := .Keywords }}{{ if ne $index 0 }}, {{ end }}{{ . }}{{ end }}</w:t>
 							</w:r>
 						</w:p>
+                        {{ if lt (plus1 $index) $numberOfSkills }}
 						<w:p wsp:rsidR="00BA2E9A" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="00BA2E9A" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
@@ -1462,6 +1464,7 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 						</w:p>
+						{{ end }}
 						{{ end }}
 						{{ end }}
 						{{ if .Education }}
@@ -1476,7 +1479,8 @@
 								<w:t>Education</w:t>
 							</w:r>
 						</w:p>
-						{{ range .Education }}
+                        {{ $numberOfEducation := len .Education }}
+                        {{ range $index, $element := .Education }}
 						<w:p wsp:rsidR="009C1F3C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="009C1F3C" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:pStyle w:val="Heading2"/>
@@ -1518,6 +1522,7 @@
 								<w:t>{{ html .EndDate | MMMMYYYY }}</w:t>
 							</w:r>
 						</w:p>
+                        {{ if lt (plus1 $index) $numberOfEducation }}
 						<w:p wsp:rsidR="009C1F3C" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="009C1F3C" wsp:rsidP="00826FD0">
 							<w:pPr>
 								<w:keepLines/>
@@ -1525,6 +1530,7 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 						</w:p>
+						{{ end }}
 						{{ end }}
 						{{ end }}
 						{{ if .Publications }}

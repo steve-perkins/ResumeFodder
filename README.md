@@ -203,3 +203,26 @@ processor may be a daunting task.  Otherwise, the process is fairly straightforw
    * The data schema structures in the `data/data.go` file.
 
 4. Save your new template file under the `templates` subdirectory.
+
+A Note About File Formats (do you need MS Word?)
+------------------------------------------------
+This processor, like HackMyResume, produces resume output files in Microsoft Word 2003 XML
+format.  Every modern version of Microsoft Word handles these files great, so if you'll always
+be working with Word then you can stop reading here!
+
+However, what if don't have access to Microsoft Word on your machine (e.g. you're on Linux,
+you have strong free software beliefs, you simply don't want to buy it, whatever)?  Unfortunately,
+the 2003 XML format variation is not well supported by LibreOffice, or online options such as
+Google Docs or Word Online.
+
+Fortunately, the most recent default Word format IS well-supported by LibreOffice and Word
+Online (I actually think that LibreOffice does a better job of exporting Word docs to PDF than
+Word itself does).  So if you want, you can convert your resume output to the latest Word format
+through one of these options:
+
+1. If you have access to a computer with Microsoft Word installed, then obviously you can open
+   your resume on that machine and "Save As..." to a copy with the default latest format.
+
+2. Otherwise, I've had nothing but great results with
+   [CloudConvert](https://cloudconvert.com/doc-to-docx), a free online service that (among other
+   things) supports conversion from DOC to DOCX.
