@@ -1,8 +1,8 @@
 package data_test
 
 import (
-	"github.com/steve-perkins/resume"
-	"github.com/steve-perkins/resume/data"
+	"gitlab.com/steve-perkins/resume"
+	"gitlab.com/steve-perkins/resume/data"
 	"os"
 	"path/filepath"
 	"reflect"

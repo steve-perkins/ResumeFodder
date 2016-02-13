@@ -3,7 +3,7 @@ package command
 import (
 	"errors"
 	"fmt"
-	"github.com/steve-perkins/resume/data"
+	"gitlab.com/steve-perkins/resume/data"
 	"io/ioutil"
 	"os"
 	"path"
