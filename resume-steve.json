@@ -24,7 +24,7 @@
     },
     "profiles": [
       {
-        "network": "GitHub",
+        "network": "GitHub / GitLab",
         "username": "steve-perkins",
         "url": "https://github.com/steve-perkins"
       },
