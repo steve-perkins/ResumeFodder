@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/steve-perkins/resume/command"
+	"gitlab.com/steve-perkins/resume/command"
 	"os"
 	"path"
 	"strings"

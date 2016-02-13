@@ -2,9 +2,9 @@ package main_test
 
 import (
 	"errors"
-	"github.com/steve-perkins/resume"
-	"github.com/steve-perkins/resume/command"
-	"github.com/steve-perkins/resume/data"
+	"gitlab.com/steve-perkins/resume"
+	"gitlab.com/steve-perkins/resume/command"
+	"gitlab.com/steve-perkins/resume/data"
 	"os"
 	"path/filepath"
 	"testing"
