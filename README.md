@@ -1,16 +1,16 @@
-Resume Template Processor
-=========================
+ResumeFodder
+============
 
-> NOTE: Primary development has moved over to GitLab:  https://gitlab.com/steve-perkins/resume.  If
+> NOTE: Primary development has moved over to GitLab:  https://gitlab.com/steve-perkins/ResumeFodder.  If
 > you're reading this on GitHub, then note that this repo is a mirror which can sometimes be slightly
 > out of date.
 
 Intro
 -----
-A command-line utility for generating resumes or CV's, inspired by
+ResumeFodder is a command-line utility for generating resumes or CV's, inspired by
 [HackMyResume](https://github.com/hacksalot/HackMyResume).
 
-The processor uses resume data files in [JSON Resume](https://github.com/jsonresume/resume-schema)
+ResumeFodder uses resume data files in [JSON Resume](https://github.com/jsonresume/resume-schema)
 format.  Your resume data is applied to a template, producing a polished Microsoft Word file as
 output.  The separation between the resume data and the formatting allows you to quickly swap out
 your resume's style with no painful cut-n-pasting.
@@ -20,15 +20,15 @@ changes to its substantive content over time, apart from formatting changes.  Cr
 branches, for custom-tailored versions of your resume that have different buzzwords emphasized
 depending on the target audience.
 
-Differences between this and HackMyResume
------------------------------------------
+Differences between ResumeFodder and HackMyResume
+-------------------------------------------------
 
 ### The Good
 
-* Written in Go, this utility compiles to a small **self-contained executable**.  There's no need to
+* Written in Go, ResumeFodder compiles to a small **self-contained executable**.  There's no need to
   install Node.js or manage NPM on your machine.
 
-* This utility supports some **optional extensions to the standard JSON Resume schema**.  These extra
+* ResumeFodder supports some **optional extensions to the standard JSON Resume schema**.  These extra
   fields do not break compatibility... they would simply be ignored if you used your data file with
   HackMyResume or another JSON Resume processor.  However, you would of course need to manually
   reorganize this extra data into standard fields if you want other processors to use them.
@@ -51,28 +51,28 @@ Differences between this and HackMyResume
       technical reviewer on someone else's book, then you might want to present that separately
       from books in which you were the actual author or co-author.
 
-    * `publicationsLabel` and `additionalPublicationsLabel` fieldds, to tell templates how to present
+    * `publicationsLabel` and `additionalPublicationsLabel` fields, to tell templates how to present
       the `publications` and `additionalPublications` sections when both are used (e.g.
       "Publications (author)" versus "Additional Publications (technical reviewer)").
 
     * An `ISBN` field has been added to the `publication` type.  Why on earth this isn't standard,
       I have no idea!
 
-* This utility **also supports an XML representation** of the JSON Resume data schema, if you prefer
-  the XML format or tooling.  The utility can convert a resume data file back and forth between
+* ResumeFodder **also supports an XML representation** of the JSON Resume data schema, if you prefer
+  the XML format or tooling.  ResumeFodder can convert a resume data file back and forth between
   both formats.
 
 ### The Bad?
 
 * HackMyResume comes with a bundle of resume templates out-of-the box, and there may be more
   created by the community.  I'm a one-man show, and **the number of templates is much more limited**.
-  Templates from HackMyResume can't be used as-is here... because they are based on the
-  [Handlebars](http://handlebarsjs.com/) template processor, while this utility uses
+  Templates from HackMyResume can't be used as-is... because they are based on the
+  [Handlebars](http://handlebarsjs.com/) template processor, while ResumeFodder uses
   [Go templates](https://golang.org/pkg/text/template/).  That being said, the two template formats
   are very similar, and it shouldn't take *extraordinary* effort to convert them.
 
 * HackMyResume allows you to generate resumes in multiple output formats (e.g. Microsoft Word,
-  PDF, HTML, Markdown, etc).  My utility **only publishes to the Word format**, period.  To me it
+  PDF, HTML, Markdown, etc).  ResumeFodder **only publishes to the Word format**, period.  To me it
   doesn't make sense to force all the effort of creating multiple versions of each template to support
   all possible outputs.  In reality, 99% of the time people want your resume in Word format... and
   Word (or LibreOffice) can always export to PDF or HTML anyway.
@@ -87,7 +87,7 @@ Differences between this and HackMyResume
   added have pretty much eliminated my own personal need for HTML/Markdown formatting support.
 
 * The developer behind HackMyResume has been a lot more active, and seems more committed to
-  building and supporting a community.  In contrast, this processor is a personal project that
+  building and supporting a community.  In contrast, ResumeFodder is a personal project that
   I wrote mainly for my own needs.  I've made it public, just to see if others do anything with
   it, but **I don't have the bandwidth to update this regularly or provide much support**.  So if
   community is a big deal to you, then HackMyResume is awesome and I definitely recommend it.
@@ -96,12 +96,12 @@ Differences between this and HackMyResume
   preferred generator tool disappears, or turns evil, or whatever... you can always just
   cut-and-paste your content into the next thing.
 
-Using the Processor
--------------------
+Using ResumeFodder
+------------------
 ```
 Usage:
 
-   resume COMMAND <args>
+   ResumeFodder.exe COMMAND <args>
 
 ... where "COMMAND" is one of the following:
 
@@ -113,8 +113,8 @@ Usage:
 
 Full details for each command:
 
-resume init <filename>
-resume init resume.xml
+ResumeFodder.exe init <filename>
+ResumeFodder.exe init resume.xml
 
 	Will generate an empty resume data file with the specified
 	filename, which must have either a '.json' or '.xml' file
@@ -123,8 +123,8 @@ resume init resume.xml
 	If no filename is specified, then a data file will be created
 	with filename 'resume.json'.
 
-resume convert <input filename> <output filename>
-resume convert resume.xml resume.json
+ResumeFodder.exe convert <input filename> <output filename>
+ResumeFodder.exe convert resume.xml resume.json
 
 	The resume data file specified by the first parameter will
 	be converted to the filename specified by the second parameter.
@@ -133,8 +133,8 @@ resume convert resume.xml resume.json
 	be overwritten.  Both filenames must have either a '.json' or
 	'.xml' file extension.
 
-resume export <data filename> <output filename> <template filename>
-resume export resume.json resume.doc templates/plain.xml
+ResumeFodder.exe export <data filename> <output filename> <template filename>
+ResumeFodder.exe export resume.json resume.doc templates/plain.xml
 
 	The resume data file specified by the first parameter will
 	published as a Microsoft Word file with the name specified by
@@ -157,8 +157,8 @@ resume export resume.json resume.doc templates/plain.xml
 
 Creating new templates
 ----------------------
-Just like with HackMyResume, templates here are Microsoft Word 2003 XML files, with text values
-inserted by a template engine.
+Just like with HackMyResume, templates for ResumeFodder are Microsoft Word 2003 XML files, with text
+values inserted by a template engine.
 
 Although a bit arcane, the Word 2003 XML format is actually quite thoroughly documented:
 
@@ -168,7 +168,7 @@ Although a bit arcane, the Word 2003 XML format is actually quite thoroughly doc
 However, you can probably figure out most of what you need by simply reviewing the existing
 template files under the `templates` subdirectory.
 
-The big difference between this and HackMyResume is that this uses
+The big difference between this and HackMyResume is that ResumeFodder uses
 [Go templates](https://golang.org/pkg/text/template/), rather than the
 [Handlebars](http://handlebarsjs.com/) template engine.  There are some differences, but both
 engines essentially involve directives and values wrapped by double-curly-braces.
@@ -187,8 +187,8 @@ Go templates:
 {{ end }}
 ```
 
-If you have no experience (or at least interest) in Go, then creating new templates for this
-processor may be a daunting task.  Otherwise, the process is fairly straightforward:
+If you have no experience (or at least interest) in Go, then creating new templates for ResumeFodder
+may be a daunting task.  Otherwise, the process is fairly straightforward:
 
 1. Use Microsoft Word (or LibreOffice) to create a resume with whatever style you like.
 
@@ -210,7 +210,7 @@ processor may be a daunting task.  Otherwise, the process is fairly straightforw
 
 A Note About File Formats (do you need MS Word?)
 ------------------------------------------------
-This processor, like HackMyResume, produces resume output files in Microsoft Word 2003 XML
+ResumeFodder, like HackMyResume, produces resume output files in Microsoft Word 2003 XML
 format.  Every modern version of Microsoft Word handles these files great, so if you'll always
 be working with Word then you can stop reading here!
 

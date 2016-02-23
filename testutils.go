@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gitlab.com/steve-perkins/resume/data"
+	"gitlab.com/steve-perkins/ResumeFodder/data"
 	"os"
 	"testing"
 )

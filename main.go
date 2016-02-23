@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"gitlab.com/steve-perkins/resume/command"
+	"gitlab.com/steve-perkins/ResumeFodder/command"
 	"os"
 	"path"
 	"strings"
@@ -77,7 +77,7 @@ func ParseArgs(args []string) (string, []string, error) {
 
 	case "convert":
 		if len(args) < 4 {
-			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume convert resume.json resume.xml\")")
+			return "", nil, errors.New("You must specify input and output filenames (e.g. \"ResumeFodder.exe convert resume.json resume.xml\")")
 		}
 		inputFilename := args[2]
 		inputExtension := strings.ToLower(path.Ext(inputFilename))
@@ -99,7 +99,7 @@ func ParseArgs(args []string) (string, []string, error) {
 
 	case "export":
 		if len(args) < 4 {
-			return "", nil, errors.New("You must specify input and output filenames (e.g. \"resume export resume.json resume.doc\"), and optionally a template name.")
+			return "", nil, errors.New("You must specify input and output filenames (e.g. \"ResumeFodder.exe export resume.json resume.doc\"), and optionally a template name.")
 		}
 		inputFilename := args[2]
 		inputExtension := strings.ToLower(path.Ext(inputFilename))
@@ -136,7 +136,7 @@ func usage() {
 	fmt.Println(`
 Usage:
 
-   resume COMMAND <args>
+   ResumeFodder.exe COMMAND <args>
 
 ... where "COMMAND" is one of the following:
 
@@ -148,8 +148,8 @@ Usage:
 
 Full details for each command:
 
-resume init <filename>
-resume init resume.xml
+ResumeFodder.exe init <filename>
+ResumeFodder.exe init resume.xml
 
 	Will generate an empty resume data file with the specified
 	filename, which must have either a '.json' or '.xml' file
@@ -158,8 +158,8 @@ resume init resume.xml
 	If no filename is specified, then a data file will be created
 	with filename 'resume.json'.
 
-resume convert <input filename> <output filename>
-resume convert resume.xml resume.json
+ResumeFodder.exe convert <input filename> <output filename>
+ResumeFodder.exe convert resume.xml resume.json
 
 	The resume data file specified by the first parameter will
 	be converted to the filename specified by the second parameter.
@@ -168,8 +168,8 @@ resume convert resume.xml resume.json
 	be overwritten.  Both filenames must have either a '.json' or
 	'.xml' file extension.
 
-resume export <data filename> <output filename> <template filename>
-resume export resume.json resume.doc templates/plain.xml
+ResumeFodder.exe export <data filename> <output filename> <template filename>
+ResumeFodder.exe export resume.json resume.doc templates/plain.xml
 
 	The resume data file specified by the first parameter will
 	published as a Microsoft Word file with the name specified by

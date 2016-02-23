@@ -1,9 +1,9 @@
 package command_test
 
 import (
-	"gitlab.com/steve-perkins/resume"
-	"gitlab.com/steve-perkins/resume/command"
-	"gitlab.com/steve-perkins/resume/data"
+	"gitlab.com/steve-perkins/ResumeFodder"
+	"gitlab.com/steve-perkins/ResumeFodder/command"
+	"gitlab.com/steve-perkins/ResumeFodder/data"
 	"os"
 	"path/filepath"
 	"reflect"
