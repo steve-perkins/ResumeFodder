@@ -1,9 +1,9 @@
 package command_test
 
 import (
-	"gitlab.com/steve-perkins/ResumeFodder"
 	"gitlab.com/steve-perkins/ResumeFodder/command"
 	"gitlab.com/steve-perkins/ResumeFodder/data"
+	"gitlab.com/steve-perkins/ResumeFodder/testutils"
 	"os"
 	"path/filepath"
 	"reflect"
@@ -13,8 +13,8 @@ import (
 func TestInitResume(t *testing.T) {
 	// Delete any pre-existing test file now, and then also clean up afterwards
 	filename := filepath.Join(os.TempDir(), "testresume.xml")
-	main.DeleteFileIfExists(t, filename)
-	defer main.DeleteFileIfExists(t, filename)
+	testutils.DeleteFileIfExists(t, filename)
+	defer testutils.DeleteFileIfExists(t, filename)
 
 	err := command.InitResume(filename)
 	if err != nil {
@@ -32,12 +32,12 @@ func TestInitResume(t *testing.T) {
 
 func TestConvertResume(t *testing.T) {
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
-	main.DeleteFileIfExists(t, xmlFilename)
-	defer main.DeleteFileIfExists(t, xmlFilename)
+	testutils.DeleteFileIfExists(t, xmlFilename)
+	defer testutils.DeleteFileIfExists(t, xmlFilename)
 
 	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
-	main.DeleteFileIfExists(t, jsonFilename)
-	defer main.DeleteFileIfExists(t, jsonFilename)
+	testutils.DeleteFileIfExists(t, jsonFilename)
+	defer testutils.DeleteFileIfExists(t, jsonFilename)
 
 	err := command.InitResume(xmlFilename)
 	if err != nil {
@@ -61,10 +61,10 @@ func TestConvertResume(t *testing.T) {
 // See also "TestExportResume_TemplateDefaultPath()", in the root-level "main_test.go" test file.
 func TestExportResume_TemplateRelativePath(t *testing.T) {
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
-	main.DeleteFileIfExists(t, xmlFilename)
-	defer main.DeleteFileIfExists(t, xmlFilename)
+	testutils.DeleteFileIfExists(t, xmlFilename)
+	defer testutils.DeleteFileIfExists(t, xmlFilename)
 
-	resumeData := main.GenerateTestResumeData()
+	resumeData := testutils.GenerateTestResumeData()
 	err := data.ToXmlFile(resumeData, xmlFilename)
 	if err != nil {
 		t.Fatal(err)

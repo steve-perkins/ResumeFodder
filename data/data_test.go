@@ -1,8 +1,8 @@
 package data_test
 
 import (
-	"gitlab.com/steve-perkins/ResumeFodder"
 	"gitlab.com/steve-perkins/ResumeFodder/data"
+	"gitlab.com/steve-perkins/ResumeFodder/testutils"
 	"os"
 	"path/filepath"
 	"reflect"
@@ -10,7 +10,7 @@ import (
 )
 
 func TestXmlConversion(t *testing.T) {
-	originalData := main.GenerateTestResumeData()
+	originalData := testutils.GenerateTestResumeData()
 
 	// Convert the data structure to a string of XML text
 	xml, err := data.ToXmlString(originalData)
@@ -31,7 +31,7 @@ func TestXmlConversion(t *testing.T) {
 }
 
 func TestJsonConversion(t *testing.T) {
-	originalData := main.GenerateTestResumeData()
+	originalData := testutils.GenerateTestResumeData()
 
 	json, err := data.ToJsonString(originalData)
 	if err != nil {
@@ -48,7 +48,7 @@ func TestJsonConversion(t *testing.T) {
 }
 
 func TestXmlToJsonConversion(t *testing.T) {
-	originalData := main.GenerateTestResumeData()
+	originalData := testutils.GenerateTestResumeData()
 
 	xml, err := data.ToXmlString(originalData)
 	if err != nil {
@@ -73,7 +73,7 @@ func TestXmlToJsonConversion(t *testing.T) {
 }
 
 func TestJsonToXmlConversion(t *testing.T) {
-	originalData := main.GenerateTestResumeData()
+	originalData := testutils.GenerateTestResumeData()
 
 	json, err := data.ToJsonString(originalData)
 	if err != nil {
@@ -100,11 +100,11 @@ func TestJsonToXmlConversion(t *testing.T) {
 func TestXmlFileConversion(t *testing.T) {
 	// Delete any pre-existing XML test file now, and then also clean up afterwards
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
-	main.DeleteFileIfExists(t, xmlFilename)
-	defer main.DeleteFileIfExists(t, xmlFilename)
+	testutils.DeleteFileIfExists(t, xmlFilename)
+	defer testutils.DeleteFileIfExists(t, xmlFilename)
 
 	// Write a resume data structure to an XML test file in the temp directory
-	originalData := main.GenerateTestResumeData()
+	originalData := testutils.GenerateTestResumeData()
 	err := data.ToXmlFile(originalData, xmlFilename)
 	if err != nil {
 		t.Fatal(err)
@@ -124,10 +124,10 @@ func TestXmlFileConversion(t *testing.T) {
 
 func TestJsonFileConversion(t *testing.T) {
 	jsonFilename := filepath.Join(os.TempDir(), "testresume.json")
-	main.DeleteFileIfExists(t, jsonFilename)
-	defer main.DeleteFileIfExists(t, jsonFilename)
+	testutils.DeleteFileIfExists(t, jsonFilename)
+	defer testutils.DeleteFileIfExists(t, jsonFilename)
 
-	originalData := main.GenerateTestResumeData()
+	originalData := testutils.GenerateTestResumeData()
 	err := data.ToJsonFile(originalData, jsonFilename)
 	if err != nil {
 		t.Fatal(err)
