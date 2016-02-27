@@ -10,13 +10,13 @@ import (
 	"testing"
 )
 
-func TestInitResume(t *testing.T) {
+func TestInitResumeFile(t *testing.T) {
 	// Delete any pre-existing test file now, and then also clean up afterwards
 	filename := filepath.Join(os.TempDir(), "testresume.xml")
 	testutils.DeleteFileIfExists(t, filename)
 	defer testutils.DeleteFileIfExists(t, filename)
 
-	err := command.InitResume(filename)
+	err := command.InitResumeFile(filename)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -30,7 +30,31 @@ func TestInitResume(t *testing.T) {
 	}
 }
 
-func TestConvertResume(t *testing.T) {
+func TestInitResumeJson(t *testing.T) {
+	json, err := command.InitResumeJson()
+	if err != nil {
+		t.Fatal(err)
+	}
+	inMemory := data.NewResumeData()
+	fromString, err := data.FromJsonString(json)
+	if !reflect.DeepEqual(inMemory, fromString) {
+		t.Fatal("Resume data after conversion doesn't match the original")
+	}
+}
+
+func TestInitResumeXml(t *testing.T) {
+	xml, err := command.InitResumeXml()
+	if err != nil {
+		t.Fatal(err)
+	}
+	inMemory := data.NewResumeData()
+	fromString, err := data.FromXmlString(xml)
+	if !reflect.DeepEqual(inMemory, fromString) {
+		t.Fatal("Resume data after conversion doesn't match the original")
+	}
+}
+
+func TestConvertResumeFile(t *testing.T) {
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
 	testutils.DeleteFileIfExists(t, xmlFilename)
 	defer testutils.DeleteFileIfExists(t, xmlFilename)
@@ -39,11 +63,11 @@ func TestConvertResume(t *testing.T) {
 	testutils.DeleteFileIfExists(t, jsonFilename)
 	defer testutils.DeleteFileIfExists(t, jsonFilename)
 
-	err := command.InitResume(xmlFilename)
+	err := command.InitResumeFile(xmlFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
-	err = command.ConvertResume(xmlFilename, jsonFilename)
+	err = command.ConvertResumeFile(xmlFilename, jsonFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -58,8 +82,8 @@ func TestConvertResume(t *testing.T) {
 	}
 }
 
-// See also "TestExportResume_TemplateDefaultPath()", in the root-level "main_test.go" test file.
-func TestExportResume_TemplateRelativePath(t *testing.T) {
+// See also "TestExportResume_TemplateDefaultPath()", in the base "ResumeFodder" project's "main_test.go" test file.
+func TestExportResumeFile_TemplateRelativePath(t *testing.T) {
 	xmlFilename := filepath.Join(os.TempDir(), "testresume.xml")
 	testutils.DeleteFileIfExists(t, xmlFilename)
 	defer testutils.DeleteFileIfExists(t, xmlFilename)
@@ -72,7 +96,7 @@ func TestExportResume_TemplateRelativePath(t *testing.T) {
 
 	outputFilename := filepath.Join(os.TempDir(), "resume.doc")
 	templateFilename := filepath.Join("..", "templates", "plain.xml")
-	err = command.ExportResume(xmlFilename, outputFilename, templateFilename)
+	err = command.ExportResumeFile(xmlFilename, outputFilename, templateFilename)
 	if err != nil {
 		t.Fatal(err)
 	}
