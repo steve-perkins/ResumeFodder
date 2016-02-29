@@ -95,7 +95,7 @@ func TestExportResumeFile_TemplateRelativePath(t *testing.T) {
 	}
 
 	outputFilename := filepath.Join(os.TempDir(), "resume.doc")
-	templateFilename := filepath.Join("..", "templates", "plain.xml")
+	templateFilename := filepath.Join("..", "templates", "standard.xml")
 	err = command.ExportResumeFile(xmlFilename, outputFilename, templateFilename)
 	if err != nil {
 		t.Fatal(err)
