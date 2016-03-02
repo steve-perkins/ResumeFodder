@@ -5,7 +5,7 @@ ResumeFodder
 > If you're reading this on GitHub, then note that this repo is a mirror which can sometimes be slightly
 > out of date.
 
-ResumeFodder is a command-line utility for generating Microsoft Word resumes from
+ResumeFodder is an application for generating Microsoft Word resumes from
 [JSON Resume](https://github.com/jsonresume/resume-schema) data files.
 
 https://resumefodder.com
