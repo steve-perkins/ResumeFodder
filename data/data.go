@@ -6,12 +6,18 @@ import (
 	"io/ioutil"
 )
 
+const SCHEMA_VERSION = 1
+
 // ResumeData is the outermost container for resume data.
 type ResumeData struct {
+	// XMLName provides a name for the top-level element, when working with resume data files in XML format.  This
+	// field is ignored when working with files in JSON format.
 	XMLName xml.Name `xml:"resume" json:"-"`
-	// TODO: Add a top-level field for schema version
-	Basics  Basics   `xml:"basics" json:"basics"`
-	Work    []Work   `xml:"work" json:"work"`
+	// Version is an identifier for the schema structure.  If breaking changes occur in the future, then ResumeFodder
+	// can use this value to recognize the incompatibility and provide options.
+	Version int    `xml:"version" json:"version"`
+	Basics  Basics `xml:"basics" json:"basics"`
+	Work    []Work `xml:"work" json:"work"`
 	// AdditionalWork is an extra field, not found within the standard JSON-Resume spec.  It is intended to store
 	// employment history that should be presented differently from that in the main "Work" field.
 	//
@@ -150,6 +156,7 @@ type Skill struct {
 //
 func NewResumeData() ResumeData {
 	return ResumeData{
+		Version: SCHEMA_VERSION,
 		Basics: Basics{
 			Location: Location{},
 			Profiles: []SocialProfile{{}},

@@ -9,6 +9,7 @@ import (
 // A helper function to generate fake `ResumeData` structs, for use by the various test functions.
 func GenerateTestResumeData() data.ResumeData {
 	data := data.ResumeData{
+		Version: data.SCHEMA_VERSION,
 		Basics: data.Basics{
 			Name:    "Peter Gibbons",
 			Email:   "peter.gibbons@initech.com",

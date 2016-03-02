@@ -121,6 +121,15 @@ func ExportResume(resumeData data.ResumeData, templateContent string) (*bytes.Bu
 		"toUpper": func(s string) string {
 			return strings.ToUpper(s)
 		},
+		"YYYY": func(s string) string {
+			const inputFormat = "2006-01-02"
+			dateValue, err := time.Parse(inputFormat, s)
+			if err != nil {
+				return s
+			}
+			const outputFormat = "2006"
+			return dateValue.Format(outputFormat)
+		},
 		"MYY": func(s string) string {
 			const inputFormat = "2006-01-02"
 			dateValue, err := time.Parse(inputFormat, s)
