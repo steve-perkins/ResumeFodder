@@ -24,4 +24,5 @@ There are three other related git repositories:
   templates available to ResumeFodder.  This repository is imported into all of the others a git submodule.
 
 Copyright 2016 [Steve Perkins](http://steveperkins.com)
+
 [MIT License](https://opensource.org/licenses/MIT)
