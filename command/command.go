@@ -139,6 +139,25 @@ func ExportResume(resumeData data.ResumeData, templateContent string) (*bytes.Bu
 			const outputFormat = "January 2006"
 			return dateValue.Format(outputFormat)
 		},
+		// TODO: I'd love to come up with a reflection-based solution for splitting a slice of any type.  God, I wish Go just had generics...
+		"firstHalfSkills": func(list []data.Skill) []data.Skill {
+			if list == nil || len(list) == 0 {
+				return nil
+			} else if len(list) == 1 {
+				return list
+			} else {
+				end := len(list)/2 + len(list)%2 - 1
+				return list[:end]
+			}
+		},
+		"secondHalfSkills": func(list []data.Skill) []data.Skill {
+			if list == nil || len(list) < 2 {
+				return nil
+			} else {
+				start := len(list)/2 + len(list)%2
+				return list[start:]
+			}
+		},
 	}
 	buffer := bytes.NewBuffer(nil)
 	resumeTemplate, err := template.New("resume").Funcs(funcMap).Parse(templateContent)
