@@ -9,6 +9,7 @@ import (
 // ResumeData is the outermost container for resume data.
 type ResumeData struct {
 	XMLName xml.Name `xml:"resume" json:"-"`
+	// TODO: Add a top-level field for schema version
 	Basics  Basics   `xml:"basics" json:"basics"`
 	Work    []Work   `xml:"work" json:"work"`
 	// AdditionalWork is an extra field, not found within the standard JSON-Resume spec.  It is intended to store
@@ -94,6 +95,7 @@ type SocialProfile struct {
 }
 
 type Work struct {
+	// TODO: Perhaps job listings should have 'City' and 'Region' extension fields, as this is commonly found on resumes
 	Company    string   `xml:"company" json:"company"`
 	Position   string   `xml:"position" json:"position"`
 	Website    string   `xml:"website" json:"website"`
@@ -104,6 +106,7 @@ type Work struct {
 }
 
 type Education struct {
+	// TODO: Perhaps education listings should have 'City' and 'Region' extension fields, as this is commonly found on resumes
 	Institution string   `xml:"institution" json:"institution"`
 	Area        string   `xml:"area" json:"area"`
 	StudyType   string   `xml:"studyType" json:"studyType"`
